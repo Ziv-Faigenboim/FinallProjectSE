@@ -1,16 +1,23 @@
-# This is a sample Python script.
+from flask import Flask, render_template
+import folium
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+app = Flask(__name__)
 
 
-# Press the green button in the gutter to run the script.
+@app.route('/')
+def map():
+    # Coordinates of Be'er Sheva
+    map_center = [31.25181, 34.7913]
+
+    # Create the map with a center and zoom level
+    beer_sheva_map = folium.Map(location=map_center, zoom_start=13)
+
+    # Save the map to an HTML file
+    beer_sheva_map.save('templates/map.html')
+
+    # Render the map in the browser
+    return render_template('map.html')
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    app.run(debug=True)
