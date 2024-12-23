@@ -1,17 +1,62 @@
 <!DOCTYPE html>
-<html lang="he">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>פרויקט גמר</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-    <div class="welcome-container">
-        <h1>ברוכים הבאים לפרויקט הגמר שלנו</h1>
-        <p>חדשנות עירונית בבאר שבע, בשילוב חיישני צל וטכנולוגיות מתקדמות</p>
-        <button onclick="location.href='/map';">היכנס</button>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Sensor Map</title>
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <!-- Leaflet JavaScript -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    ></script>
 
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      #sensor-panel {
+        width: 30%;
+        padding: 1rem;
+        border-right: 1px solid #ccc;
+        overflow-y: auto;
+      }
+      #map {
+        width: 70%;
+        height: 100vh;
+      }
+      button {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sensor-panel">
+      <h2>Sensor Data</h2>
+      <div id="sensor-data-container">
+        <p>Click on the sensor marker on the map to load data.</p>
+      </div>
+      <button id="history-button">Show History</button>
+      <div id="history-container" style="display: none; margin-top: 20px;">
+        <h3>Historical Data</h3>
+        <ul id="history-list"></ul>
+      </div>
     </div>
-</body>
+
+    <div id="map"></div>
+
+    <script src="/static/js/map.js"></script>
+  </body>
 </html>
