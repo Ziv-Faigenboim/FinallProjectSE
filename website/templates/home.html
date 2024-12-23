@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
+%}
+
+
+<div class="container mt-5">
+        <h1 class="text-center">Beer Sheva Map</h1>
+
+    <style>
+        /* הגדרת גודל למסגרת ה-iframe */
+        iframe {
+            width: 100%;  /* ממלא את הרוחב של ה-container */
+            max-width: 1000px;  /* רוחב מקסימלי */
+            height: 600px;  /* גובה המפה */
+            border: 3px solid #000;  /* מסגרת */
+            border-radius: 10px;  /* פינות מעוגלות */
+            margin: 0 auto;  /* הצגת ה-iframe במרכז */
+            display: block;  /* למרכז את ה-iframe */
+        }
+    </style>
+
+<iframe srcdoc="{{map}}"></iframe>
+</div>
+
+<div class="container mt-5">
+    <h1 class="text-center">Data Sensor</h1>
+
+    <iframe>
+
+    </iframe>
+
+
+
+
+        <body>
+
+
+        </body>
+
+</div>
+
+
+
+{% endblock %}
