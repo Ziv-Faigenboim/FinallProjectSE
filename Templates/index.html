@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Add this link to your HTML head -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <meta charset="utf-8" />
     <title>Sensor Map</title>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="static/style.css">
     <!-- Leaflet CSS -->
     <link
       rel="stylesheet"
@@ -12,43 +16,17 @@
     <script
       src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     ></script>
-
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        display: flex;
-      }
-      #sensor-panel {
-        width: 30%;
-        padding: 1rem;
-        border-right: 1px solid #ccc;
-        overflow-y: auto;
-      }
-      #map {
-        width: 70%;
-        height: 100vh;
-      }
-      button {
-        margin-top: 10px;
-        padding: 10px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #0056b3;
-      }
-    </style>
   </head>
   <body>
+    <header id="main-header">
+      GIS & Shadow Sensors Simulation
+    </header>
     <div id="sensor-panel">
       <h2>Sensor Data</h2>
       <div id="sensor-data-container">
         <p>Click on the sensor marker on the map to load data.</p>
       </div>
-      <button id="history-button">Show History</button>
+      <button id="history-button" class="button">Show History</button>
       <div id="history-container" style="display: none; margin-top: 20px;">
         <h3>Historical Data</h3>
         <ul id="history-list"></ul>
