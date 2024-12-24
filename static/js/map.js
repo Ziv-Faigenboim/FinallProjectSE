@@ -38,14 +38,12 @@ function fetchCurrentData() {
 function fetchHistoricalData() {
   fetch('http://127.0.0.1:5000/get-sensor-history')
     .then((response) => {
-      console.log('Response received:', response);
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
       return response.json();
     })
     .then((data) => {
-      console.log('Historical Data:', data);
       const historyContainer = document.getElementById('history-container');
       const historyList = document.getElementById('history-list');
       historyList.innerHTML = ''; // Clear existing history
