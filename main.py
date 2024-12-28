@@ -49,6 +49,13 @@ def get_historical_sensor_data():
 def index():
     return render_template("index.html")
 
+@app.route("/shadow-history")
+def shadow_history():
+    """
+    Serve the Shadow History page.
+    """
+    return render_template("shadow-history.html")
+
 
 @app.route("/get-sensor-data")
 def get_sensor_data():

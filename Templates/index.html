@@ -1,26 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <!-- Add this link to your HTML head -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <meta charset="utf-8" />
-    <title>Sensor Map</title>
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="static/style.css">
-    <!-- Leaflet CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    />
-    <!-- Leaflet JavaScript -->
-    <script
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    ></script>
-  </head>
-  <body>
-    <header id="main-header">
-      GIS & Shadow Sensors Simulation
-    </header>
+{% extends "base.html" %}
+
+{% block title %}Sensor Map{% endblock %}
+
+{% block content %}
+<body>
+
+
+  <div class="container">
     <div id="sensor-panel">
       <h2>Sensor Data</h2>
       <div id="sensor-data-container">
@@ -34,7 +20,9 @@
     </div>
 
     <div id="map"></div>
+  </div>
 
-    <script src="/static/js/map.js"></script>
-  </body>
-</html>
+  <script src="/static/js/map.js"></script>
+</body>
+
+{% endblock %}
