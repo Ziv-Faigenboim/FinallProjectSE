@@ -21,7 +21,7 @@ function fetchCurrentData() {
     .then((data) => {
       const container = document.getElementById('sensor-data-container');
       container.innerHTML = `
-        <p><strong>Temperature:</strong> ${data.temperature} °C</p>
+        <p><strong>Temperature:</strong> ${data.temperature}</p>
         <p><strong>Humidity:</strong> ${data.humidity} %</p>
         <p><strong>Battery Level:</strong> ${data.battery} %</p>
         <p><strong>Sample Time:</strong> ${data.sample_time}</p>
@@ -52,7 +52,7 @@ function fetchHistoricalData() {
         data.forEach((reading) => {
           const listItem = document.createElement('li');
           listItem.innerHTML = `
-            <p><strong>Temperature:</strong> ${reading.temperature} °C</p>
+            <p><strong>Temperature:</strong> ${reading.temperature}</p>
             <p><strong>Humidity:</strong> ${reading.humidity} %</p>
             <p><strong>Battery Level:</strong> ${reading.battery} %</p>
             <p><strong>Sample Time:</strong> ${reading.sample_time}</p>
