@@ -13,20 +13,20 @@ body {
   background-color: #007bff;
   color: white;
   text-align: center;
-  padding: 0.5rem 0; /* Reduced padding */
-  font-size: 1.4rem; /* Smaller font size */
+  padding: 0.5rem 0;
+  font-size: 1.4rem;
   font-weight: 500;
 }
 
 #nav-bar {
-  margin-top: 0.25rem; /* Reduced margin */
+  margin-top: 0.25rem;
 }
 
 #nav-bar a {
-  margin: 0 10px; /* Reduced spacing between links */
+  margin: 0 10px;
   color: white;
   text-decoration: none;
-  font-size: 1.1rem; /* Smaller font size for links */
+  font-size: 1.1rem;
   font-weight: 400;
 }
 
@@ -34,10 +34,9 @@ body {
   text-decoration: underline;
 }
 
-
 .container {
   display: flex;
-  height: calc(100vh - 70px); /* Adjust height to exclude header */
+  height: calc(100vh - 120px);
 }
 
 #sensor-panel {
@@ -49,10 +48,70 @@ body {
   overflow-y: auto;
 }
 
-#map {
+#map-container {
+  position: relative;
   width: 70%;
-  height: 100%;
+  height: calc(100vh - 100px);  /* יותר מקום מתחת */
 }
+
+#map {
+  width: 100%;
+  height: calc(100vh - 210px);  /* גובה המפה קטן יותר כדי לפנות מקום לסרגל */
+}
+
+#slider-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 10px;
+  background-color: #ffffff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 100;  /* הסרגל תמיד יהיה מעל המפה */
+  box-sizing: border-box;
+}
+
+#time-slider {
+  width: 90%;
+  margin: 10px 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+#time-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#sun-icon {
+  position: absolute;
+  top: -35px;
+  font-size: 2rem;
+  transition: left 0.1s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.time-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-size: 1rem;
+  color: #555;
+}
+
+
 
 button {
   margin-top: 10px;
@@ -86,7 +145,6 @@ h2, h3 {
   color: #444;
 }
 
-/* General alignment to the right */
 .align-right {
   text-align: right;
 }
@@ -96,65 +154,65 @@ h2, h3 {
   color: #333;
   line-height: 1.8;
   margin: 2rem auto;
-  padding: 2rem; /* Increased padding for better readability */
+  padding: 2rem;
   max-width: 1100px;
   background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  direction: rtl; /* Aligns content to the right for Hebrew text */
+  direction: rtl;
 }
 
 #shadow-history-content h2 {
-  font-size: 2.5rem; /* Increased font size for main heading */
+  font-size: 2.5rem;
   color: #0056b3;
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
 #shadow-history-content h3 {
-  font-size: 2rem; /* Increased font size for subheadings */
+  font-size: 2rem;
   color: #007bff;
   margin-top: 1.8rem;
 }
 
 #shadow-history-content p {
-  font-size: 1.2rem; /* Increased font size for paragraphs */
+  font-size: 1.2rem;
   margin-bottom: 1.5rem;
   text-align: right;
 }
 
 #shadow-history-content ul {
-  font-size: 1.2rem; /* Increased font size for list items */
+  font-size: 1.2rem;
   margin: 1.2rem 0;
-  padding-right: 1.5rem; /* Adjusts list padding */
+  padding-right: 1.5rem;
 }
 
 #shadow-history-content ul li {
-  margin-bottom: 1rem; /* Increased spacing between list items */
+  margin-bottom: 1rem;
 }
 
 .shadow-image {
   width: 100%;
   border-radius: 8px;
-  margin: 1.5rem 0; /* Increased spacing around images */
+  margin: 1.5rem 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .responsive-image {
-  max-width: 100%; /* Makes the image scale within its container */
-  height: auto; /* Maintains aspect ratio */
-  border-radius: 8px; /* Adds rounded corners */
-  margin: 1.5rem 0; /* Increased spacing around images */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional modern shadow effect */
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .small-image {
-  width: 500px; /* Fixed width */
-  height: auto; /* Maintain aspect ratio */
+  width: 500px;
+  height: auto;
 }
 
 .large-image {
-  width: 100%; /* Full width of container */
-  max-width: 600px; /* Limit max size */
+  width: 100%;
+  max-width: 600px;
   height: auto;
 }
