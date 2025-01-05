@@ -1,0 +1,2210 @@
+{
+  "code": 200,
+  "message": "",
+  "data": {
+    "readings_data": [
+      {
+        "Temperature": 23.169092,
+        "Humidity": 64.95057,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-11T18:13:29.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:30.795Z",
+        "reading_type": "Read now",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.160915,
+        "Humidity": 65.73182,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-11T08:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.417Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 18.999783,
+        "Humidity": 66.070564,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-11T06:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.417Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.946438,
+        "Humidity": 65.6128,
+        "Battery Level": 95,
+        "sample_time_utc": "2024-12-11T10:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.417Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 23.023066,
+        "Humidity": 64.978035,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-11T17:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.418Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 22.816614,
+        "Humidity": 65.222176,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-11T16:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.418Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.5285,
+        "Humidity": 65.78675,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-11T09:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.417Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 22.992853,
+        "Humidity": 65.4419,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-11T15:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.418Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.110561,
+        "Humidity": 65.863045,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-11T07:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.417Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.004818,
+        "Humidity": 66.46119,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-11T05:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.417Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.412685,
+        "Humidity": 66.97999,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-11T04:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.416Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 22.650446,
+        "Humidity": 65.58228,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-11T14:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.418Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 22.27279,
+        "Humidity": 65.673836,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-11T13:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.418Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 21.864923,
+        "Humidity": 65.75318,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-11T12:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.417Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 21.336208,
+        "Humidity": 65.73792,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-11T11:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.417Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.553677,
+        "Humidity": 67.27601,
+        "Battery Level": 93,
+        "sample_time_utc": "2024-12-10T23:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.416Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.906155,
+        "Humidity": 67.825325,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-10T19:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.415Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.573818,
+        "Humidity": 67.355354,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-10T22:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.416Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.498287,
+        "Humidity": 67.19056,
+        "Battery Level": 95,
+        "sample_time_utc": "2024-12-11T01:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.416Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.452969,
+        "Humidity": 67.05323,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-11T03:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.416Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 21.50741,
+        "Humidity": 70.68482,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-10T08:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.414Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.518429,
+        "Humidity": 67.24549,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-11T00:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.416Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.47311,
+        "Humidity": 67.12342,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-11T02:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.416Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.001827,
+        "Humidity": 70.706184,
+        "Battery Level": 96,
+        "sample_time_utc": "2024-12-10T07:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.414Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.936367,
+        "Humidity": 70.50477,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-10T04:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.413Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 22.675623,
+        "Humidity": 70.01954,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-10T10:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.414Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 23.58703,
+        "Humidity": 68.95142,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-10T13:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.415Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 22.584986,
+        "Humidity": 70.516975,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-10T09:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.414Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.941402,
+        "Humidity": 70.465096,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-10T03:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.413Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.996792,
+        "Humidity": 70.37354,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-10T02:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.413Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.936367,
+        "Humidity": 70.57801,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-10T05:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.414Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.891048,
+        "Humidity": 70.66956,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-10T06:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.414Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.614101,
+        "Humidity": 67.514046,
+        "Battery Level": 98,
+        "sample_time_utc": "2024-12-10T20:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.415Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 23.244623,
+        "Humidity": 69.29627,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-10T12:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.414Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 23.561853,
+        "Humidity": 68.2129,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-10T15:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.415Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.578854,
+        "Humidity": 67.42249,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-10T21:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.416Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.444942,
+        "Humidity": 67.93214,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-10T18:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.415Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 23.909296,
+        "Humidity": 68.68897,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-10T14:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.415Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 23.19427,
+        "Humidity": 68.051155,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-10T16:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.415Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 21.089474,
+        "Humidity": 67.74293,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-10T17:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.415Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 22.982782,
+        "Humidity": 69.67469,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-10T11:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.414Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.606075,
+        "Humidity": 71.68275,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-09T12:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.411Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.208279,
+        "Humidity": 72.149666,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-09T11:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.411Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.037075,
+        "Humidity": 71.038826,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-09T14:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.412Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.278774,
+        "Humidity": 71.30128,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-09T13:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.411Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.606075,
+        "Humidity": 70.84962,
+        "Battery Level": 96,
+        "sample_time_utc": "2024-12-09T17:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.412Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.946438,
+        "Humidity": 70.87098,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-09T16:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.412Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.001827,
+        "Humidity": 70.9076,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-09T15:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.412Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.726925,
+        "Humidity": 70.776375,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-09T18:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.412Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.384518,
+        "Humidity": 70.31556,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-09T22:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.413Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.78735,
+        "Humidity": 70.41627,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-09T21:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.412Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.072323,
+        "Humidity": 70.33387,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-10T00:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.413Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.65643,
+        "Humidity": 70.60548,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-09T20:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.412Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.17303,
+        "Humidity": 70.32777,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-09T23:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.413Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.011898,
+        "Humidity": 70.34608,
+        "Battery Level": 93,
+        "sample_time_utc": "2024-12-10T01:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.413Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 23.300013,
+        "Humidity": 74.20045,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-08T11:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.408Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 24.100641,
+        "Humidity": 74.752815,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-08T13:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.408Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 24.4078,
+        "Humidity": 74.578865,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-08T12:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.408Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.993801,
+        "Humidity": 73.84339,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-08T16:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.409Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 21.472162,
+        "Humidity": 73.97462,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-08T15:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.409Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.243526,
+        "Humidity": 73.47718,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-08T18:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.409Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.679562,
+        "Humidity": 73.49549,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-09T08:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.411Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.22842,
+        "Humidity": 72.77833,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-09T10:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.411Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.79742,
+        "Humidity": 73.66944,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-08T17:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.409Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 22.509455,
+        "Humidity": 74.469,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-08T14:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.408Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.48019,
+        "Humidity": 73.38563,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-08T20:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.409Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.379482,
+        "Humidity": 73.42835,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-08T21:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.409Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.4248,
+        "Humidity": 70.602425,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-09T19:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.412Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.072323,
+        "Humidity": 73.49854,
+        "Battery Level": 96,
+        "sample_time_utc": "2024-12-08T23:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.410Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.278774,
+        "Humidity": 73.44666,
+        "Battery Level": 98,
+        "sample_time_utc": "2024-12-08T22:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.410Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.379482,
+        "Humidity": 73.44361,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-08T19:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.409Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.891048,
+        "Humidity": 73.52296,
+        "Battery Level": 96,
+        "sample_time_utc": "2024-12-09T01:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.410Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.830624,
+        "Humidity": 73.55042,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-09T02:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.410Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.755093,
+        "Humidity": 73.535164,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-09T04:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.410Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.961544,
+        "Humidity": 73.538216,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-09T00:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.410Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.800411,
+        "Humidity": 73.54127,
+        "Battery Level": 96,
+        "sample_time_utc": "2024-12-09T03:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.410Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.709774,
+        "Humidity": 73.53211,
+        "Battery Level": 96,
+        "sample_time_utc": "2024-12-09T06:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.411Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.694668,
+        "Humidity": 73.46497,
+        "Battery Level": 93,
+        "sample_time_utc": "2024-12-09T07:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.411Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.66949,
+        "Humidity": 73.22083,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-09T09:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.411Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.729916,
+        "Humidity": 73.5138,
+        "Battery Level": 93,
+        "sample_time_utc": "2024-12-09T05:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.410Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.238491,
+        "Humidity": 71.49659,
+        "Battery Level": 86,
+        "sample_time_utc": "2024-12-07T18:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.406Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.102535,
+        "Humidity": 71.64002,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-07T19:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.406Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.04211,
+        "Humidity": 71.82313,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-07T21:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.406Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.067287,
+        "Humidity": 71.975716,
+        "Battery Level": 96,
+        "sample_time_utc": "2024-12-07T22:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.406Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.021969,
+        "Humidity": 71.71632,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-07T20:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.406Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.97665,
+        "Humidity": 72.253426,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-08T00:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.407Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.981686,
+        "Humidity": 72.372444,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-08T01:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.407Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.981686,
+        "Humidity": 72.650154,
+        "Battery Level": 96,
+        "sample_time_utc": "2024-12-08T03:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.407Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.96658,
+        "Humidity": 72.50672,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-08T02:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.407Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.027004,
+        "Humidity": 72.113045,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-07T23:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.406Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.402615,
+        "Humidity": 73.30933,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-08T06:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.407Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.936367,
+        "Humidity": 72.982796,
+        "Battery Level": 96,
+        "sample_time_utc": "2024-12-08T05:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.407Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.442898,
+        "Humidity": 73.379524,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-08T08:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.408Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 18.78326,
+        "Humidity": 73.30933,
+        "Battery Level": 96,
+        "sample_time_utc": "2024-12-08T07:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.407Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.951473,
+        "Humidity": 72.83631,
+        "Battery Level": 93,
+        "sample_time_utc": "2024-12-08T04:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.407Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 21.925348,
+        "Humidity": 73.88001,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-08T10:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.408Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.606075,
+        "Humidity": 73.556526,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-08T09:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:18.408Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.303951,
+        "Humidity": 71.35621,
+        "Battery Level": 98,
+        "sample_time_utc": "2024-12-07T17:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:12.481Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lat": 31.2498119452557,
+          "lng": 34.7895184904266
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 19.60403,
+        "Humidity": 71.18226,
+        "Battery Level": 93,
+        "sample_time_utc": "2024-12-07T13:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:12.481Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      },
+      {
+        "Temperature": 20.726925,
+        "Humidity": 71.27381,
+        "Battery Level": 100,
+        "sample_time_utc": "2024-12-07T15:54:42.000Z",
+        "gw_read_time_utc": "2024-12-11T18:13:12.481Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "E9:19:79:09:A1:AD",
+        "device_name": "G1.2 A1:AD",
+        "fw_version": {
+          "mcu": "2.8.48+011"
+        },
+        "location": {
+          "lng": 34.7895184904266,
+          "lat": 31.2498119452557
+        },
+        "unit_name": "G1.2 A1:AD",
+        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
+        "gw_version": "3.3.0+110"
+      }
+    ],
+    "pageCount": 2,
+    "totalCount": 200
+  }
+}

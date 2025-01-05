@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Sensor Map{% endblock %}
+
+{% block content %}
+<body>
+
+
+  <div class="container">
+    <div id="sensor-panel">
+      <h2>Sensor Data</h2>
+      <div id="sensor-data-container">
+        <p>Click on the sensor marker on the map to load data.</p>
+      </div>
+      <button id="history-button" class="button">Show History</button>
+      <div id="history-container" style="display: none; margin-top: 20px;">
+        <h3>Historical Data</h3>
+        <ul id="history-list"></ul>
+      </div>
+    </div>
+
+    <div id="map"></div>
+  </div>
+
+  <script src="/static/js/map.js"></script>
+</body>
+
+{% endblock %}

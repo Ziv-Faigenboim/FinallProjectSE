@@ -1,0 +1,160 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+#main-header {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0; /* Reduced padding */
+  font-size: 1.4rem; /* Smaller font size */
+  font-weight: 500;
+}
+
+#nav-bar {
+  margin-top: 0.25rem; /* Reduced margin */
+}
+
+#nav-bar a {
+  margin: 0 10px; /* Reduced spacing between links */
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem; /* Smaller font size for links */
+  font-weight: 400;
+}
+
+#nav-bar a:hover {
+  text-decoration: underline;
+}
+
+
+.container {
+  display: flex;
+  height: calc(100vh - 70px); /* Adjust height to exclude header */
+}
+
+#sensor-panel {
+  width: 30%;
+  padding: 1.5rem;
+  border-right: 1px solid #e0e0e0;
+  background: #ffffff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+#map {
+  width: 70%;
+  height: 100%;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+#history-container {
+  margin-top: 20px;
+}
+
+#history-list li {
+  border-bottom: 1px solid #eaeaea;
+  padding: 10px 0;
+}
+
+h2, h3 {
+  font-weight: 500;
+  color: #444;
+}
+
+/* General alignment to the right */
+.align-right {
+  text-align: right;
+}
+
+#shadow-history-content {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.8;
+  margin: 2rem auto;
+  padding: 2rem; /* Increased padding for better readability */
+  max-width: 1100px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  direction: rtl; /* Aligns content to the right for Hebrew text */
+}
+
+#shadow-history-content h2 {
+  font-size: 2.5rem; /* Increased font size for main heading */
+  color: #0056b3;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+#shadow-history-content h3 {
+  font-size: 2rem; /* Increased font size for subheadings */
+  color: #007bff;
+  margin-top: 1.8rem;
+}
+
+#shadow-history-content p {
+  font-size: 1.2rem; /* Increased font size for paragraphs */
+  margin-bottom: 1.5rem;
+  text-align: right;
+}
+
+#shadow-history-content ul {
+  font-size: 1.2rem; /* Increased font size for list items */
+  margin: 1.2rem 0;
+  padding-right: 1.5rem; /* Adjusts list padding */
+}
+
+#shadow-history-content ul li {
+  margin-bottom: 1rem; /* Increased spacing between list items */
+}
+
+.shadow-image {
+  width: 100%;
+  border-radius: 8px;
+  margin: 1.5rem 0; /* Increased spacing around images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.responsive-image {
+  max-width: 100%; /* Makes the image scale within its container */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 8px; /* Adds rounded corners */
+  margin: 1.5rem 0; /* Increased spacing around images */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional modern shadow effect */
+}
+
+.small-image {
+  width: 500px; /* Fixed width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.large-image {
+  width: 100%; /* Full width of container */
+  max-width: 600px; /* Limit max size */
+  height: auto;
+}
