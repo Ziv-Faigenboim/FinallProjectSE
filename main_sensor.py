@@ -378,8 +378,8 @@ def main():
     password = "123456"
 
     mac_addresses = ["D2:34:24:34:68:70"]
-    start_date = "2025-01-01T00:00:00.000Z"
-    end_date = "2025-01-01T23:59:59.000Z"
+    start_date = "2025-01-05T00:00:00.000Z"
+    end_date = "2025-01-05T23:59:59.000Z"
     sensor_data_collection=get_db_collection(Collections.sensor_data)
 
     try:
