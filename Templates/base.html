@@ -10,12 +10,29 @@
   </head>
   <body>
     <header id="main-header">
-      GIS With Shadow Sensors Simulation
+      <h1>GIS With Shadow Sensors Simulation</h1>
       <nav id="nav-bar">
         <a href="/">Home</a>
         <a href="/shadow-history">Why Shadow?</a>
+        {% if logged_in %}
+            <a href="/logout" class="logout-btn">Logout</a>
+        {% else %}
+            <a href="/login" class="login-btn">Login</a>
+        {% endif %}
       </nav>
     </header>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="flash-messages">
+          {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
     <main>
       {% block content %}{% endblock %}
     </main>
