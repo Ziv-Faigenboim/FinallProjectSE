@@ -2,7 +2,7 @@ import requests
 import json
 from datetime import datetime, timedelta
 
-from db.collections import Collections
+from db.db_collections import Collections
 from db.connection import get_db_collection
 base_url = "https://atapi.atomation.net/api/v1/s2s/v1_0"
 

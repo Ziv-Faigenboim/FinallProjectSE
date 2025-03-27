@@ -7,14 +7,45 @@
     <link rel="stylesheet" href="static/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+      }
+      .nav-title {
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
+      #nav-bar {
+        display: flex;
+        gap: 15px;
+      }
+      #nav-bar a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 400;
+        transition: text-decoration 0.3s;
+      }
+      #nav-bar a:hover {
+        text-decoration: underline;
+      }
+    </style>
   </head>
   <body>
     <header id="main-header">
-      GIS With Shadow Sensors Simulation
-      <nav id="nav-bar">
-        <a href="/">Home</a>
-        <a href="/shadow-history">Why Shadow?</a>
-      </nav>
+      <div class="nav-container">
+        <div class="nav-title">GIS With Shadow Sensors Simulation</div>
+        <nav id="nav-bar">
+          <a href="/">Home</a>
+          <a href="/shadow-history">Why Shadow?</a>
+          <a href="/register">Register</a>
+          <a href="/login">Login</a>
+          <a href="/logout">Logout</a>
+        </nav>
+      </div>
     </header>
     <main>
       {% block content %}{% endblock %}
