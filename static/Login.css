@@ -1,0 +1,44 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* רקע גרדיאנט */
+.gradient-custom {
+  background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* כרטיס */
+.login-card {
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* טופס */
+.form-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.btn-primary {
+  background-color: #6a11cb;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #4e0dbd;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

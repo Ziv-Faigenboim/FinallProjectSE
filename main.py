@@ -47,7 +47,7 @@ def get_historical_sensor_data():
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("Sighup.html")
 
 @app.route("/shadow-history")
 def shadow_history():
@@ -74,6 +74,15 @@ def get_sensor_history():
         return jsonify(history), 200
     except Exception as e:
         return jsonify({"error": f"Failed to fetch historical data: {str(e)}"}), 500
+
+
+
+
+
+
+
+
+
 
 
 if __name__ == "__main__":
