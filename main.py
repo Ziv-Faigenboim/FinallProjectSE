@@ -7,7 +7,7 @@ from db.connection import get_db_collection
 app = Flask(__name__)
 app.secret_key = "your_secret_key"  # Needed for session and flashing messages
 
-# MongoDB collection for users
+# MongoDB's collection for users
 users_col = get_db_collection(DBCollections.users)
 
 # ===================== Sensor Data from JSON =====================
