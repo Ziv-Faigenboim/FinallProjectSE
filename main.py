@@ -1,5 +1,8 @@
 import json
-from flask import Flask, render_template, jsonify
+from urllib import request
+
+from flask import Flask, render_template, jsonify, request, redirect
+
 
 app = Flask(__name__)
 
@@ -45,9 +48,19 @@ def get_historical_sensor_data():
         raise RuntimeError("Failed to fetch historical data")
 
 
+
 @app.route("/")
 def index():
-    return render_template("Sighup.html")
+    return render_template("Login.html")
+
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "POST":
+        # פה בהמשך נטפל בקליטת הנתונים מהטופס
+        pass
+    return render_template("SighUp.html")  # חשוב לוודא ששמו כך בדיוק!
+
 
 @app.route("/shadow-history")
 def shadow_history():
