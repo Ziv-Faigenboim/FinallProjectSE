@@ -3,48 +3,61 @@
 {% block title %}Sensor Map{% endblock %}
 
 {% block content %}
-<body>
-
-  <div class="container">
-    <div id="sensor-panel">
-      <h2>Sensor Data</h2>
-      <div id="sensor-data-container">
-        <p>Click on the sensor marker on the map to load data.</p>
-      </div>
-      <button id="history-button" class="button">Show History</button>
-      <div id="history-container" style="display: none; margin-top: 20px;">
-        <h3>Historical Data</h3>
-        <ul id="history-list"></ul>
-      </div>
+<div class="container">
+  <div id="sensor-panel">
+    <h2>Sensor Data</h2>
+    <div id="sensor-data-container">
+      <p>Click on the sensor marker on the map to load data.</p>
     </div>
-
-    <div id="map-container">
-      <div id="map"></div>
-
-      <div id="slider-container">
-        <input type="range" id="time-slider" min="0" max="23" value="12" step="1">
-        <div id="sun-icon">☀️</div>
-        <div class="time-labels">
-          <span>6 AM</span>
-          <span>12 PM</span>
-          <span>6 PM</span>
-        </div>
-      </div>
+    <button id="history-button" class="button">Show History</button>
+    <div id="history-container" style="display: none; margin-top: 20px;">
+      <h3>Historical Data</h3>
+      <ul id="history-list"></ul>
     </div>
-
   </div>
 
-  <script src="/static/js/map.js"></script>
-  <script>
-    const slider = document.getElementById('time-slider');
-    const sunIcon = document.getElementById('sun-icon');
+  <div id="map-container">
+    <div id="map"></div>
 
-    slider.addEventListener('input', function() {
-      const value = slider.value;
-      const percent = (value / 23) * 100;
-      sunIcon.style.left = percent + '%';
-    });
-  </script>
+    <div id="slider-container">
+      <input type="range" id="time-slider" min="0" max="23" value="12" step="1">
+      <div id="sun-icon">☀️</div>
+      <div class="time-labels">
+        <span>6 AM</span>
+        <span>12 PM</span>
+        <span>6 PM</span>
+      </div>
+    </div>
+  </div>
+</div>
 
-</body>
+<!-- Load map logic -->
+<script src="/static/js/map.js"></script>
+<script>
+  document.getElementById('history-button').addEventListener('click', function () {
+    const historyContainer = document.getElementById('history-container');
+    const historyList = document.getElementById('history-list');
+
+    // Toggle visibility
+    historyContainer.style.display = historyContainer.style.display === 'none' ? 'block' : 'none';
+
+    if (historyContainer.style.display === 'block') {
+      fetch('/get-sensor-history')
+        .then(response => response.json())
+        .then(data => {
+          historyList.innerHTML = ''; // Clear old data
+          data.forEach(item => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+              <strong>Temperature:</strong> ${item.temperature} °C<br>
+              <strong>Humidity:</strong> ${item.humidity} %<br>
+              <strong>Battery:</strong> ${item.battery} %<br>
+              <strong>Time:</strong> ${item.sample_time}
+            `;
+            historyList.appendChild(li);
+          });
+        });
+    }
+  });
+</script>
 {% endblock %}

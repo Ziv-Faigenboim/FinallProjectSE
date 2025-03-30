@@ -216,3 +216,92 @@ h2, h3 {
   max-width: 600px;
   height: auto;
 }
+
+.leaflet-popup-content {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Popup container */
+.popup-wrapper {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+/* Quality text label */
+.shadow-popup .quality-label {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 6px;
+  padding: 4px 8px;
+  border-radius: 5px;
+  display: inline-block;
+  color: white;
+}
+
+.shadow-popup .quality-label.red {
+  background-color: #d9534f;
+}
+
+.shadow-popup .quality-label.yellow {
+  background-color: #f0ad4e;
+  color: #333;
+}
+
+.shadow-popup .quality-label.green {
+  background-color: #5cb85c;
+}
+
+/* Meter bar */
+.shadow-popup .meter-bar {
+  width: 100%;
+  height: 12px;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.shadow-popup .meter-fill {
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+.shadow-popup .meter-fill.red {
+  background-color: #d9534f;
+}
+
+.shadow-popup .meter-fill.yellow {
+  background-color: #f0ad4e;
+}
+
+.shadow-popup .meter-fill.green {
+  background-color: #5cb85c;
+}
+
+.gradient-meter {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  margin: 10px 0;
+}
+
+.gradient-bar {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(to right, red, yellow, green);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.meter-indicator {
+  position: absolute;
+  top: -5px;
+  width: 10px;
+  height: 30px;
+  background-color: #333;
+  border-radius: 3px;
+  transform: translateX(-50%);
+}
