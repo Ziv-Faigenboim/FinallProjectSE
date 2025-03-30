@@ -38,33 +38,37 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
-  marker.on('click', async () => {
-    try {
-      const sensorData = await fetchSensorData();
-      const temp = sensorData.temperature;
-      const humidity = sensorData.humidity;
-      const qualityObj = calculateShadowQuality(temp, humidity);
+marker.on('click', async () => {
+  try {
+    const sensorData = await fetchSensorData();
+    const temp = sensorData.temperature;
+    const humidity = sensorData.humidity;
+    const battery = sensorData.battery;
+    const time = sensorData.sample_time;
+    const qualityObj = calculateShadowQuality(temp, humidity);
 
-      // Update popup
-      const popupContent = `
-        <div>
-          <strong>Shadow Quality</strong><br>
-          ${createGradientMeter(qualityObj.value)}
-        </div>
-      `;
-      marker.bindPopup(popupContent).openPopup();
-
-      // Update sensor panel on the left
-      const sensorPanel = document.getElementById('sensor-data-container');
-      sensorPanel.innerHTML = `
-        <h3>Live Sensor Readings</h3>
-        <p><strong>Temperature:</strong> ${temp.toFixed(1)}°C</p>
-        <p><strong>Humidity:</strong> ${humidity.toFixed(1)}%</p>
-        <p><strong>Shadow Quality:</strong></p>
+    // Update popup
+    const popupContent = `
+      <div>
+        <strong>Shadow Quality</strong><br>
         ${createGradientMeter(qualityObj.value)}
-      `;
-    } catch (err) {
-      console.error('Error fetching sensor data:', err);
-    }
-  });
+      </div>
+    `;
+    marker.bindPopup(popupContent).openPopup();
+
+    // Update sensor panel on the left with full data
+    const sensorPanel = document.getElementById('sensor-data-container');
+    sensorPanel.innerHTML = `
+      <h3>Live Sensor Readings</h3>
+      <p><strong>Temperature:</strong> ${temp.toFixed(1)}°C</p>
+      <p><strong>Humidity:</strong> ${humidity.toFixed(1)}%</p>
+      <p><strong>Battery:</strong> ${battery}%</p>
+      <p><strong>Sample Time:</strong> ${time}</p>
+      <p><strong>Shadow Quality:</strong></p>
+      ${createGradientMeter(qualityObj.value)}
+    `;
+  } catch (err) {
+    console.error('Error fetching sensor data:', err);
+  }
+});
 });
