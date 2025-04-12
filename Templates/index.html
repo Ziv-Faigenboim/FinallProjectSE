@@ -3,22 +3,72 @@
 {% block title %}Sensor Map{% endblock %}
 
 {% block content %}
+<!-- Inline styles (you may also move these to your style.css) -->
+<style>
+  /* Ensure the map container is visible and has a fixed height */
+  #map {
+    width: 100%;
+    height: 500px;
+  }
+  /* Button and gradient meter styling */
+  .button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .gradient-meter {
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, #ccc, #007bff);
+    position: relative;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  .meter-indicator {
+    position: absolute;
+    top: -5px;
+    width: 10px;
+    height: 20px;
+    background: red;
+    border-radius: 2px;
+  }
+  /* Optional: basic styling for slider container */
+  #slider-container {
+    margin-top: 15px;
+  }
+  #sun-icon {
+    display: inline-block;
+    font-size: 24px;
+    vertical-align: middle;
+  }
+  .time-labels span {
+    margin: 0 10px;
+  }
+</style>
+
 <div class="container">
+  <!-- Sensor Panel -->
   <div id="sensor-panel">
     <h2>Sensor Data</h2>
     <div id="sensor-data-container">
-      <p>Click on the sensor marker on the map to load data.</p>
+      <p>Click the sensor marker on the map to load data.</p>
     </div>
     <button id="history-button" class="button">Show History</button>
     <div id="history-container" style="display: none; margin-top: 20px;">
       <h3>Historical Data</h3>
       <ul id="history-list"></ul>
     </div>
+    <button id="toggle-3d" class="button">Toggle 3D Buildings</button>
   </div>
 
+  <!-- Map Container -->
   <div id="map-container">
     <div id="map"></div>
-
     <div id="slider-container">
       <input type="range" id="time-slider" min="0" max="23" value="12" step="1">
       <div id="sun-icon">☀️</div>
@@ -31,33 +81,107 @@
   </div>
 </div>
 
-<!-- Load map logic -->
-<script src="/static/js/map.js"></script>
+<!-- Load the OSMBuildings GL (WebGL) script -->
+<script src="{{ url_for('static', filename='js/OSMBuildings.js') }}"></script>
+
 <script>
-  document.getElementById('history-button').addEventListener('click', function () {
-    const historyContainer = document.getElementById('history-container');
-    const historyList = document.getElementById('history-list');
+  // Wait until the DOM is fully loaded
+  document.addEventListener('DOMContentLoaded', function () {
+    // Initialize OSMBuildings in the #map container
+    const osmb = new OSMBuildings({
+      container: 'map',
+      position: { latitude: 31.252973, longitude: 34.791462 },
+      zoom: 17,
+      minZoom: 15,
+      maxZoom: 20,
+      baseURL: 'https://data.osmbuildings.org/0.2/anonymous/tile/',
+      attribution: '© OSM Buildings'
+    });
 
-    // Toggle visibility
-    historyContainer.style.display = historyContainer.style.display === 'none' ? 'block' : 'none';
 
-    if (historyContainer.style.display === 'block') {
-      fetch('/get-sensor-history')
-        .then(response => response.json())
-        .then(data => {
-          historyList.innerHTML = ''; // Clear old data
-          data.forEach(item => {
+
+    // Toggle 3D buildings on/off
+    let is3DEnabled = true;
+    document.getElementById('toggle-3d').addEventListener('click', () => {
+      is3DEnabled = !is3DEnabled;
+      osmb.setStyle({ buildings: { enabled: is3DEnabled } });
+    });
+
+    // Create a marker element to represent the sensor
+    const markerElement = document.createElement('div');
+    markerElement.style.width = '20px';
+    markerElement.style.height = '20px';
+    markerElement.style.background = 'red';
+    markerElement.style.border = '2px solid white';
+    markerElement.style.borderRadius = '50%';
+    markerElement.style.cursor = 'pointer';
+
+    // Add the sensor marker to the map (coordinates: [longitude, latitude])
+    osmb.addMarker({
+      id: 'sensor',
+      coordinates: [34.791462, 31.252973],
+      element: markerElement
+    });
+
+    // When the sensor marker is clicked, fetch sensor data and display it
+    markerElement.addEventListener('click', async () => {
+      try {
+        const response = await fetch('/get-sensor-data');
+        const data = await response.json();
+        // Calculate shadow quality (example formula)
+        const quality = Math.min(100, Math.max(0, (data.humidity * 0.6 + (30 - data.temperature) * 2)));
+
+        document.getElementById('sensor-data-container').innerHTML = `
+          <h3>Live Sensor Readings</h3>
+          <p><strong>Temperature:</strong> ${data.temperature}°C</p>
+          <p><strong>Humidity:</strong> ${data.humidity}%</p>
+          <p><strong>Battery:</strong> ${data.battery}%</p>
+          <p><strong>Sample Time:</strong> ${data.sample_time}</p>
+          <p><strong>Shadow Quality:</strong></p>
+          <div class="gradient-meter">
+            <div class="meter-indicator" style="left: ${quality}%;"></div>
+          </div>
+        `;
+      } catch (err) {
+        console.error('Sensor data error:', err);
+      }
+    });
+
+    // Toggle historical data display
+    document.getElementById('history-button').addEventListener('click', async () => {
+      const container = document.getElementById('history-container');
+      container.style.display = container.style.display === 'none' ? 'block' : 'none';
+
+      if (container.style.display === 'block') {
+        try {
+          const response = await fetch('/get-sensor-history');
+          const data = await response.json();
+          const list = document.getElementById('history-list');
+          list.innerHTML = '';
+
+          data.forEach(entry => {
             const li = document.createElement('li');
             li.innerHTML = `
-              <strong>Temperature:</strong> ${item.temperature} °C<br>
-              <strong>Humidity:</strong> ${item.humidity} %<br>
-              <strong>Battery:</strong> ${item.battery} %<br>
-              <strong>Time:</strong> ${item.sample_time}
+              <strong>Temperature:</strong> ${entry.temperature} °C<br>
+              <strong>Humidity:</strong> ${entry.humidity} %<br>
+              <strong>Battery:</strong> ${entry.battery} %<br>
+              <strong>Time:</strong> ${entry.sample_time}
             `;
-            historyList.appendChild(li);
+            list.appendChild(li);
           });
-        });
-    }
+        } catch (err) {
+          console.error('History data error:', err);
+        }
+      }
+    });
+
+    // Time slider functionality
+    const slider = document.getElementById('time-slider');
+    const sunIcon = document.getElementById('sun-icon');
+    slider.addEventListener('input', function () {
+      const percent = (slider.value / 23) * 100;
+      sunIcon.style.left = percent + '%';
+    });
   });
 </script>
 {% endblock %}
