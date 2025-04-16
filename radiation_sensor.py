@@ -108,17 +108,17 @@ def get_historical_sensor_data():
         return {"error": str(e)}
 
 def main():
-    sensor_data_collection = get_db_collection(DBCollections.sensor_data)
-    print("Connected to collection:", sensor_data_collection.full_name)
+    "C4:45:5E:64:F9:3E"
 
-    email = "Pre_delivery@atomation.net"
+    email = "pre_delivery@atomation.net"
     password = "123456"
 
-    mac_addresses = ["D2:34:24:34:68:70"]
-    start_date = "2025-04-15T00:00:00.000Z"
-    end_date = "2025-04-15T23:59:59.000Z"
+    mac_addresses = ["C4:45:5E:64:F9:3E"]
+    start_date = "2025-04-16T00:00:00.000Z"
+    end_date = "2025-04-16T23:59:59.000Z"
     sensor_data_collection = get_db_collection(DBCollections.radiationsensor)
 
+    print("Connected to collection:", sensor_data_collection.full_name)
 
     try:
 
@@ -129,6 +129,9 @@ def main():
         print("Sensor readings retrieved successfully!")
         print(json.dumps(sensor_readings, indent=2))
         sensor_data_collection.insert_one(sensor_readings)
+        #//////////////remove
+       # sensor_data_collection.delete_one({"sample_time_utc": "2024-12-24T08:37:06.000Z"})
+        #///////////////remove
 
         for reading in sensor_readings['data']['readings_data']:
         #for reading in reading_data:
