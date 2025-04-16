@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {% extends "base.html" %}
 
 {% block title %}Sensor Map{% endblock %}
@@ -180,3 +181,119 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 {% endblock %}
+=======
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Mapbox 2D/3D Toggle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Include Mapbox GL JS CSS -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+  <style>
+    body { margin: 0; padding: 0; }
+    #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    .toggle-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 1;
+      background: #fff;
+      border: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <button class="toggle-button" id="toggle3d">3D Map</button>
+
+  <!-- Include Mapbox GL JS library -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <script>
+    // Replace 'YOUR_MAPBOX_TOKEN_HERE' with your actual Mapbox access token.
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZWxhZDc2MTAiLCJhIjoiY205andvMnN2MDZpaDJqc2JvaXhlbWR2bCJ9.BL95xjSj5yW4y3Rb_0_l1w';
+
+    // Initialize the map
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-74.0066, 40.7135], // New York City coordinates; adjust as needed
+      zoom: 15,
+      pitch: 0,     // start with a flat view
+      bearing: 0
+    });
+
+    // Flag to track current view mode
+    var is3D = false;
+
+    // Function to add the 3D buildings layer
+    function add3dLayer() {
+      // Find the first symbol layer to ensure our 3D buildings layer is rendered beneath labels.
+      var layers = map.getStyle().layers;
+      var labelLayerId;
+      for (var i = 0; i < layers.length; i++) {
+        if (layers[i].type === 'symbol' && layers[i].layout && layers[i].layout['text-field']) {
+          labelLayerId = layers[i].id;
+          break;
+        }
+      }
+
+      // Add 3D buildings layer if it doesn't already exist.
+      if (!map.getLayer('3d-buildings')) {
+        map.addLayer({
+          'id': '3d-buildings',
+          'source': 'composite',
+          'source-layer': 'building',
+          'filter': ['==', 'extrude', 'true'],
+          'type': 'fill-extrusion',
+          'minzoom': 15,
+          'paint': {
+            'fill-extrusion-color': '#aaa',
+            'fill-extrusion-height': [
+              'interpolate', ['linear'], ['zoom'],
+              15, 0,
+              15.05, ['get', 'height']
+            ],
+            'fill-extrusion-base': [
+              'interpolate', ['linear'], ['zoom'],
+              15, 0,
+              15.05, ['get', 'min_height']
+            ],
+            'fill-extrusion-opacity': 0.6
+          }
+        }, labelLayerId);
+      }
+    }
+
+    // Function to remove the 3D buildings layer
+    function remove3dLayer() {
+      if (map.getLayer('3d-buildings')) {
+        map.removeLayer('3d-buildings');
+      }
+    }
+
+    // Attach event listener to the toggle button
+    document.getElementById('toggle3d').addEventListener('click', function() {
+      if (is3D) {
+        // Switch to 2D view: reset pitch and bearing and remove 3D layer.
+        map.easeTo({ pitch: 0, bearing: 0 });
+        remove3dLayer();
+        is3D = false;
+        this.textContent = "3D Map";
+      } else {
+        // Switch to 3D view: change camera settings and add 3D buildings.
+        map.easeTo({ pitch: 60, bearing: -17.6 });
+        add3dLayer();
+        is3D = true;
+        this.textContent = "2D Map";
+      }
+    });
+  </script>
+</body>
+</html>
+>>>>>>> Stashed changes
