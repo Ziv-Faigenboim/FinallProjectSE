@@ -114,10 +114,10 @@ def main():
     email = "Pre_delivery@atomation.net"
     password = "123456"
 
-    mac_addresses = ["C4:45:5E:64:F9:3E"]
+    mac_addresses = ["D2:34:24:34:68:70"]
     start_date = "2025-04-15T00:00:00.000Z"
-    end_date = "2025-04-1T23:59:59.000Z"
-    sensor_data_collection = get_db_collection(DBCollections.sensor_data)
+    end_date = "2025-04-15T23:59:59.000Z"
+    sensor_data_collection = get_db_collection(DBCollections.radiationsensor)
 
 
     try:
