@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <meta charset="utf-8" />
     <title>{% block title %}GIS Simulation{% endblock %}</title>
+
+    <!-- Styles -->
     <link rel="stylesheet" href="static/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+
+    <!-- ✅ Mapbox GL JS MUST LOAD HERE -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+
     <style>
       .nav-container {
         display: flex;
@@ -34,23 +39,24 @@
       }
     </style>
   </head>
+
   <body>
     <header id="main-header">
       <div class="nav-container">
         <div class="nav-title">GIS With Shadow Sensors Simulation</div>
-<nav id="nav-bar">
-  {% if session.get('logged_in') %}
-    <a href="/">Home</a>
-    <a href="/shadow-history">Why Shadow?</a>
-    <a href="/logout">Logout</a>
-  {% else %}
-    <a href="/login">Login</a>
-    <a href="/register">Register</a>
-  {% endif %}
-</nav>
-
+        <nav id="nav-bar">
+          {% if session.get('logged_in') %}
+            <a href="/">Home</a>
+            <a href="/shadow-history">Why Shadow?</a>
+            <a href="/logout">Logout</a>
+          {% else %}
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+          {% endif %}
+        </nav>
       </div>
     </header>
+
     <main>
       {% block content %}{% endblock %}
     </main>

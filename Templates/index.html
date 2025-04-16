@@ -16,8 +16,13 @@
     </div>
   </div>
 
-  <div id="map-container">
-    <div id="map"></div>
+  <div id="map-container" style="position: relative;">
+    <div id="map" style="height: 600px;"></div>
+
+    <!-- 2D/3D toggle button -->
+    <button class="toggle-button" onclick="toggleView()" style="position: absolute; top: 10px; right: 10px; z-index: 1;">
+      Toggle 2D/3D
+    </button>
 
     <div id="slider-container">
       <input type="range" id="time-slider" min="0" max="23" value="12" step="1">
