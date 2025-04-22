@@ -50,6 +50,27 @@ def get_historical_sensor_data():
         print(f"Error in get_historical_sensor_data: {str(e)}")
         raise RuntimeError("Failed to fetch historical data")
 
+# ===================== Weather API =====================
+import requests
+
+def get_weather():
+    api_key = "27b99d8bad72ab73a65e2b96ab43ec97"
+    lat, lon = 31.25181, 34.7913
+    try:
+        url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={api_key}&units=metric&lang=en"
+        response = requests.get(url)
+        data = response.json()
+        return {
+            "temperature": data["main"]["temp"],
+            "description": data["weather"][0]["description"],
+            "humidity": data["main"]["humidity"],
+            "wind": data["wind"]["speed"]
+        }
+    except Exception as e:
+        print("Weather API error:", e)
+        return {"error": "Failed to fetch weather data"}
+
+
 # ===================== Require Login for Protected Routes =====================
 @app.before_request
 def require_login():
@@ -94,6 +115,12 @@ def get_sensor_history():
         return jsonify(history), 200
     except Exception as e:
         return jsonify({"error": f"Failed to fetch historical data: {str(e)}"}), 500
+
+@app.route("/get-weather")
+def get_weather_route():
+    weather_data = get_weather()
+    return jsonify(weather_data)
+
 
 # ===================== User Registration & Login =====================
 

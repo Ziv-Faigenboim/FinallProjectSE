@@ -1,29 +1,88 @@
+
 {% extends "base.html" %}
 
 {% block title %}Sensor Map{% endblock %}
 
 {% block content %}
+<style>
+  .container {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  #info-panel {
+    flex: 1;
+    max-width: 400px;
+  }
+
+  #map-container {
+    flex: 2;
+    position: relative;
+  }
+
+  #map {
+    height: 600px;
+    border-radius: 10px;
+  }
+
+  #weather-box {
+    background-color: #e8f4ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  #sensor-data-container, #history-container {
+    margin-bottom: 20px;
+  }
+
+  #slider-container {
+    margin-top: 15px;
+  }
+
+  .button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+</style>
+
 <div class="container">
-  <div id="sensor-panel">
+  <div id="info-panel">
+    <div id="weather-box">
+      <h3>Weather around Sensor Location</h3>
+      <p><strong>Temperature:</strong> <span id="w-temp">--</span>°C</p>
+      <p><strong>Description:</strong> <span id="w-desc">--</span></p>
+      <p><strong>Humidity:</strong> <span id="w-humidity">--</span>%</p>
+      <p><strong>Wind:</strong> <span id="w-wind">--</span> km/h</p>
+    </div>
+
     <h2>Sensor Data</h2>
     <div id="sensor-data-container">
       <p>Click on the sensor marker on the map to load data.</p>
     </div>
+
     <button id="history-button" class="button">Show History</button>
-    <div id="history-container" style="display: none; margin-top: 20px;">
+    <div id="history-container" style="display: none;">
       <h3>Historical Data</h3>
       <ul id="history-list"></ul>
     </div>
   </div>
 
-  <div id="map-container" style="position: relative;">
-    <div id="map" style="height: 600px;"></div>
-
-    <!-- 2D/3D toggle button -->
+  <div id="map-container">
+    <div id="map"></div>
     <button class="toggle-button" onclick="toggleView()" style="position: absolute; top: 10px; right: 10px; z-index: 1;">
       Toggle 2D/3D
     </button>
-
     <div id="slider-container">
       <input type="range" id="time-slider" min="0" max="23" value="12" step="1">
       <div id="sun-icon">☀️</div>
@@ -36,9 +95,23 @@
   </div>
 </div>
 
-<!-- Load map logic -->
 <script src="/static/js/map.js"></script>
 <script>
+  // Load weather data
+  fetch("/get-weather")
+    .then(res => res.json())
+    .then(data => {
+      if (!data.error) {
+        document.getElementById("w-temp").textContent = data.temperature;
+        document.getElementById("w-desc").textContent = data.description;
+        document.getElementById("w-humidity").textContent = data.humidity;
+        document.getElementById("w-wind").textContent = data.wind;
+      } else {
+        document.getElementById("weather-box").innerHTML = "Error loading weather data.";
+      }
+    });
+
+  // Load sensor history
   document.getElementById('history-button').addEventListener('click', function () {
     const historyContainer = document.getElementById('history-container');
     const historyList = document.getElementById('history-list');
@@ -50,7 +123,7 @@
       fetch('/get-sensor-history')
         .then(response => response.json())
         .then(data => {
-          historyList.innerHTML = ''; // Clear old data
+          historyList.innerHTML = '';
           data.forEach(item => {
             const li = document.createElement('li');
             li.innerHTML = `

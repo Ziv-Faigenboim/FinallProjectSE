@@ -305,3 +305,28 @@ h2, h3 {
   border-radius: 3px;
   transform: translateX(-50%);
 }
+
+.weather-container {
+  background-color: #e8f4ff;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.weather-container h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.weather-container p {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.weather-container span {
+  font-weight: bold;
+}
