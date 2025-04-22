@@ -13,20 +13,38 @@
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
 
     <style>
+      body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: #f5f5f5;
+      }
+
+      header {
+        background-color: #2c3e50;
+        padding: 0.5rem 0;
+        color: white;
+      }
+
       .nav-container {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start; /* הכל מיושר שמאלה */
         align-items: center;
         padding: 0 1rem;
+        gap: 30px; /* רווח בין הכותרת לתפריט */
       }
+
       .nav-title {
         font-size: 1.4rem;
         font-weight: 500;
+        color: white;
+        white-space: nowrap;
       }
+
       #nav-bar {
         display: flex;
         gap: 15px;
       }
+
       #nav-bar a {
         color: white;
         text-decoration: none;
@@ -34,8 +52,13 @@
         font-weight: 400;
         transition: text-decoration 0.3s;
       }
+
       #nav-bar a:hover {
         text-decoration: underline;
+      }
+
+      main {
+        padding: 2rem;
       }
     </style>
   </head>
@@ -43,7 +66,7 @@
   <body>
     <header id="main-header">
       <div class="nav-container">
-        <div class="nav-title">GIS With Shadow Sensors Simulation</div>
+        <div class="nav-title">🌤️ GIS With Shadow Sensors Simulation</div>
         <nav id="nav-bar">
           {% if session.get('logged_in') %}
             <a href="/">Home</a>

@@ -121,6 +121,37 @@ def get_weather_route():
     weather_data = get_weather()
     return jsonify(weather_data)
 
+import csv
+from flask import Response
+
+@app.route("/export-csv")
+def export_csv():
+    try:
+        with open("readings.json", "r") as file:
+            data = json.load(file)
+            readings = data.get("data", {}).get("readings_data", [])
+
+        if not readings:
+            return "No sensor data available", 404
+
+        # Create CSV string
+        def generate():
+            header = ["Temperature", "Humidity", "Battery Level", "sample_time_utc"]
+            yield ",".join(header) + "\n"
+            for row in readings:
+                line = [
+                    str(row.get("Temperature", "")),
+                    str(row.get("Humidity", "")),
+                    str(row.get("Battery Level", "")),
+                    str(row.get("sample_time_utc", ""))
+                ]
+                yield ",".join(line) + "\n"
+
+        return Response(generate(), mimetype='text/csv',
+                        headers={"Content-Disposition": "attachment;filename=sensor_data.csv"})
+
+    except Exception as e:
+        return f"Error generating CSV: {str(e)}", 500
 
 # ===================== User Registration & Login =====================
 

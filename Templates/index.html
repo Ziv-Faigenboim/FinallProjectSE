@@ -72,6 +72,10 @@
     </div>
 
     <button id="history-button" class="button">Show History</button>
+    <a href="/export-csv" class="button" style="margin-top: 10px; display: inline-block;" download>
+    📥 Download CSV
+    </a>
+
     <div id="history-container" style="display: none;">
       <h3>Historical Data</h3>
       <ul id="history-list"></ul>
@@ -135,6 +139,17 @@
             historyList.appendChild(li);
           });
         });
+    }
+  });
+</script>
+<script>
+  // ☀️ Shadow slider functionality
+  document.getElementById("time-slider").addEventListener("input", function (e) {
+    const hour = parseInt(e.target.value);
+    const azimuth = 180 - ((hour / 24) * 360); // Simulated sun position
+    const position = [1.5, azimuth, 80]; // pitch, bearing, elevation
+    if (typeof map !== 'undefined' && map.setLight) {
+      map.setLight({ anchor: 'viewport', position: position, intensity: 0.8 });
     }
   });
 </script>
