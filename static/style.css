@@ -52,9 +52,8 @@ body {
   flex: 2 1 0;
   position: relative;
   height: 100%;           /* exactly the same height as its flex parent */
-  min-height: 0;          /* let it shrink if the window is small          */
+  min-height: 0;          /* let it shrink if the window is small */
 }
-
 
 #map {
   position: absolute;
@@ -65,19 +64,18 @@ body {
   border-radius: 10px;
 }
 
-
-
 #slider-container {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 15px 10px;
+  padding: 20px 10px;
   background-color: #ffffff;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-  z-index: 100;  /* הסרגל תמיד יהיה מעל המפה */
+  z-index: 100;
   box-sizing: border-box;
+  border-radius: 0 0 10px 10px;
 }
 
 #time-slider {
@@ -86,9 +84,17 @@ body {
   cursor: pointer;
   -webkit-appearance: none;
   appearance: none;
-  height: 8px;
-  background: #ddd;
-  border-radius: 5px;
+  height: 10px;
+  background: linear-gradient(90deg,
+    #0a1a2a 0%,    /* Night */
+    #5d88b2 20%,   /* Dawn */
+    #87ceeb 40%,   /* Morning */
+    #ffffff 50%,   /* Noon */
+    #87ceeb 60%,   /* Afternoon */
+    #5d88b2 80%,   /* Dusk */
+    #0a1a2a 100%   /* Night again */
+  );
+  border-radius: 10px;
   outline: none;
 }
 
@@ -97,29 +103,48 @@ body {
   appearance: none;
   width: 20px;
   height: 20px;
-  background: #007bff;
+  background: #fff;
+  border: 2px solid #ffb700;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(255, 183, 0, 0.5);
+}
+
+#time-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 2px solid #ffb700;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 183, 0, 0.5);
 }
 
 #sun-icon {
   position: absolute;
-  top: -35px;
+  top: -25px;
   font-size: 2rem;
   transition: left 0.1s ease-in-out;
   transform: translateX(-50%);
+  text-shadow: 0 0 15px rgba(255, 183, 0, 0.7);
+}
+
+#time-display {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 5px 0;
 }
 
 .time-labels {
   display: flex;
   justify-content: space-between;
-  margin-top: 5px;
-  font-size: 1rem;
+  width: 90%;
+  margin: 5px auto;
+  font-size: 14px;
   color: #555;
+  padding: 0 10px;
 }
-
-
 
 button {
   margin-top: 10px;
@@ -337,4 +362,23 @@ h2, h3 {
 
 .weather-container span {
   font-weight: bold;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  background-color: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.toggle-button:hover {
+  background-color: #0056b3;
 }

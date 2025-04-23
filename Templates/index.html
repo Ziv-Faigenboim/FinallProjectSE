@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 
 {% block title %}Sensor Map{% endblock %}
@@ -10,22 +9,27 @@
     flex-direction: row;
     padding: 20px;
     gap: 20px;
+    height: calc(100vh - 120px); /* Ensure container takes available height */
   }
 
   #info-panel {
     flex: 1;
     max-width: 400px;
+    overflow-y: auto;
   }
 
   #map-container {
     flex: 2;
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
-#map {
-  height: 100%;           /* or just delete the rule altogether            */
-  border-radius: 10px;
-}
+  #map {
+    flex: 1;
+    border-radius: 10px;
+    position: relative;
+  }
 
   #weather-box {
     background-color: #e8f4ff;
@@ -39,7 +43,13 @@
   }
 
   #slider-container {
-    margin-top: 15px;
+    position: relative;
+    width: 100%;
+    padding: 15px 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0 0 10px 10px;
+    z-index: 100;
+    margin-top: 10px;
   }
 
   .button {
@@ -53,6 +63,19 @@
 
   .button:hover {
     background-color: #0056b3;
+  }
+  
+  .toggle-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
   }
 </style>
 
@@ -84,7 +107,7 @@
 
   <div id="map-container">
     <div id="map"></div>
-    <button class="toggle-button" onclick="toggleView()" style="position: absolute; top: 10px; right: 10px; z-index: 1;">
+    <button class="toggle-button" onclick="toggleView()">
       Toggle 2D/3D
     </button>
     <div id="slider-container">
@@ -139,17 +162,6 @@
             historyList.appendChild(li);
           });
         });
-    }
-  });
-</script>
-<script>
-  // ☀️ Shadow slider functionality
-  document.getElementById("time-slider").addEventListener("input", function (e) {
-    const hour = parseInt(e.target.value);
-    const azimuth = 180 - ((hour / 24) * 360); // Simulated sun position
-    const position = [1.5, azimuth, 80]; // pitch, bearing, elevation
-    if (typeof map !== 'undefined' && map.setLight) {
-      map.setLight({ anchor: 'viewport', position: position, intensity: 0.8 });
     }
   });
 </script>

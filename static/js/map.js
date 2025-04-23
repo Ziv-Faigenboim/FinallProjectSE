@@ -4,7 +4,7 @@ let is3D = false;
 
 const map = new mapboxgl.Map({
   container: 'map',
-  style: 'mapbox://styles/mapbox/streets-v11',
+  style: 'mapbox://styles/mapbox/light-v11', // Using light style for better shadow visibility
   center: [34.7913, 31.2518],
   zoom: 15,
   pitch: 0,
@@ -12,6 +12,9 @@ const map = new mapboxgl.Map({
 });
 
 map.addControl(new mapboxgl.NavigationControl());
+
+// Initialize sun position based on slider
+let sunPosition = calculateSunPosition(12); // Default to noon
 
 map.on('load', () => {
   const layers = map.getStyle().layers;
@@ -23,29 +26,82 @@ map.on('load', () => {
     }
   }
 
+  // Add terrain source for shadow casting surfaces
+  map.addSource('mapbox-dem', {
+    'type': 'raster-dem',
+    'url': 'mapbox://mapbox.mapbox-terrain-dem-v1',
+    'tileSize': 512,
+    'maxzoom': 14
+  });
+
+  // Add terrain for shadows to cast onto
+  map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
+
+  // Set fog effect to enhance depth perception
+  map.setFog({
+    'range': [0.5, 10],
+    'color': '#f8f8f8',
+    'horizon-blend': 0.1
+  });
+
+  // Configure the light with shadows enabled
+  map.setLight({
+    anchor: 'viewport',
+    position: sunPosition,
+    color: '#ffffff',
+    intensity: 0.8
+  });
+
+  // Add 3D building layer with fixed consistent color
   map.addLayer({
-    id: '3d-buildings',
-    source: 'composite',
+    'id': '3d-buildings',
+    'source': 'composite',
     'source-layer': 'building',
-    filter: ['==', 'extrude', 'true'],
-    type: 'fill-extrusion',
-    minzoom: 15,
-    layout: { visibility: 'none' },
-    paint: {
-      'fill-extrusion-color': '#aaa',
+    'filter': ['==', 'extrude', 'true'],
+    'type': 'fill-extrusion',
+    'minzoom': 15,
+    'layout': {
+      'visibility': 'none'
+    },
+    'paint': {
+      // Fixed consistent color for buildings
+      'fill-extrusion-color': '#9E9E9E', // Medium gray that won't change with lighting
       'fill-extrusion-height': [
-        'interpolate', ['linear'], ['zoom'],
+        'interpolate',
+        ['linear'],
+        ['zoom'],
         15, 0,
         15.05, ['get', 'height']
       ],
       'fill-extrusion-base': [
-        'interpolate', ['linear'], ['zoom'],
+        'interpolate',
+        ['linear'],
+        ['zoom'],
         15, 0,
         15.05, ['get', 'min_height']
       ],
-      'fill-extrusion-opacity': 0.6
+      'fill-extrusion-opacity': 0.9,
+      // Improved shadow receiving properties
+      'fill-extrusion-ambient-occlusion-intensity': 0.7,
+      'fill-extrusion-ambient-occlusion-radius': 15
     }
   }, labelLayerId);
+
+  // Enhanced ground shadow layer with more pronounced shadows
+  map.addLayer({
+    'id': 'ground-shadow',
+    'type': 'fill',
+    'source': 'composite',
+    'source-layer': 'building',
+    'layout': {
+      'visibility': 'none'
+    },
+    'paint': {
+      'fill-color': '#000000',
+      'fill-opacity': 0.35, // Increased opacity for more pronounced shadows
+      'fill-translate': calculateShadowTranslation(12) // Default shadow position
+    }
+  }, '3d-buildings');
 
   // Add the sensor marker
   const marker = new mapboxgl.Marker()
@@ -101,26 +157,219 @@ function toggleView() {
     map.easeTo({ pitch: 0, bearing: 0, duration: 1000 });
     if (map.getLayer('3d-buildings')) {
       map.setLayoutProperty('3d-buildings', 'visibility', 'none');
+      map.setLayoutProperty('ground-shadow', 'visibility', 'none');
     }
     is3D = false;
   } else {
     map.easeTo({ pitch: 60, bearing: -17.6, duration: 1000 });
     if (map.getLayer('3d-buildings')) {
       map.setLayoutProperty('3d-buildings', 'visibility', 'visible');
+      map.setLayoutProperty('ground-shadow', 'visibility', 'visible');
     }
     is3D = true;
+
+    // Update shadows when switching to 3D
+    updateShadows();
   }
 }
 
-// Sun slider logic
+// Improved sun position calculation based on realistic solar position
+function calculateSunPosition(hour) {
+  // For simplicity, we can approximate the sun's position
+  // East at sunrise, South at noon, West at sunset
+
+  // Convert hour to radians (0-24 hours mapped to 0-2?)
+  const radians = (hour / 24) * 2 * Math.PI;
+
+  // Calculate sun's azimuth (horizontal angle)
+  // East at 6am (90°), South at noon (180°), West at 6pm (270°)
+  let azimuth;
+  if (hour < 6) {
+    // Before sunrise, position sun in east but below horizon
+    azimuth = 90;
+  } else if (hour < 12) {
+    // Morning: sun moves from east to south
+    azimuth = 90 + ((hour - 6) / 6) * 90;
+  } else if (hour < 18) {
+    // Afternoon: sun moves from south to west
+    azimuth = 180 + ((hour - 12) / 6) * 90;
+  } else {
+    // After sunset, position sun in west but below horizon
+    azimuth = 270;
+  }
+
+  // Calculate sun's elevation (vertical angle)
+  // Below horizon at night, rises to peak at noon, then sets
+  let elevation;
+  if (hour < 6 || hour > 18) {
+    // Sun is below horizon before 6am and after 6pm
+    elevation = -10;
+  } else {
+    // Sun rises, peaks at noon, then sets
+    // Using sin function to create a smooth arc
+    elevation = 80 * Math.sin(Math.PI * (hour - 6) / 12);
+  }
+
+  return [1.5, azimuth, elevation];
+}
+
+// Improved shadow translation calculation for more realistic shadows
+function calculateShadowTranslation(hour) {
+  // If it's night time, no shadows (return zero translation)
+  if (hour < 6 || hour > 18) {
+    return [0, 0];
+  }
+
+  // Calculate shadow direction (opposite to sun position)
+  const sunAzimuth = (hour < 12) ?
+    90 + ((hour - 6) / 6) * 90 :
+    180 + ((hour - 12) / 6) * 90;
+
+  // Convert to radians
+  const azimuthRad = (sunAzimuth * Math.PI) / 180;
+
+  // Calculate shadow length based on sun elevation
+  // Lower sun = longer shadows
+  let elevation;
+  if (hour < 6 || hour > 18) {
+    elevation = -10; // Below horizon
+  } else {
+    elevation = 80 * Math.sin(Math.PI * (hour - 6) / 12);
+  }
+
+  // Calculate shadow length - longer at sunrise/sunset, shortest at noon
+  const shadowLength = (90 - elevation) / 3;
+
+  // Calculate x and y translation - invert for proper shadow direction
+  const dx = Math.cos(azimuthRad) * shadowLength * -1;
+  const dy = Math.sin(azimuthRad) * shadowLength * -1;
+
+  return [dx, dy];
+}
+
+// Get sunlight color based on time of day (warmer at sunrise/sunset)
+function getSunlightColor(hour) {
+  // Night time - cooler blue light
+  if (hour < 6 || hour > 18) {
+    return '#102030'; // dark blue night light
+  }
+  // Dawn/dusk - orange/red light
+  else if (hour < 7 || hour > 17) {
+    return '#ff7b39'; // strong orange sunrise/sunset
+  }
+  // Early morning/late afternoon - warm light
+  else if (hour < 9 || hour > 15) {
+    return '#fff5e6'; // slightly warm light
+  }
+  // Midday - white light
+  else {
+    return '#ffffff'; // white daylight
+  }
+}
+
+// Get light intensity based on time of day
+function getSunlightIntensity(hour) {
+  // Night time - very low intensity
+  if (hour < 6 || hour > 18) {
+    return 0.2; // low light at night
+  }
+  // Dawn/dusk - medium-low intensity
+  else if (hour < 7 || hour > 17) {
+    return 0.4; // dawn/dusk
+  }
+  // Early morning/late afternoon - medium intensity
+  else if (hour < 8 || hour > 16) {
+    return 0.6; // morning/evening
+  }
+  // Midday - highest intensity
+  else {
+    return 0.8; // bright midday
+  }
+}
+
+// Update shadows based on current time slider position
+function updateShadows() {
+  const hour = parseInt(document.getElementById('time-slider').value);
+
+  // Check if it's night time (before sunrise or after sunset)
+  const isNightTime = hour < 6 || hour > 18;
+
+  if (map.loaded()) {
+    // Update the light source
+    sunPosition = calculateSunPosition(hour);
+    map.setLight({
+      anchor: 'viewport',
+      position: sunPosition,
+      color: getSunlightColor(hour),
+      intensity: getSunlightIntensity(hour)
+    });
+
+    // Update shadow handling
+    if (map.getLayer('ground-shadow')) {
+      if (isNightTime) {
+        // Hide shadows completely at night
+        map.setPaintProperty('ground-shadow', 'fill-opacity', 0);
+      } else {
+        // Calculate and update shadow position
+        const shadowTranslation = calculateShadowTranslation(hour);
+        map.setPaintProperty('ground-shadow', 'fill-translate', shadowTranslation);
+
+        // Adjust shadow opacity based on time of day
+        let shadowOpacity;
+        if (hour >= 10 && hour <= 14) {
+          shadowOpacity = 0.45; // stronger shadows at midday
+        } else if (hour < 7 || hour > 17) {
+          shadowOpacity = 0.25; // fainter shadows at dawn/dusk
+        } else {
+          shadowOpacity = 0.35; // normal shadows during day
+        }
+        map.setPaintProperty('ground-shadow', 'fill-opacity', shadowOpacity);
+      }
+    }
+  }
+}
+
+// Slider and time display logic
 document.addEventListener('DOMContentLoaded', () => {
   const slider = document.getElementById('time-slider');
   const sunIcon = document.getElementById('sun-icon');
+  const timeLabels = document.querySelector('.time-labels');
+
   if (slider && sunIcon) {
-    slider.addEventListener('input', function () {
-      const value = slider.value;
-      const percent = (value / 23) * 100;
+    // Create time display element
+    const timeDisplay = document.createElement('div');
+    timeDisplay.id = 'time-display';
+    timeDisplay.style.textAlign = 'center';
+    timeDisplay.style.marginTop = '5px';
+    timeDisplay.style.fontWeight = 'bold';
+    timeDisplay.style.fontSize = '16px';
+
+    // Add time display below the slider
+    const sliderContainer = document.getElementById('slider-container');
+    sliderContainer.insertBefore(timeDisplay, timeLabels);
+
+    // Update time display and sun position when slider changes
+    slider.addEventListener('input', function() {
+      const hour = parseInt(slider.value);
+      const formattedHour = hour.toString().padStart(2, '0') + ':00';
+      timeDisplay.textContent = formattedHour;
+
+      // Update sun icon position
+      const percent = (hour / 23) * 100;
       sunIcon.style.left = percent + '%';
+
+      // Update shadows
+      updateShadows();
     });
+
+    // Initialize with default time
+    const initialHour = parseInt(slider.value);
+    const formattedInitialHour = initialHour.toString().padStart(2, '0') + ':00';
+    timeDisplay.textContent = formattedInitialHour;
+
+    // Initialize shadows with default slider value
+    setTimeout(() => {
+      updateShadows();
+    }, 1000); // Small delay to ensure map is fully loaded
   }
 });
