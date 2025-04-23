@@ -136,7 +136,7 @@ map.on('load', () => {
       const container = document.getElementById('sensor-data-container');
       container.innerHTML = `
         <h3>Live Sensor Readings</h3>
-        <p><strong>Temperature:</strong> ${temp.toFixed(1)}�C</p>
+        <p><strong>Temperature:</strong> ${temp.toFixed(1)}�C</p>
         <p><strong>Humidity:</strong> ${humidity.toFixed(1)}%</p>
         <p><strong>Battery:</strong> ${battery}%</p>
         <p><strong>Sample Time:</strong> ${time}</p>
@@ -175,74 +175,53 @@ function toggleView() {
 
 // Improved sun position calculation based on realistic solar position
 function calculateSunPosition(hour) {
-  // For simplicity, we can approximate the sun's position
-  // East at sunrise, South at noon, West at sunset
-
-  // Convert hour to radians (0-24 hours mapped to 0-2?)
-  const radians = (hour / 24) * 2 * Math.PI;
-
-  // Calculate sun's azimuth (horizontal angle)
-  // East at 6am (90�), South at noon (180�), West at 6pm (270�)
-  let azimuth;
-  if (hour < 6) {
-    // Before sunrise, position sun in east but below horizon
-    azimuth = 90;
-  } else if (hour < 12) {
-    // Morning: sun moves from east to south
-    azimuth = 90 + ((hour - 6) / 6) * 90;
-  } else if (hour < 18) {
-    // Afternoon: sun moves from south to west
-    azimuth = 180 + ((hour - 12) / 6) * 90;
-  } else {
-    // After sunset, position sun in west but below horizon
-    azimuth = 270;
-  }
-
-  // Calculate sun's elevation (vertical angle)
-  // Below horizon at night, rises to peak at noon, then sets
-  let elevation;
+  // If it's night time, position sun below horizon
   if (hour < 6 || hour > 18) {
-    // Sun is below horizon before 6am and after 6pm
-    elevation = -10;
-  } else {
-    // Sun rises, peaks at noon, then sets
-    // Using sin function to create a smooth arc
-    elevation = 80 * Math.sin(Math.PI * (hour - 6) / 12);
+    return [1, hour < 6 ? 0 : 180, -10];
   }
 
-  return [1.5, azimuth, elevation];
+  // Calculate relative time through the day (0 at sunrise, 1 at sunset)
+  const dayProgress = (hour - 6) / 12;
+
+  // Calculate azimuth
+  // Sunrise: 0° (East)
+  // Solar noon: 90° (South)
+  // Sunset: 180° (West)
+  const azimuth = dayProgress * 180;
+
+  // Calculate elevation (max 60° at solar noon)
+  const elevation = 60 * Math.sin(Math.PI * dayProgress);
+
+  return [1, azimuth, elevation];
 }
 
 // Improved shadow translation calculation for more realistic shadows
 function calculateShadowTranslation(hour) {
-  // If it's night time, no shadows (return zero translation)
+  // If it's night time, no shadows
   if (hour < 6 || hour > 18) {
     return [0, 0];
   }
 
-  // Calculate shadow direction (opposite to sun position)
-  const sunAzimuth = (hour < 12) ?
-    90 + ((hour - 6) / 6) * 90 :
-    180 + ((hour - 12) / 6) * 90;
+  // Calculate relative time through the day (0 at sunrise, 1 at sunset)
+  const dayProgress = (hour - 6) / 12;
+
+  // Calculate sun's azimuth (0° = East, 90° = South, 180° = West)
+  const sunAzimuth = dayProgress * 180;
 
   // Convert to radians
   const azimuthRad = (sunAzimuth * Math.PI) / 180;
 
-  // Calculate shadow length based on sun elevation
-  // Lower sun = longer shadows
-  let elevation;
-  if (hour < 6 || hour > 18) {
-    elevation = -10; // Below horizon
-  } else {
-    elevation = 80 * Math.sin(Math.PI * (hour - 6) / 12);
-  }
+  // Calculate shadow length - longer at sunrise/sunset, shorter at noon
+  const baseLength = 15;
+  const extraLength = 25 * (1 - Math.sin(Math.PI * dayProgress));
+  const shadowLength = baseLength + extraLength;
 
-  // Calculate shadow length - longer at sunrise/sunset, shortest at noon
-  const shadowLength = (90 - elevation) / 3;
-
-  // Calculate x and y translation - invert for proper shadow direction
-  const dx = Math.cos(azimuthRad) * shadowLength * -1;
-  const dy = Math.sin(azimuthRad) * shadowLength * -1;
+  // Calculate x and y translation
+  // At sunrise (0°): shadows point left (-x)
+  // At noon (90°): shadows point up (-y)
+  // At sunset (180°): shadows point right (+x)
+  const dx = -Math.cos(azimuthRad) * shadowLength;
+  const dy = -Math.sin(azimuthRad) * shadowLength;
 
   return [dx, dy];
 }
@@ -290,15 +269,13 @@ function getSunlightIntensity(hour) {
 // Update shadows based on current time slider position
 function updateShadows() {
   const hour = parseInt(document.getElementById('time-slider').value);
-
-  // Check if it's night time (before sunrise or after sunset)
   const isNightTime = hour < 6 || hour > 18;
 
   if (map.loaded()) {
     // Update the light source
     sunPosition = calculateSunPosition(hour);
     map.setLight({
-      anchor: 'viewport',
+      anchor: 'map',
       position: sunPosition,
       color: getSunlightColor(hour),
       intensity: getSunlightIntensity(hour)
@@ -307,21 +284,19 @@ function updateShadows() {
     // Update shadow handling
     if (map.getLayer('ground-shadow')) {
       if (isNightTime) {
-        // Hide shadows completely at night
         map.setPaintProperty('ground-shadow', 'fill-opacity', 0);
       } else {
-        // Calculate and update shadow position
         const shadowTranslation = calculateShadowTranslation(hour);
         map.setPaintProperty('ground-shadow', 'fill-translate', shadowTranslation);
 
         // Adjust shadow opacity based on time of day
         let shadowOpacity;
         if (hour >= 10 && hour <= 14) {
-          shadowOpacity = 0.45; // stronger shadows at midday
+          shadowOpacity = 0.7; // stronger shadows at midday
         } else if (hour < 7 || hour > 17) {
-          shadowOpacity = 0.25; // fainter shadows at dawn/dusk
+          shadowOpacity = 0.5; // medium shadows at dawn/dusk
         } else {
-          shadowOpacity = 0.35; // normal shadows during day
+          shadowOpacity = 0.6; // normal shadows during day
         }
         map.setPaintProperty('ground-shadow', 'fill-opacity', shadowOpacity);
       }
