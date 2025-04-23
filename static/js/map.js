@@ -4,7 +4,7 @@ let is3D = false;
 
 const map = new mapboxgl.Map({
   container: 'map',
-  style: 'mapbox://styles/mapbox/light-v11', // Using light style for better shadow visibility
+  style: 'mapbox://styles/mapbox/streets-v11', // Using light style for better shadow visibility
   center: [34.7913, 31.2518],
   zoom: 15,
   pitch: 0,
