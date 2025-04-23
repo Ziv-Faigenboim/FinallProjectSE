@@ -125,8 +125,8 @@ def main():
     password = "123456"
 
     mac_addresses = ["C4:45:5E:64:F9:3E"]
-    start_date = "2025-04-16T00:00:00.000Z"
-    end_date = "2025-04-16T23:59:59.000Z"
+    start_date = "2025-04-18T00:00:00.000Z"
+    end_date = "2025-04-18T23:59:59.000Z"
     sensor_data_collection = get_db_collection(DBCollections.radiationsensor)
 
     print("Connected to collection:", sensor_data_collection.full_name)
