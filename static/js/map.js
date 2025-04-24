@@ -312,7 +312,7 @@ function updateShadows() {
 document.addEventListener('DOMContentLoaded', () => {
   const slider = document.getElementById('time-slider');
   const sunIcon = document.getElementById('sun-icon');
-  const timeLabels = document.querySelector('.time-labels');
+  const sliderContainer = document.getElementById('slider-container');
 
   if (slider && sunIcon) {
     // Create time display element
@@ -324,8 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
     timeDisplay.style.fontSize = '16px';
 
     // Add time display below the slider
-    const sliderContainer = document.getElementById('slider-container');
-    sliderContainer.insertBefore(timeDisplay, timeLabels);
+    sliderContainer.appendChild(timeDisplay);
 
     // Update time display and sun position when slider changes
     slider.addEventListener('input', function() {
@@ -345,6 +344,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const initialHour = parseInt(slider.value);
     const formattedInitialHour = initialHour.toString().padStart(2, '0') + ':00';
     timeDisplay.textContent = formattedInitialHour;
+
+    // Position sun icon correctly on page load
+    const initialPercent = (initialHour / 23) * 100;
+    sunIcon.style.left = initialPercent + '%';
+
+    // Create and position morning and evening time indicators
+    const createTimeLabel = (id, text, leftPos) => {
+      const label = document.createElement('div');
+      label.id = id;
+      label.textContent = text;
+      label.style.position = 'absolute';
+      label.style.bottom = '5px';
+      label.style.left = leftPos;
+      label.style.fontSize = '14px';
+      label.style.fontWeight = 'bold';
+      sliderContainer.appendChild(label);
+    };
+    
+    createTimeLabel('morning-label', '6 AM', '10px');
+    createTimeLabel('evening-label', '6 PM', 'calc(100% - 40px)');
 
     // Initialize shadows with default slider value
     setTimeout(() => {

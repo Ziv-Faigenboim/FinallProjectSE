@@ -140,6 +140,10 @@ body {
   box-shadow: 0 0 10px rgba(255, 183, 0, 0.5);
 }
 
+#morning-label, #evening-label {
+  color: #666;
+}
+
 #sun-icon {
   position: absolute;
   top: -25px;
@@ -147,6 +151,7 @@ body {
   transition: left 0.1s ease-in-out;
   transform: translateX(-50%);
   text-shadow: 0 0 15px rgba(255, 183, 0, 0.7);
+  z-index: 10;
 }
 
 #time-display {
