@@ -10,49 +10,70 @@ body {
 
 #main-header {
   width: 100%;
-  background-color: #007bff;
+  background-color: #48b4e0;
   color: white;
-  text-align: center;
+  text-align: left;
   padding: 0.5rem 0;
   font-size: 1.4rem;
   font-weight: 500;
 }
 
-#nav-bar {
-  margin-top: 0.25rem;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-#nav-bar a {
-  margin: 0 10px;
+.nav-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: white;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.right-nav a {
   color: white;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 400;
 }
 
-#nav-bar a:hover {
+.right-nav a:hover {
   text-decoration: underline;
+}
+
+/* Remove the old nav-bar styles */
+#nav-bar {
+  display: none;
 }
 
 .container {
   display: flex;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 60px);
+  padding: 0;
 }
 
-#sensor-panel {
-  width: 30%;
-  padding: 1.5rem;
-  border-right: 1px solid #e0e0e0;
+#info-panel {
+  width: 350px;
+  padding: 1rem;
   background: #ffffff;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
 }
 
 #map-container {
-  flex: 2 1 0;
+  flex: 1;
   position: relative;
-  height: 100%;           /* exactly the same height as its flex parent */
-  min-height: 0;          /* let it shrink if the window is small */
+  height: 100%;
+  min-height: 0;
 }
 
 #map {
@@ -61,7 +82,6 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  border-radius: 10px;
 }
 
 #slider-container {
@@ -148,20 +168,19 @@ body {
 
 button {
   margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #007bff;
+  padding: 10px 15px;
+  background-color: #48b4e0;
   color: white;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
+  background-color: #3a91b5;
 }
 
 #history-container {
@@ -369,7 +388,7 @@ h2, h3 {
   top: 10px;
   right: 10px;
   z-index: 1000;
-  background-color: #007bff;
+  background-color: #48b4e0;
   color: white;
   padding: 8px 12px;
   border: none;
@@ -380,5 +399,20 @@ h2, h3 {
 }
 
 .toggle-button:hover {
-  background-color: #0056b3;
+  background-color: #3a91b5;
+}
+
+#weather-box {
+  background-color: white;
+  padding: 15px;
+  border-radius: 0;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #48b4e0;
+  color: white;
+  display: inline-block;
+  margin-right: 10px;
+  text-decoration: none;
 }
