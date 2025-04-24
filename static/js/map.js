@@ -112,18 +112,22 @@ map.on('load', () => {
     try {
       const response = await fetch('/get-sensor-data');
       const data = await response.json();
-      const temp = data.temperature;
-      const humidity = data.humidity;
-      const battery = data.battery;
-      const time = data.sample_time;
-      const quality = Math.min(100, Math.max(0, (humidity * 0.6 + (30 - temp) * 2)));
+      
+      // Extract data from the response based on your JSON structure
+      const temp = data.Temperature || data.temperature;
+      const humidity = data.Humidity || data.humidity;
+      const battery = data.battery || data["Battery Level"];
+      const time = data.sample_time || data.sample_time_utc;
+      
+      // Calculate comfort level based on temperature and humidity
+      const comfort = calculateComfortLevel(temp, humidity);
 
       const popupContent = `
         <div>
-          <strong>Shadow Quality</strong><br>
+          <strong>Comfort Level</strong><br>
           <div class="gradient-meter">
             <div class="gradient-bar"></div>
-            <div class="meter-indicator" style="left: ${quality}%;"></div>
+            <div class="meter-indicator" style="left: ${comfort}%;"></div>
           </div>
         </div>
       `;
@@ -136,14 +140,14 @@ map.on('load', () => {
       const container = document.getElementById('sensor-data-container');
       container.innerHTML = `
         <h3>Live Sensor Readings</h3>
-        <p><strong>Temperature:</strong> ${temp.toFixed(1)}�C</p>
+        <p><strong>Temperature:</strong> ${temp.toFixed(1)}°C</p>
         <p><strong>Humidity:</strong> ${humidity.toFixed(1)}%</p>
         <p><strong>Battery:</strong> ${battery}%</p>
         <p><strong>Sample Time:</strong> ${time}</p>
-        <p><strong>Shadow Quality:</strong></p>
+        <p><strong>Comfort Level:</strong></p>
         <div class="gradient-meter">
           <div class="gradient-bar"></div>
-          <div class="meter-indicator" style="left: ${quality}%;"></div>
+          <div class="meter-indicator" style="left: ${comfort}%;"></div>
         </div>
       `;
     } catch (err) {
@@ -348,3 +352,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1000); // Small delay to ensure map is fully loaded
   }
 });
+
+// Calculate comfort level based on temperature and humidity
+function calculateComfortLevel(temp, humidity) {
+  // Simple comfort calculation based on ideal temperature of 22°C and humidity of 60%
+  const comfort = 100 - Math.abs(22 - temp) * 2 - Math.abs(60 - humidity) * 0.5;
+  return Math.max(0, Math.min(100, comfort));
+}
