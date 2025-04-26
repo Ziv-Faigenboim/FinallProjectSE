@@ -151,20 +151,43 @@
     historyContainer.style.display = historyContainer.style.display === 'none' ? 'block' : 'none';
 
     if (historyContainer.style.display === 'block') {
+      // Show loading message
+      historyList.innerHTML = '<li>Loading sensor history...</li>';
+      
       fetch('/get-sensor-history')
-        .then(response => response.json())
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`Server returned ${response.status}: ${response.statusText}`);
+          }
+          return response.json();
+        })
         .then(data => {
+          if (!data || data.length === 0) {
+            historyList.innerHTML = '<li>No historical data available</li>';
+            return;
+          }
+          
           historyList.innerHTML = '';
           data.forEach(item => {
+            // Add safety checks for all values
+            const temp = item.temperature || item.Temperature || 'N/A';
+            const humidity = item.humidity || item.Humidity || 'N/A';
+            const battery = item.battery || item.BatteryLevel || item['Battery Level'] || 'N/A';
+            const time = item.sample_time || item.sample_time_utc || 'N/A';
+            
             const li = document.createElement('li');
             li.innerHTML = `
-              <strong>Temperature:</strong> ${item.temperature} °C<br>
-              <strong>Humidity:</strong> ${item.humidity} %<br>
-              <strong>Battery:</strong> ${item.battery} %<br>
-              <strong>Time:</strong> ${item.sample_time}
+              <strong>Temperature:</strong> ${temp} °C<br>
+              <strong>Humidity:</strong> ${humidity} %<br>
+              <strong>Battery:</strong> ${battery} %<br>
+              <strong>Time:</strong> ${time}
             `;
             historyList.appendChild(li);
           });
+        })
+        .catch(error => {
+          console.error('Error fetching history:', error);
+          historyList.innerHTML = `<li class="error">Error loading history: ${error.message}</li>`;
         });
     }
   });

@@ -114,13 +114,14 @@ map.on('load', () => {
       const data = await response.json();
       
       // Extract data from the response based on your JSON structure
-      const temp = data.Temperature || data.temperature;
-      const humidity = data.Humidity || data.humidity;
-      const battery = data.battery || data["Battery Level"];
-      const time = data.sample_time || data.sample_time_utc;
+      // Add safety checks to ensure values are numbers before using toFixed()
+      const temp = data.Temperature || data.temperature || 0;
+      const humidity = data.Humidity || data.humidity || 0;
+      const battery = data.battery || data["Battery Level"] || data.BatteryLevel || 0;
+      const time = data.sample_time || data.sample_time_utc || new Date().toISOString();
       
       // Calculate comfort level based on temperature and humidity
-      const comfort = calculateComfortLevel(temp, humidity);
+      const comfort = calculateComfortLevel(Number(temp), Number(humidity));
 
       const popupContent = `
         <div>
@@ -140,9 +141,9 @@ map.on('load', () => {
       const container = document.getElementById('sensor-data-container');
       container.innerHTML = `
         <h3>Live Sensor Readings</h3>
-        <p><strong>Temperature:</strong> ${temp.toFixed(1)}°C</p>
-        <p><strong>Humidity:</strong> ${humidity.toFixed(1)}%</p>
-        <p><strong>Battery:</strong> ${battery}%</p>
+        <p><strong>Temperature:</strong> ${parseFloat(temp).toFixed(1)}°C</p>
+        <p><strong>Humidity:</strong> ${parseFloat(humidity).toFixed(1)}%</p>
+        <p><strong>Battery:</strong> ${parseFloat(battery).toFixed(0)}%</p>
         <p><strong>Sample Time:</strong> ${time}</p>
         <p><strong>Comfort Level:</strong></p>
         <div class="gradient-meter">
@@ -152,6 +153,13 @@ map.on('load', () => {
       `;
     } catch (err) {
       console.error('Error fetching sensor data:', err);
+      // Display error message in sensor data container
+      const container = document.getElementById('sensor-data-container');
+      container.innerHTML = `
+        <h3>Error Loading Sensor Data</h3>
+        <p>Could not load the latest sensor data. Please try again later.</p>
+        <p>Error details: ${err.message}</p>
+      `;
     }
   });
 });
