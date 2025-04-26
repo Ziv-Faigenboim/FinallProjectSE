@@ -110,17 +110,19 @@ map.on('load', () => {
 
   marker.getElement().addEventListener('click', async () => {
     try {
+      // Fetch sensor data (which now includes radiation)
       const response = await fetch('/get-sensor-data');
       const data = await response.json();
       
-      // Extract data from the response based on your JSON structure
-      const temp = data.Temperature || data.temperature;
-      const humidity = data.Humidity || data.humidity;
-      const battery = data.battery || data["Battery Level"];
-      const time = data.sample_time || data.sample_time_utc;
+      // Extract data from the response
+      const temp = data.temperature !== undefined ? data.temperature : "N/A";
+      const humidity = data.humidity !== undefined ? data.humidity : "N/A";
+      const battery = data.battery !== undefined ? data.battery : "N/A";
+      const radiation = data.radiation !== undefined ? data.radiation : "N/A";
+      const time = data.sample_time || "N/A";
       
-      // Calculate comfort level based on temperature and humidity
-      const comfort = calculateComfortLevel(temp, humidity);
+      // Calculate comfort level based on temperature, humidity, and radiation
+      const comfort = calculateComfortLevel(temp, humidity, radiation);
 
       const popupContent = `
         <div>
@@ -140,9 +142,10 @@ map.on('load', () => {
       const container = document.getElementById('sensor-data-container');
       container.innerHTML = `
         <h3>Live Sensor Readings</h3>
-        <p><strong>Temperature:</strong> ${temp.toFixed(1)}°C</p>
-        <p><strong>Humidity:</strong> ${humidity.toFixed(1)}%</p>
+        <p><strong>Temperature:</strong> ${typeof temp === 'number' ? temp.toFixed(1) : temp}°C</p>
+        <p><strong>Humidity:</strong> ${typeof humidity === 'number' ? humidity.toFixed(1) : humidity}%</p>
         <p><strong>Battery:</strong> ${battery}%</p>
+        <p><strong>Radiation:</strong> ${typeof radiation === 'number' ? radiation.toFixed(2) : radiation}</p>
         <p><strong>Sample Time:</strong> ${time}</p>
         <p><strong>Comfort Level:</strong></p>
         <div class="gradient-meter">
@@ -372,9 +375,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Calculate comfort level based on temperature and humidity
-function calculateComfortLevel(temp, humidity) {
-  // Simple comfort calculation based on ideal temperature of 22°C and humidity of 60%
-  const comfort = 100 - Math.abs(22 - temp) * 2 - Math.abs(60 - humidity) * 0.5;
+// Calculate comfort level based on temperature, humidity, and radiation
+function calculateComfortLevel(temp, humidity, radiation) {
+  // Base comfort calculation based on ideal temperature of 22°C and humidity of 60%
+  let comfort = 100 - Math.abs(22 - temp) * 2 - Math.abs(60 - humidity) * 0.5;
+  
+  // Include radiation in comfort calculation if available
+  if (radiation && typeof radiation === 'number') {
+    // Reduce comfort by 1 point for each unit of radiation above the safe threshold
+    const safeRadiationThreshold = 0.5; // Example threshold
+    if (radiation > safeRadiationThreshold) {
+      comfort -= (radiation - safeRadiationThreshold) * 10;
+    }
+  }
+  
   return Math.max(0, Math.min(100, comfort));
 }

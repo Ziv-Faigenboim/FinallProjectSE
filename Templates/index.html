@@ -47,6 +47,33 @@
     margin-bottom: 20px;
   }
 
+  .gradient-meter {
+    width: 100%;
+    height: 20px;
+    position: relative;
+    margin: 10px 0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .gradient-bar {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #ff0000, #ffff00, #00ff00);
+    position: absolute;
+  }
+  
+  .meter-indicator {
+    width: 6px;
+    height: 24px;
+    background-color: #ffffff;
+    border: 2px solid #333333;
+    position: absolute;
+    top: -2px;
+    border-radius: 2px;
+    transform: translateX(-50%);
+  }
+
   #slider-container {
     position: relative;
     width: 100%;
@@ -161,6 +188,7 @@
               <strong>Temperature:</strong> ${item.temperature} °C<br>
               <strong>Humidity:</strong> ${item.humidity} %<br>
               <strong>Battery:</strong> ${item.battery} %<br>
+              <strong>Radiation:</strong> ${item.radiation || 'N/A'}<br>
               <strong>Time:</strong> ${item.sample_time}
             `;
             historyList.appendChild(li);
