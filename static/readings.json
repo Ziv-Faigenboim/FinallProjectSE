@@ -1,45 +1,12 @@
-{
-  "code": 200,
-  "message": "",
-  "data": {
-    "readings_data": [
-      {
-        "Temperature": 20.0,
-        "Humidity": 40.0,
-        "Battery Level": 100.0,
-        "BatteryLevel": 100.0,
-        "sample_time_utc": "2025-04-26T11:44:45.000Z"
-      },
-      {
-        "Temperature": 20.5,
-        "Humidity": 42.0,
-        "Battery Level": 99.0,
-        "BatteryLevel": 99.0,
-        "sample_time_utc": "2025-04-26T10:44:45.000Z"
-      },
-      {
-        "Temperature": 21.0,
-        "Humidity": 44.0,
-        "Battery Level": 98.0,
-        "BatteryLevel": 98.0,
-        "sample_time_utc": "2025-04-26T09:44:45.000Z"
-      },
-      {
-        "Temperature": 21.5,
-        "Humidity": 46.0,
-        "Battery Level": 97.0,
-        "BatteryLevel": 97.0,
-        "sample_time_utc": "2025-04-26T08:44:45.000Z"
-      },
-      {
-        "Temperature": 22.0,
-        "Humidity": 48.0,
-        "Battery Level": 96.0,
-        "BatteryLevel": 96.0,
-        "sample_time_utc": "2025-04-26T07:44:45.000Z"
-      }
-    ],
-    "pageCount": 1,
-    "totalCount": 5
+[
+  {
+    "timestamp": "2025-04-26 16:13:57",
+    "Temperature": 22.5,
+    "Humidity": 45,
+    "CO": 0.2,
+    "CH4": 0.1,
+    "Distance": 150,
+    "Gas": 25,
+    "source": "sample_data"
   }
-}
+]

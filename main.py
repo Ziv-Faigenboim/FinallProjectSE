@@ -7,170 +7,127 @@ import os
 import subprocess
 import threading
 from datetime import datetime, timedelta
+import time
+import traceback
+from dotenv import load_dotenv
+
+# Import updated functions from main_sensor
+import main_sensor
 
 app = Flask(__name__)
 app.secret_key = "your_secret_key"  # Needed for session and flashing messages
 
-# MongoDB's collection for users
+# Try to get database collections
 users_col = get_db_collection(DBCollections.users)
+sensor_data_col = get_db_collection(DBCollections.sensor_data)
+
+# File path for sensor data cache 
+READINGS_JSON_PATH = "static/readings.json"
 
 # ===================== Auto-update readings.json with main_sensor data =====================
 def update_readings_json():
     """
-    Runs main_sensor.py and saves the latest data to readings.json 
+    Gets data directly from MongoDB sensor_data collection and saves it to readings.json.
+    Falls back to local backup if MongoDB is unavailable.
     """
     try:
-        print("Fetching latest sensor data...")
+        # Check if we have a valid MongoDB connection
+        if sensor_data_col is None:
+            print("MongoDB connection is not available, using local backup or sample data")
+            # Try to use main_sensor's update_readings_json with its local backup
+            main_sensor.update_readings_json()
+            
+            # Check if readings.json was created by main_sensor
+            if os.path.exists(READINGS_JSON_PATH):
+                with open(READINGS_JSON_PATH, "r") as f:
+                    data = json.load(f)
+                    if data:
+                        print(f"Successfully used local backup via main_sensor module")
+                        return data
+            
+            # If not, generate sample data as last resort
+            return generate_sample_data()
         
-        # Import the main function from main_sensor to run it directly
-        import main_sensor
-        import sys
-        import io
-        
-        # Capture any output that main_sensor.py would print to console
-        original_stdout = sys.stdout
-        captured_output = io.StringIO()
-        sys.stdout = captured_output
+        print("Getting sensor data from MongoDB collection...")
+        test_data = None
         
         try:
-            # Run main_sensor's main function directly to get latest data
-            main_sensor.main()
+            # Try to query MongoDB
+            test_data = sensor_data_col.find().sort("timestamp", -1).limit(100)
+            test_data = list(test_data)
             
-            # Get output back
-            sys.stdout = original_stdout
-            output = captured_output.getvalue()
-            print("Output from main_sensor.py:")
-            print(output)
-        except Exception as e:
-            sys.stdout = original_stdout
-            print(f"Error running main_sensor.main(): {e}")
-        
-        # Now get data from the MongoDB collection that main_sensor.py would have updated
-        from db.db_collections import DBCollections
-        from db.connection import get_db_collection
-        
-        # Get the collection main_sensor.py uses
-        sensor_data_collection = get_db_collection(DBCollections.sensor_data)
-        
-        # Get all data from that collection (up to 100 entries)
-        mongo_data = list(sensor_data_collection.find().sort("_id", -1).limit(100))
-        
-        # Format the data to match the expected structure
-        formatted_data = {
-            "code": 200,
-            "message": "",
-            "data": {
-                "readings_data": [],
-                "pageCount": 1,
-                "totalCount": len(mongo_data)
-            }
-        }
-        
-        # Find the full response object (has data.readings_data structure)
-        full_response = None
-        individual_readings = []
-        
-        for doc in mongo_data:
-            # Skip _id field which isn't JSON serializable
-            if '_id' in doc:
-                doc.pop('_id')
+            if not test_data:
+                print("No data found in MongoDB collection, trying local backup")
+                main_sensor.update_readings_json()
                 
-            # Check if this is the full API response with readings_data
-            if "data" in doc and "readings_data" in doc["data"]:
-                full_response = doc
-            else:
-                # This is an individual reading
-                individual_readings.append(doc)
-        
-        # Use the full response if found, otherwise construct from individual readings
-        if full_response:
-            formatted_data = full_response
-            print(f"Using full response with {len(formatted_data['data']['readings_data'])} readings")
-        else:
-            formatted_data["data"]["readings_data"] = individual_readings
-            print(f"Constructed from {len(individual_readings)} individual readings")
-        
-        # If no data was found in MongoDB, use a fixed date that we know has data
-        if not formatted_data["data"]["readings_data"]:
-            print("No data found in MongoDB. Using API to fetch known data...")
+                # Check if readings.json was created successfully
+                if os.path.exists(READINGS_JSON_PATH):
+                    with open(READINGS_JSON_PATH, "r") as f:
+                        data = json.load(f)
+                        if data:
+                            return data
+                
+                # Last resort - generate sample data
+                return generate_sample_data()
+                    
+            # Convert MongoDB ObjectId to string for JSON serialization
+            for item in test_data:
+                if '_id' in item:
+                    item['_id'] = str(item['_id'])
+                    
+            # Write data to readings.json
+            with open(READINGS_JSON_PATH, "w") as f:
+                json.dump(test_data, f, indent=2)
+                
+            print(f"Updated {READINGS_JSON_PATH} with {len(test_data)} records from MongoDB")
+            return test_data
             
-            from main_sensor import get_access_token, get_sensor_readings
+        except Exception as e:
+            print(f"Error getting data from MongoDB: {e}")
+            traceback.print_exc()
             
-            # Use the same credentials as in main_sensor.py
-            email = "sce@atomation.net"
-            password = "123456"
-            mac_addresses = ["D2:34:24:34:68:70"]
+            # Try to use main_sensor's update_readings_json with its local backup
+            main_sensor.update_readings_json()
             
-            # Use today's date
-            today = datetime.utcnow()
-            start_date = today.strftime("%Y-%m-%dT00:00:00.000Z") 
-            end_date = today.strftime("%Y-%m-%dT23:59:59.000Z")
+            # Check if readings.json was created by main_sensor
+            if os.path.exists(READINGS_JSON_PATH):
+                with open(READINGS_JSON_PATH, "r") as f:
+                    data = json.load(f)
+                    if data:
+                        return data
             
-            token = get_access_token(email, password)
-            sensor_readings = get_sensor_readings(token, mac_addresses, start_date, end_date)
-            
-            if sensor_readings and "data" in sensor_readings and sensor_readings["data"]["readings_data"]:
-                formatted_data = sensor_readings
-                print(f"Found {len(formatted_data['data']['readings_data'])} readings via API")
-            else:
-                print("No data found via API. Creating sample data...")
-                formatted_data = create_guaranteed_sample_data()
-        
-        # Save to static/readings.json
-        readings_file_path = os.path.join('static', 'readings.json')
-        with open(readings_file_path, 'w') as file:
-            json.dump(formatted_data, file, indent=2)
-            
-        print(f"Successfully updated {readings_file_path} with latest sensor data")
-        print(f"Number of readings: {len(formatted_data['data']['readings_data'])}")
-        
-        # Schedule next update (every 30 minutes)
-        threading.Timer(1800, update_readings_json).start()
-        
+            # Last resort - generate sample data
+            return generate_sample_data()
+    
     except Exception as e:
         print(f"Error updating readings.json: {e}")
-        
-        # Always ensure we have data in readings.json
-        readings_file_path = os.path.join('static', 'readings.json')
-        print("Creating guaranteed sample data...")
-        sample_data = create_guaranteed_sample_data()
-        
-        with open(readings_file_path, 'w') as file:
-            json.dump(sample_data, file, indent=2)
-        
-        print(f"Created {readings_file_path} with guaranteed sample data")
+        traceback.print_exc()
+        return generate_sample_data()
 
-def create_guaranteed_sample_data():
-    """Creates guaranteed sample data that will work with the website"""
-    now = datetime.utcnow()
-    
-    # Create sample data structure matching what the site expects
-    sample_data = {
-        "code": 200,
-        "message": "",
-        "data": {
-            "readings_data": [
-                {
-                    "Temperature": 22.5,
-                    "Humidity": 45.0,
-                    "Battery Level": 95.0,
-                    "BatteryLevel": 95.0,
-                    "sample_time_utc": (now - timedelta(hours=i)).strftime("%Y-%m-%dT%H:%M:%S.000Z")
-                }
-                for i in range(1, 6)  # Create 5 samples
-            ],
-            "pageCount": 1,
-            "totalCount": 5
+def generate_sample_data():
+    """Create sample data for the application to use when MongoDB is unavailable"""
+    print("Creating guaranteed sample data...")
+    sample_data = [
+        {
+            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "Temperature": 22.5,
+            "Humidity": 45,
+            "CO": 0.2,
+            "CH4": 0.1,
+            "Distance": 150,
+            "Gas": 25,
+            "source": "sample_data"
         }
-    }
+    ]
     
-    # Add some variation to the data
-    for i, reading in enumerate(sample_data["data"]["readings_data"]):
-        reading["Temperature"] = 20.0 + (i * 0.5)  # 20.0, 20.5, 21.0, etc.
-        reading["Humidity"] = 40.0 + (i * 2.0)     # 40.0, 42.0, 44.0, etc.
-        reading["Battery Level"] = 100.0 - (i * 1.0)  # 100.0, 99.0, 98.0, etc.
-        reading["BatteryLevel"] = reading["Battery Level"]  # Duplicate for compatibility
+    # Ensure the static directory exists
+    os.makedirs("static", exist_ok=True)
     
+    # Write sample data to readings.json
+    with open(READINGS_JSON_PATH, "w") as f:
+        json.dump(sample_data, f, indent=2)
+    
+    print(f"Created {READINGS_JSON_PATH} with guaranteed sample data")
     return sample_data
 
 # ===================== Sensor Data from JSON =====================
@@ -179,7 +136,10 @@ def get_latest_sensor_data():
         # Look for readings.json in the static folder
         with open(os.path.join('static', 'readings.json'), "r") as file:
             data = json.load(file)
+            
+            # Handle both formats (main_sensor.py format and MongoDB format)
             if "data" in data and "readings_data" in data["data"]:
+                # main_sensor.py format
                 latest_data = data["data"]["readings_data"][-1]
                 return {
                     "temperature": latest_data.get("Temperature", "N/A"),
@@ -187,33 +147,56 @@ def get_latest_sensor_data():
                     "battery": latest_data.get("Battery Level", "N/A"),
                     "sample_time": latest_data.get("sample_time_utc", "N/A"),
                 }
+            elif isinstance(data, list) and len(data) > 0:
+                # MongoDB format or sample data format
+                latest_data = data[0]  # Assuming data is sorted newest first
+                return {
+                    "temperature": latest_data.get("Temperature", "N/A"),
+                    "humidity": latest_data.get("Humidity", "N/A"),
+                    "battery": latest_data.get("Battery Level", "N/A"),
+                    "sample_time": latest_data.get("sample_time_utc", latest_data.get("timestamp", "N/A")),
+                }
             else:
                 raise ValueError("Invalid JSON structure")
     except Exception as e:
         print(f"Error in get_latest_sensor_data: {str(e)}")
-        raise RuntimeError("Failed to fetch sensor data")
+        traceback.print_exc()
+        return {
+            "temperature": "Error",
+            "humidity": "Error",
+            "battery": "Error",
+            "sample_time": "Error loading data"
+        }
 
 def get_historical_sensor_data():
     try:
         # Look for readings.json in the static folder
         with open(os.path.join('static', 'readings.json'), "r") as file:
             data = json.load(file)
+            
+            # Handle both formats (main_sensor.py format and MongoDB format)
             if "data" in data and "readings_data" in data["data"]:
-                historical_data = [
-                    {
-                        "temperature": reading.get("Temperature", "N/A"),
-                        "humidity": reading.get("Humidity", "N/A"),
-                        "battery": reading.get("Battery Level", "N/A"),
-                        "sample_time": reading.get("sample_time_utc", "N/A"),
-                    }
-                    for reading in data["data"]["readings_data"]
-                ]
-                return historical_data
+                # main_sensor.py format
+                readings = data["data"]["readings_data"]
+            elif isinstance(data, list):
+                # MongoDB format or sample data format
+                readings = data
             else:
                 raise ValueError("Invalid JSON structure")
+                
+            historical_data = []
+            for reading in readings:
+                historical_data.append({
+                    "temperature": reading.get("Temperature", "N/A"),
+                    "humidity": reading.get("Humidity", "N/A"),
+                    "battery": reading.get("Battery Level", "N/A"),
+                    "sample_time": reading.get("sample_time_utc", reading.get("timestamp", "N/A")),
+                })
+            return historical_data
     except Exception as e:
         print(f"Error in get_historical_sensor_data: {str(e)}")
-        raise RuntimeError("Failed to fetch historical data")
+        traceback.print_exc()
+        return [{"error": "Failed to fetch historical data"}]
 
 # ===================== Weather API =====================
 import requests
@@ -384,9 +367,29 @@ def logout():
 
 # ===================== Run App =====================
 if __name__ == "__main__":
-    # Initialize data updates
-    with app.app_context():
-        # Start sensor data update thread when app starts
-        threading.Thread(target=update_readings_json, daemon=True).start()
+    # Update readings.json with data from MongoDB at startup
+    print("Initializing application...")
+    update_readings_json()
+    
+    # Start a background thread to periodically update sensor data
+    def background_task():
+        while True:
+            try:
+                # Run main_sensor.py to collect new data
+                print("Running main_sensor.py to collect fresh sensor data...")
+                main_sensor.main()
+                
+                # Wait for 30 minutes before updating again
+                time.sleep(1800)  # 30 minutes
+            except Exception as e:
+                print(f"Error in background task: {e}")
+                traceback.print_exc()
+                time.sleep(300)  # Wait 5 minutes before retrying if there's an error
+    
+    # Start the background thread
+    sensor_thread = threading.Thread(target=background_task, daemon=True)
+    sensor_thread.start()
+    
+    # Run the Flask app
     app.run(debug=True)
 

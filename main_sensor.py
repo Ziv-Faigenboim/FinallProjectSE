@@ -1,11 +1,15 @@
 import requests
 import json
+import os
+import traceback
 from datetime import datetime, timedelta
 
 from db.db_collections import DBCollections
-
 from db.connection import get_db_collection
+
 base_url = "https://atapi.atomation.net/api/v1/s2s/v1_0"
+# File path for local sensor data backup
+LOCAL_BACKUP_PATH = "data/sensor_backup.json"
 
 def get_access_token(email, password):
     login_url = f"{base_url}/auth/login"
@@ -107,41 +111,131 @@ def get_historical_sensor_data():
     except Exception as e:
         return {"error": str(e)}
 
+def save_to_local_backup(data):
+    """Save sensor readings to a local backup file"""
+    try:
+        # Create data directory if it doesn't exist
+        os.makedirs("data", exist_ok=True)
+        
+        # Load existing backup if available
+        existing_data = []
+        if os.path.exists(LOCAL_BACKUP_PATH):
+            with open(LOCAL_BACKUP_PATH, 'r') as f:
+                try:
+                    existing_data = json.load(f)
+                except json.JSONDecodeError:
+                    print("Error reading backup file, creating new backup")
+                    existing_data = []
+        
+        # Add new data (avoid duplicates based on sample_time_utc)
+        if 'data' in data and 'readings_data' in data['data']:
+            new_entries = 0
+            existing_times = {entry.get('sample_time_utc') for entry in existing_data 
+                             if 'sample_time_utc' in entry}
+            
+            for reading in data['data']['readings_data']:
+                if reading.get('sample_time_utc') not in existing_times:
+                    existing_data.append(reading)
+                    new_entries += 1
+            
+            # Save updated data
+            with open(LOCAL_BACKUP_PATH, 'w') as f:
+                json.dump(existing_data, f, indent=2)
+            
+            print(f"Saved {new_entries} new readings to local backup ({len(existing_data)} total)")
+        else:
+            print("No readings data to backup")
+    except Exception as e:
+        print(f"Error saving to local backup: {e}")
+        traceback.print_exc()
+
 def main():
-
-
     email = "sce@atomation.net"
     password = "123456"
 
     mac_addresses = ["D2:34:24:34:68:70"]
-    start_date = "2025-04-16T00:00:00.000Z"
-    end_date = "2025-04-16T23:59:59.000Z"
-    sensor_data_collection=get_db_collection(DBCollections.sensor_data)
+    # Use current date for data collection
+    current_date = datetime.utcnow().strftime("%Y-%m-%dT")
+    start_date = f"{current_date}00:00:00.000Z"
+    end_date = f"{current_date}23:59:59.000Z"
+    
+    # Get MongoDB collection
+    sensor_data_collection = get_db_collection(DBCollections.sensor_data)
+    mongodb_available = sensor_data_collection is not None
 
     try:
-
+        # Get sensor data from API
         token = get_access_token(email, password)
         print("Access token retrieved successfully!")
-        print(token)
+        
         sensor_readings = get_sensor_readings(token, mac_addresses, start_date, end_date)
         print("Sensor readings retrieved successfully!")
-        print(json.dumps(sensor_readings, indent=2))
-        sensor_data_collection.insert_one(sensor_readings)
-        #//////////////remove
-       # sensor_data_collection.delete_one({"sample_time_utc": "2024-12-24T08:37:06.000Z"})
-        #///////////////remove
-
-        for reading in sensor_readings['data']['readings_data']:
-        #for reading in reading_data:
-            if sensor_data_collection.find_one({"sample_time_utc": reading["sample_time_utc"]}):
-                print("sensor readings data already exists!")
-
-                continue
-            sensor_data_collection.insert_one(reading)
-            print("inserted sensor readings data!")
-
+        
+        # Save to local backup first for data safety
+        save_to_local_backup(sensor_readings)
+        
+        # Try to save to MongoDB if available
+        if mongodb_available:
+            try:
+                # Insert the full API response
+                sensor_data_collection.insert_one(sensor_readings)
+                print("Inserted full sensor readings response to MongoDB")
+                
+                # Insert individual readings
+                for reading in sensor_readings['data']['readings_data']:
+                    if sensor_data_collection.find_one({"sample_time_utc": reading["sample_time_utc"]}):
+                        print(f"Skipping duplicate reading for {reading['sample_time_utc']}")
+                        continue
+                    sensor_data_collection.insert_one(reading)
+                    print(f"Inserted reading for {reading['sample_time_utc']}")
+            except Exception as mongo_error:
+                print(f"MongoDB error: {mongo_error}")
+                traceback.print_exc()
+        else:
+            print("MongoDB connection not available, data saved to local backup only")
+            
+        # Update readings.json for web application
+        update_readings_json(sensor_readings)
+        
     except Exception as e:
-        print(e)
+        print(f"Error in main process: {e}")
+        traceback.print_exc()
+
+def update_readings_json(sensor_readings=None):
+    """Update readings.json file with latest sensor data"""
+    try:
+        readings_file_path = os.path.join('static', 'readings.json')
+        os.makedirs('static', exist_ok=True)
+        
+        # If no data provided, try to load from local backup
+        if sensor_readings is None:
+            if os.path.exists(LOCAL_BACKUP_PATH):
+                with open(LOCAL_BACKUP_PATH, 'r') as f:
+                    backup_data = json.load(f)
+                    
+                # Format backup data to match expected structure
+                if backup_data:
+                    sensor_readings = {
+                        "code": 200,
+                        "message": "",
+                        "data": {
+                            "readings_data": backup_data[:100],  # Limit to last 100 readings
+                            "pageCount": 1,
+                            "totalCount": len(backup_data)
+                        }
+                    }
+        
+        # If we have sensor readings, write to readings.json
+        if sensor_readings and "data" in sensor_readings and "readings_data" in sensor_readings["data"]:
+            with open(readings_file_path, 'w') as f:
+                json.dump(sensor_readings, f, indent=2)
+            print(f"Updated {readings_file_path} with {len(sensor_readings['data']['readings_data'])} readings")
+        else:
+            print("No sensor data available to update readings.json")
+            
+    except Exception as e:
+        print(f"Error updating readings.json: {e}")
+        traceback.print_exc()
 
 def authenticate_and_get_token(email, password, app_version='1.8.5', access_type=5):
     url = 'https://atapi.atomation.net/api/v1/s2s/v1_0/auth/login'
