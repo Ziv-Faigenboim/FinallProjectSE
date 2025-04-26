@@ -1,2210 +1,3136 @@
 {
-  "code": 200,
-  "message": "",
   "data": {
     "readings_data": [
       {
-        "Temperature": 23.169092,
-        "Humidity": 64.95057,
+        "Temperature": 18.471066,
+        "Humidity": 0,
+        "External Battery": 8.639749,
+        "Vibration SD": 0.0063961796,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-11T18:13:29.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:30.795Z",
-        "reading_type": "Read now",
+        "ANEMOMETER": 0,
+        "EMF": 478,
+        "Strain": 3.515625,
+        "Leak": 0.4640625,
+        "Generic MV": 455.49316,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T17:18:03.000Z",
+        "gw_read_time_utc": "2025-04-16T17:23:40.577Z",
+        "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe79ddbca845bcec32761"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 19.160915,
-        "Humidity": 65.73182,
+        "Temperature": 19.2868,
+        "Humidity": 0,
+        "External Battery": 8.636909,
+        "Vibration SD": 0.0069822944,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-11T08:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.417Z",
+        "ANEMOMETER": 0,
+        "EMF": 478,
+        "Strain": 3.0761719,
+        "Leak": 0.46538085,
+        "Generic MV": 456.5918,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T16:27:59.000Z",
+        "gw_read_time_utc": "2025-04-16T17:17:41.894Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe64a924d08f224692305"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 18.999783,
-        "Humidity": 66.070564,
+        "Temperature": 34.67498,
+        "Humidity": 0,
+        "External Battery": 8.503377,
+        "Vibration SD": 0.007583636,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-11T06:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.417Z",
+        "ANEMOMETER": 0,
+        "EMF": 478,
+        "Strain": 5.053711,
+        "Leak": 0.46230468,
+        "Generic MV": 453.51562,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T14:27:59.000Z",
+        "gw_read_time_utc": "2025-04-16T17:17:41.891Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe64a924d08f2246922e9"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 19.946438,
-        "Humidity": 65.6128,
-        "Battery Level": 95,
-        "sample_time_utc": "2024-12-11T10:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.417Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 23.023066,
-        "Humidity": 64.978035,
+        "Temperature": 19.765163,
+        "Humidity": 0,
+        "External Battery": 8.628385,
+        "Vibration SD": 0.009095076,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-11T17:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.418Z",
+        "ANEMOMETER": 0,
+        "EMF": 478,
+        "Strain": 3.515625,
+        "Leak": 0.46384278,
+        "Generic MV": 455.93262,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T16:17:59.000Z",
+        "gw_read_time_utc": "2025-04-16T17:17:41.894Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe64a924d08f224692303"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.816614,
-        "Humidity": 65.222176,
+        "Temperature": 27.252802,
+        "Humidity": 0,
+        "External Battery": 8.580086,
+        "Vibration SD": 0.0061058234,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-11T16:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.418Z",
+        "ANEMOMETER": 0,
+        "EMF": 479,
+        "Strain": 3.9550781,
+        "Leak": 0.4642822,
+        "Generic MV": 458.78906,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T15:27:59.000Z",
+        "gw_read_time_utc": "2025-04-16T17:17:41.893Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe64a924d08f2246922f9"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 19.5285,
-        "Humidity": 65.78675,
+        "Temperature": 18.526455,
+        "Humidity": 0,
+        "External Battery": 8.58861,
+        "Vibration SD": 0.0064844014,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-11T09:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.417Z",
+        "ANEMOMETER": 0,
+        "EMF": 477,
+        "Strain": 2.1972656,
+        "Leak": 0.46274415,
+        "Generic MV": 455.49316,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T17:07:59.000Z",
+        "gw_read_time_utc": "2025-04-16T17:17:41.895Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe64a924d08f22469230d"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.992853,
-        "Humidity": 65.4419,
+        "Temperature": 18.748013,
+        "Humidity": 0,
+        "External Battery": 8.6482725,
+        "Vibration SD": 0.0060821464,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-11T15:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.418Z",
+        "ANEMOMETER": 0,
+        "EMF": 477,
+        "Strain": 2.8564453,
+        "Leak": 0.46384278,
+        "Generic MV": 456.81152,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T16:57:59.000Z",
+        "gw_read_time_utc": "2025-04-16T17:17:41.895Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe64a924d08f22469230b"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 19.110561,
-        "Humidity": 65.863045,
+        "Temperature": 18.833614,
+        "Humidity": 0,
+        "External Battery": 8.639749,
+        "Vibration SD": 0.0064074295,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-11T07:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.417Z",
+        "ANEMOMETER": 0,
+        "EMF": 479,
+        "Strain": 4.1748047,
+        "Leak": 0.4634033,
+        "Generic MV": 455.7129,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T16:37:59.000Z",
+        "gw_read_time_utc": "2025-04-16T17:17:41.895Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe64a924d08f224692307"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 19.004818,
-        "Humidity": 66.46119,
+        "Temperature": 30.228724,
+        "Humidity": 0,
+        "External Battery": 8.545993,
+        "Vibration SD": 0.0066614924,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-11T05:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.417Z",
+        "ANEMOMETER": 0,
+        "EMF": 478,
+        "Strain": 3.7353516,
+        "Leak": 0.4634033,
+        "Generic MV": 458.3496,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T15:07:59.000Z",
+        "gw_read_time_utc": "2025-04-16T17:17:41.892Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe64a924d08f2246922f3"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 19.412685,
-        "Humidity": 66.97999,
+        "Temperature": 34.493706,
+        "Humidity": 0,
+        "External Battery": 8.494854,
+        "Vibration SD": 0.006583182,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-11T04:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.416Z",
+        "ANEMOMETER": 0,
+        "EMF": 478,
+        "Strain": 4.1748047,
+        "Leak": 0.46208495,
+        "Generic MV": 454.1748,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T14:37:59.000Z",
+        "gw_read_time_utc": "2025-04-16T17:17:41.891Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe64a924d08f2246922eb"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.650446,
-        "Humidity": 65.58228,
+        "Temperature": 31.50268,
+        "Humidity": 0,
+        "External Battery": 8.526106,
+        "Vibration SD": 0.0068851174,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-11T14:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.418Z",
+        "ANEMOMETER": 0,
+        "EMF": 478,
+        "Strain": 3.515625,
+        "Leak": 0.46186525,
+        "Generic MV": 458.56934,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T14:47:59.000Z",
+        "gw_read_time_utc": "2025-04-16T17:17:41.891Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe64a924d08f2246922ed"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.27279,
-        "Humidity": 65.673836,
+        "Temperature": 31.789698,
+        "Humidity": 0,
+        "External Battery": 8.528946,
+        "Vibration SD": 0.0067133084,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-11T13:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.418Z",
-        "reading_type": "Periodic",
-        "triggers": {},
+        "ANEMOMETER": 0,
+        "EMF": 478,
+        "Strain": 4.3945312,
+        "Leak": 0.46208495,
+        "Generic MV": 454.61426,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T14:48:50.000Z",
+        "gw_read_time_utc": "2025-04-16T17:17:41.892Z",
+        "reading_type": "Trigger",
+        "triggers": {
+          "Temperature": true,
+          "Humidity": false,
+          "External Battery": false,
+          "Vibration SD": false,
+          "Battery Level": false,
+          "ANEMOMETER": false,
+          "EMF": false,
+          "Strain": false,
+          "Leak": false,
+          "Generic MV": false,
+          "Distance": false
+        },
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe64a924d08f2246922ef"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 21.864923,
-        "Humidity": 65.75318,
+        "Temperature": 35.455467,
+        "Humidity": 0,
+        "External Battery": 8.469283,
+        "Vibration SD": 0.006425213,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-11T12:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.417Z",
+        "ANEMOMETER": 0,
+        "EMF": 477,
+        "Strain": 3.9550781,
+        "Leak": 0.46054688,
+        "Generic MV": 454.39453,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T14:17:59.000Z",
+        "gw_read_time_utc": "2025-04-16T17:17:41.891Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe64a924d08f2246922e7"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 21.336208,
-        "Humidity": 65.73792,
+        "Temperature": 28.269953,
+        "Humidity": 0,
+        "External Battery": 8.568722,
+        "Vibration SD": 0.006991881,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-11T11:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.417Z",
+        "ANEMOMETER": 0,
+        "EMF": 479,
+        "Strain": 4.614258,
+        "Leak": 0.4625244,
+        "Generic MV": 455.27344,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T15:17:59.000Z",
+        "gw_read_time_utc": "2025-04-16T17:17:41.892Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe64a924d08f2246922f5"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 19.553677,
-        "Humidity": 67.27601,
-        "Battery Level": 93,
-        "sample_time_utc": "2024-12-10T23:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.416Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 19.906155,
-        "Humidity": 67.825325,
+        "Temperature": 26.084589,
+        "Humidity": 0,
+        "External Battery": 8.58861,
+        "Vibration SD": 0.0075590443,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-10T19:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.415Z",
+        "ANEMOMETER": 0,
+        "EMF": 478,
+        "Strain": 3.515625,
+        "Leak": 0.46318358,
+        "Generic MV": 455.93262,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T15:37:59.000Z",
+        "gw_read_time_utc": "2025-04-16T17:17:41.893Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe64a924d08f2246922fb"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 19.573818,
-        "Humidity": 67.355354,
+        "Temperature": 20.913235,
+        "Humidity": 0,
+        "External Battery": 8.619862,
+        "Vibration SD": 0.006442561,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-10T22:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.416Z",
+        "ANEMOMETER": 0,
+        "EMF": 478,
+        "Strain": 3.2958984,
+        "Leak": 0.46516114,
+        "Generic MV": 456.81152,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T16:07:59.000Z",
+        "gw_read_time_utc": "2025-04-16T17:17:41.894Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe64a924d08f224692301"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 19.498287,
-        "Humidity": 67.19056,
-        "Battery Level": 95,
-        "sample_time_utc": "2024-12-11T01:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.416Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 19.452969,
-        "Humidity": 67.05323,
+        "Temperature": 18.737942,
+        "Humidity": 0,
+        "External Battery": 8.594291,
+        "Vibration SD": 0.00653708,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-11T03:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.416Z",
+        "ANEMOMETER": 0,
+        "EMF": 478,
+        "Strain": 2.8564453,
+        "Leak": 0.46472168,
+        "Generic MV": 455.27344,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T16:47:59.000Z",
+        "gw_read_time_utc": "2025-04-16T17:17:41.895Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe64a924d08f224692309"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 21.50741,
-        "Humidity": 70.68482,
+        "Temperature": 24.563898,
+        "Humidity": 0,
+        "External Battery": 8.599974,
+        "Vibration SD": 0.0068392185,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-10T08:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.414Z",
+        "ANEMOMETER": 0,
+        "EMF": 479,
+        "Strain": 3.515625,
+        "Leak": 0.46516114,
+        "Generic MV": 456.15234,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T15:47:59.000Z",
+        "gw_read_time_utc": "2025-04-16T17:17:41.893Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe64a924d08f2246922fd"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 19.518429,
-        "Humidity": 67.24549,
+        "Temperature": 31.608423,
+        "Humidity": 0,
+        "External Battery": 8.534629,
+        "Vibration SD": 0.0066844122,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-11T00:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.416Z",
+        "ANEMOMETER": 0,
+        "EMF": 478,
+        "Strain": 3.7353516,
+        "Leak": 0.46208495,
+        "Generic MV": 454.61426,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T14:57:59.000Z",
+        "gw_read_time_utc": "2025-04-16T17:17:41.892Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe64a924d08f2246922f1"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 19.47311,
-        "Humidity": 67.12342,
+        "Temperature": 28.17428,
+        "Humidity": 0,
+        "External Battery": 8.509059,
+        "Vibration SD": 0.00682449,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-11T02:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.416Z",
-        "reading_type": "Periodic",
-        "triggers": {},
+        "ANEMOMETER": 0,
+        "EMF": 478,
+        "Strain": 4.1748047,
+        "Leak": 0.46384278,
+        "Generic MV": 455.49316,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T15:18:50.000Z",
+        "gw_read_time_utc": "2025-04-16T17:17:41.893Z",
+        "reading_type": "Trigger",
+        "triggers": {
+          "Temperature": true,
+          "Humidity": false,
+          "External Battery": false,
+          "Vibration SD": false,
+          "Battery Level": false,
+          "ANEMOMETER": false,
+          "EMF": false,
+          "Strain": false,
+          "Leak": false,
+          "Generic MV": false,
+          "Distance": false
+        },
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe64a924d08f2246922f7"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 20.001827,
-        "Humidity": 70.706184,
-        "Battery Level": 96,
-        "sample_time_utc": "2024-12-10T07:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.414Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 19.936367,
-        "Humidity": 70.50477,
+        "Temperature": 22.660517,
+        "Humidity": 0,
+        "External Battery": 8.614179,
+        "Vibration SD": 0.0063019805,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-10T04:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.413Z",
+        "ANEMOMETER": 0,
+        "EMF": 478,
+        "Strain": 3.515625,
+        "Leak": 0.46384278,
+        "Generic MV": 455.49316,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T15:57:59.000Z",
+        "gw_read_time_utc": "2025-04-16T17:17:41.894Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe64a924d08f2246922ff"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.675623,
-        "Humidity": 70.01954,
+        "Temperature": 35.329582,
+        "Humidity": 0,
+        "External Battery": 8.480647,
+        "Vibration SD": 0.0067767855,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-10T10:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.414Z",
+        "ANEMOMETER": 0,
+        "EMF": 477,
+        "Strain": 4.3945312,
+        "Leak": 0.46098632,
+        "Generic MV": 453.95508,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T14:08:37.000Z",
+        "gw_read_time_utc": "2025-04-16T17:17:41.890Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffe64a924d08f2246922e5"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 23.58703,
-        "Humidity": 68.95142,
+        "Temperature": 39.649956,
+        "Humidity": 0,
+        "External Battery": 8.3158655,
+        "Vibration SD": 0.0066144145,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-10T13:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.415Z",
+        "ANEMOMETER": 0,
+        "EMF": 477,
+        "Strain": 4.1748047,
+        "Leak": 0.45922852,
+        "Generic MV": 452.19727,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T13:37:59.000Z",
+        "gw_read_time_utc": "2025-04-16T14:08:16.399Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffb9d1dc23dffae55e15bd"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.584986,
-        "Humidity": 70.516975,
+        "Temperature": 37.50991,
+        "Humidity": 0,
+        "External Battery": 8.364163,
+        "Vibration SD": 0.006769386,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-10T09:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.414Z",
+        "ANEMOMETER": 0,
+        "EMF": 477,
+        "Strain": 4.8339844,
+        "Leak": 0.46010742,
+        "Generic MV": 452.85645,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T13:18:28.000Z",
+        "gw_read_time_utc": "2025-04-16T14:08:16.399Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffb9d1dc23dffae55e15b9"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 19.941402,
-        "Humidity": 70.465096,
+        "Temperature": 37.232964,
+        "Humidity": 0,
+        "External Battery": 8.446555,
+        "Vibration SD": 0.008011894,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-10T03:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.413Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 4.614258,
+        "Leak": 0.46054688,
+        "Generic MV": 453.2959,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T13:28:10.000Z",
+        "gw_read_time_utc": "2025-04-16T14:08:16.399Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffb9d1dc23dffae55e15bb"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 19.996792,
-        "Humidity": 70.37354,
+        "Temperature": 39.156487,
+        "Humidity": 0,
+        "External Battery": 8.415302,
+        "Vibration SD": 0.0071092825,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-10T02:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.413Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 4.614258,
+        "Leak": 0.45900878,
+        "Generic MV": 452.85645,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T13:08:46.000Z",
+        "gw_read_time_utc": "2025-04-16T14:08:16.399Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffb9d1dc23dffae55e15b7"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 19.936367,
-        "Humidity": 70.57801,
+        "Temperature": 37.373955,
+        "Humidity": 0,
+        "External Battery": 8.440873,
+        "Vibration SD": 0.00687565,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-10T05:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.414Z",
+        "ANEMOMETER": 0,
+        "EMF": 477,
+        "Strain": 4.3945312,
+        "Leak": 0.45966798,
+        "Generic MV": 453.07617,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T13:48:41.000Z",
+        "gw_read_time_utc": "2025-04-16T14:08:16.399Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffb9d1dc23dffae55e15bf"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 36.105034,
+        "Humidity": 0,
+        "External Battery": 8.455078,
+        "Vibration SD": 0.0074689277,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 477,
+        "Strain": 4.3945312,
+        "Leak": 0.46230468,
+        "Generic MV": 453.73535,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T13:58:22.000Z",
+        "gw_read_time_utc": "2025-04-16T14:08:16.399Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffb9d1dc23dffae55e15c1"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 40.954124,
+        "Humidity": 0,
+        "External Battery": 8.375527,
+        "Vibration SD": 0.00661192,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 4.614258,
+        "Leak": 0.45769042,
+        "Generic MV": 450.8789,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T12:58:05.000Z",
+        "gw_read_time_utc": "2025-04-16T14:08:16.398Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffb9d1dc23dffae55e15b5"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.132748,
+        "Humidity": 0,
+        "External Battery": 8.614179,
+        "Vibration SD": 0.0062109996,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.4169922,
+        "Leak": 0.46208495,
+        "Generic MV": 455.93262,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T10:38:47.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.449Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec26663"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.183102,
+        "Humidity": 0,
+        "External Battery": 8.622703,
+        "Vibration SD": 0.006087534,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 2.8564453,
+        "Leak": 0.46208495,
+        "Generic MV": 453.51562,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T10:18:23.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.449Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec2665f"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 25.626368,
+        "Humidity": 0,
+        "External Battery": 8.597133,
+        "Vibration SD": 0.0061127464,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.6367188,
+        "Leak": 0.46142578,
+        "Generic MV": 456.81152,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T11:28:00.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.450Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec26671"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 19.916225,
+        "Humidity": 0,
+        "External Battery": 8.628385,
+        "Vibration SD": 0.005597483,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 3.7353516,
+        "Leak": 0.46230468,
+        "Generic MV": 453.07617,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T11:08:00.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.449Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec26669"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 19.971615,
+        "Humidity": 0,
+        "External Battery": 8.614179,
+        "Vibration SD": 0.007710211,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.8564453,
+        "Leak": 0.46054688,
+        "Generic MV": 456.15234,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T10:58:11.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.449Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec26667"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 34.53399,
+        "Humidity": 0,
+        "External Battery": 8.48633,
+        "Vibration SD": 0.00646527,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 4.3945312,
+        "Leak": 0.46032715,
+        "Generic MV": 452.85645,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T11:58:05.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.450Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec26679"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 44.03579,
+        "Humidity": 0,
+        "External Battery": 8.22495,
+        "Vibration SD": 0.006463006,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 473,
+        "Strain": 3.7353516,
+        "Leak": 0.45527345,
+        "Generic MV": 450.21973,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T11:38:42.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.450Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec26675"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
         "Temperature": 19.891048,
-        "Humidity": 70.66956,
+        "Vibration SD": 0.5134891,
+        "High G": 10.567192,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-10T06:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.414Z",
-        "reading_type": "Periodic",
-        "triggers": {},
+        "sample_time_utc": "2025-04-16T11:25:18.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.450Z",
+        "reading_type": "Trigger",
+        "triggers": {
+          "Temperature": false,
+          "Vibration SD": false,
+          "High G": true,
+          "Battery Level": false
+        },
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec2666d"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 19.614101,
-        "Humidity": 67.514046,
-        "Battery Level": 98,
-        "sample_time_utc": "2024-12-10T20:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.415Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 23.244623,
-        "Humidity": 69.29627,
+        "Temperature": 34.690086,
+        "Humidity": 0,
+        "External Battery": 8.483489,
+        "Vibration SD": 0.006660863,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-10T12:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.414Z",
+        "ANEMOMETER": 0,
+        "EMF": 477,
+        "Strain": 5.2734375,
+        "Leak": 0.46010742,
+        "Generic MV": 453.2959,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T12:08:47.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.450Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec2667b"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 23.561853,
-        "Humidity": 68.2129,
+        "Temperature": 21.024014,
+        "Vibration SD": 0.8864293,
+        "High G": 6.3173695,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-10T15:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.415Z",
-        "reading_type": "Periodic",
-        "triggers": {},
+        "sample_time_utc": "2025-04-16T11:26:44.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.450Z",
+        "reading_type": "Trigger",
+        "triggers": {
+          "Temperature": false,
+          "Vibration SD": false,
+          "High G": true,
+          "Battery Level": false
+        },
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec2666f"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 19.578854,
-        "Humidity": 67.42249,
+        "Temperature": 38.360893,
+        "Humidity": 0,
+        "External Battery": 8.415302,
+        "Vibration SD": 0.0063020405,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-10T21:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.416Z",
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 4.3945312,
+        "Leak": 0.45900878,
+        "Generic MV": 452.417,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T11:48:23.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.450Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec26677"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 20.444942,
-        "Humidity": 67.93214,
+        "Temperature": 39.72045,
+        "Humidity": 0,
+        "External Battery": 8.415302,
+        "Vibration SD": 0.006292334,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-10T18:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.415Z",
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 4.8339844,
+        "Leak": 0.46010742,
+        "Generic MV": 452.19727,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T12:38:00.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.451Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec26681"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 23.909296,
-        "Humidity": 68.68897,
+        "Temperature": 32.47955,
+        "Humidity": 0,
+        "External Battery": 8.531787,
+        "Vibration SD": 0.006209355,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-10T14:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.415Z",
-        "reading_type": "Periodic",
-        "triggers": {},
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 3.515625,
+        "Leak": 0.45966798,
+        "Generic MV": 452.417,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T11:29:51.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.450Z",
+        "reading_type": "Trigger",
+        "triggers": {
+          "Temperature": true,
+          "Humidity": false,
+          "External Battery": false,
+          "Vibration SD": false,
+          "Battery Level": false,
+          "ANEMOMETER": false,
+          "EMF": false,
+          "Strain": false,
+          "Leak": false,
+          "Generic MV": false,
+          "Distance": false
+        },
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec26673"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 23.19427,
-        "Humidity": 68.051155,
+        "Temperature": 19.886013,
+        "Humidity": 0,
+        "External Battery": 8.614179,
+        "Vibration SD": 0.0060351617,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-10T16:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.415Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 3.0761719,
+        "Leak": 0.46120605,
+        "Generic MV": 453.51562,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T11:18:42.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.450Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec2666b"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 21.089474,
-        "Humidity": 67.74293,
+        "Temperature": 36.528008,
+        "Humidity": 0,
+        "External Battery": 8.452237,
+        "Vibration SD": 0.0065491814,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-10T17:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.415Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 4.614258,
+        "Leak": 0.46054688,
+        "Generic MV": 452.19727,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T12:18:29.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.451Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec2667d"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.982782,
-        "Humidity": 69.67469,
+        "Temperature": 40.526115,
+        "Humidity": 0,
+        "External Battery": 8.389733,
+        "Vibration SD": 0.00688597,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-10T11:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.414Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 4.3945312,
+        "Leak": 0.45878905,
+        "Generic MV": 452.85645,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T12:48:42.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.451Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec26683"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 20.606075,
-        "Humidity": 71.68275,
+        "Temperature": 37.177574,
+        "Humidity": 0,
+        "External Battery": 8.440873,
+        "Vibration SD": 0.00667527,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-09T12:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.411Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 4.1748047,
+        "Leak": 0.45900878,
+        "Generic MV": 453.07617,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T12:28:11.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.451Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec2667f"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 20.208279,
-        "Humidity": 72.149666,
+        "Temperature": 20.016933,
+        "Humidity": 0,
+        "External Battery": 8.617021,
+        "Vibration SD": 0.0054902723,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-09T11:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.411Z",
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 2.4169922,
+        "Leak": 0.46186525,
+        "Generic MV": 453.95508,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T10:48:29.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.449Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec26665"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 20.037075,
-        "Humidity": 71.038826,
+        "Temperature": 20.183102,
+        "Humidity": 0,
+        "External Battery": 8.608497,
+        "Vibration SD": 0.0059477985,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-09T14:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.412Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 3.2958984,
+        "Leak": 0.46098632,
+        "Generic MV": 453.2959,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T10:28:05.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.449Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec26661"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 20.278774,
-        "Humidity": 71.30128,
+        "Temperature": 20.117641,
+        "Humidity": 0,
+        "External Battery": 8.622703,
+        "Vibration SD": 0.0073958253,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-09T13:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.411Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 3.7353516,
+        "Leak": 0.46296388,
+        "Generic MV": 453.73535,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T09:08:47.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.448Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec2664f"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 20.606075,
-        "Humidity": 70.84962,
-        "Battery Level": 96,
-        "sample_time_utc": "2024-12-09T17:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.412Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 19.946438,
-        "Humidity": 70.87098,
+        "Temperature": 20.132748,
+        "Humidity": 0,
+        "External Battery": 8.628385,
+        "Vibration SD": 0.0073048137,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-09T16:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.412Z",
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 3.0761719,
+        "Leak": 0.4616455,
+        "Generic MV": 452.63672,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T08:58:05.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.448Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec2664d"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 20.001827,
-        "Humidity": 70.9076,
+        "Temperature": 20.132748,
+        "Humidity": 0,
+        "External Battery": 8.614179,
+        "Vibration SD": 0.0070905155,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-09T15:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.412Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 3.515625,
+        "Leak": 0.46230468,
+        "Generic MV": 453.73535,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T09:18:29.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.448Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec26651"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 20.726925,
-        "Humidity": 70.776375,
+        "Temperature": 20.122677,
+        "Humidity": 0,
+        "External Battery": 8.625543,
+        "Vibration SD": 0.007197315,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-09T18:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.412Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.1972656,
+        "Leak": 0.4634033,
+        "Generic MV": 454.39453,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T09:28:11.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.448Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec26653"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 20.384518,
-        "Humidity": 70.31556,
+        "Temperature": 20.15289,
+        "Humidity": 0,
+        "External Battery": 8.614179,
+        "Vibration SD": 0.005613032,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-09T22:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.413Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 3.2958984,
+        "Leak": 0.46120605,
+        "Generic MV": 454.1748,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T09:58:00.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.449Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec2665b"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 20.78735,
-        "Humidity": 70.41627,
+        "Temperature": 20.117641,
+        "Vibration SD": 0.34364498,
+        "High G": 10.980584,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-09T21:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.412Z",
-        "reading_type": "Periodic",
-        "triggers": {},
+        "sample_time_utc": "2025-04-16T09:45:09.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.448Z",
+        "reading_type": "Trigger",
+        "triggers": {
+          "Temperature": false,
+          "Vibration SD": false,
+          "High G": true,
+          "Battery Level": false
+        },
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec26657"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 20.072323,
-        "Humidity": 70.33387,
-        "Battery Level": 100,
-        "sample_time_utc": "2024-12-10T00:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.413Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 20.65643,
-        "Humidity": 70.60548,
-        "Battery Level": 100,
-        "sample_time_utc": "2024-12-09T20:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.412Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
         "Temperature": 20.17303,
-        "Humidity": 70.32777,
+        "Humidity": 0,
+        "External Battery": 8.619862,
+        "Vibration SD": 0.005994585,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-09T23:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.413Z",
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 3.0761719,
+        "Leak": 0.46230468,
+        "Generic MV": 454.1748,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T10:08:42.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.449Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec2665d"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 20.011898,
-        "Humidity": 70.34608,
-        "Battery Level": 93,
-        "sample_time_utc": "2024-12-10T01:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.413Z",
+        "Temperature": 20.117641,
+        "Humidity": 0,
+        "External Battery": 8.617021,
+        "Vibration SD": 0.0072240354,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 3.2958984,
+        "Leak": 0.46120605,
+        "Generic MV": 454.1748,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T09:38:00.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.448Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec26655"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 23.300013,
-        "Humidity": 74.20045,
+        "Temperature": 20.147854,
+        "Humidity": 0,
+        "External Battery": 8.614179,
+        "Vibration SD": 0.0058731115,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-08T11:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.408Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 3.0761719,
+        "Leak": 0.46120605,
+        "Generic MV": 453.2959,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T09:48:12.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:44.449Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa95cdbca845bcec26659"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 24.100641,
-        "Humidity": 74.752815,
+        "Temperature": 19.563747,
+        "Humidity": 0,
+        "External Battery": 8.611338,
+        "Vibration SD": 0.0071604587,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-08T13:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.408Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.6367188,
+        "Leak": 0.46098632,
+        "Generic MV": 453.07617,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T00:48:05.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.646Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b27"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 24.4078,
-        "Humidity": 74.578865,
+        "Temperature": 19.815517,
+        "Humidity": 0,
+        "External Battery": 8.597133,
+        "Vibration SD": 0.007083845,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-08T12:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.408Z",
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 1.9775391,
+        "Leak": 0.46142578,
+        "Generic MV": 455.7129,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T01:38:42.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.646Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b31"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 20.993801,
-        "Humidity": 73.84339,
+        "Temperature": 19.92126,
+        "Humidity": 0,
+        "External Battery": 8.614179,
+        "Vibration SD": 0.00761454,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-08T16:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.409Z",
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 2.8564453,
+        "Leak": 0.4616455,
+        "Generic MV": 455.7129,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T01:58:05.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.647Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b35"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 21.472162,
-        "Humidity": 73.97462,
+        "Temperature": 20.092464,
+        "Humidity": 0,
+        "External Battery": 8.571563,
+        "Vibration SD": 0.007216546,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-08T15:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.409Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.8564453,
+        "Leak": 0.46230468,
+        "Generic MV": 453.07617,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T02:28:11.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.647Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b3b"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 20.243526,
-        "Humidity": 73.47718,
-        "Battery Level": 100,
-        "sample_time_utc": "2024-12-08T18:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.409Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 19.679562,
-        "Humidity": 73.49549,
-        "Battery Level": 100,
-        "sample_time_utc": "2024-12-09T08:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.411Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
         "Temperature": 20.22842,
-        "Humidity": 72.77833,
+        "Humidity": 0,
+        "External Battery": 8.563039,
+        "Vibration SD": 0.007902012,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-09T10:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.411Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.6367188,
+        "Leak": 0.46142578,
+        "Generic MV": 453.95508,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T03:58:42.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.648Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b4d"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 20.79742,
-        "Humidity": 73.66944,
+        "Temperature": 20.21835,
+        "Humidity": 0,
+        "External Battery": 8.611338,
+        "Vibration SD": 0.006922559,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-08T17:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.409Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.8564453,
+        "Leak": 0.46296388,
+        "Generic MV": 453.95508,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T03:08:05.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.647Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b43"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.509455,
-        "Humidity": 74.469,
+        "Temperature": 20.258633,
+        "Humidity": 0,
+        "External Battery": 8.622703,
+        "Vibration SD": 0.007188742,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-08T14:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.408Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 3.515625,
+        "Leak": 0.4625244,
+        "Generic MV": 453.95508,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T05:58:11.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.649Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b65"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 20.48019,
-        "Humidity": 73.38563,
-        "Battery Level": 100,
-        "sample_time_utc": "2024-12-08T20:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.409Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 20.379482,
-        "Humidity": 73.42835,
-        "Battery Level": 100,
-        "sample_time_utc": "2024-12-08T21:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.409Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 20.4248,
-        "Humidity": 70.602425,
-        "Battery Level": 100,
-        "sample_time_utc": "2024-12-09T19:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.412Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 20.072323,
-        "Humidity": 73.49854,
-        "Battery Level": 96,
-        "sample_time_utc": "2024-12-08T23:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.410Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 20.278774,
-        "Humidity": 73.44666,
-        "Battery Level": 98,
-        "sample_time_utc": "2024-12-08T22:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.410Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 20.379482,
-        "Humidity": 73.44361,
-        "Battery Level": 100,
-        "sample_time_utc": "2024-12-08T19:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.409Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 19.891048,
-        "Humidity": 73.52296,
-        "Battery Level": 96,
-        "sample_time_utc": "2024-12-09T01:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.410Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 19.830624,
-        "Humidity": 73.55042,
-        "Battery Level": 100,
-        "sample_time_utc": "2024-12-09T02:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.410Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 19.755093,
-        "Humidity": 73.535164,
-        "Battery Level": 100,
-        "sample_time_utc": "2024-12-09T04:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.410Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 19.961544,
-        "Humidity": 73.538216,
-        "Battery Level": 100,
-        "sample_time_utc": "2024-12-09T00:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.410Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 19.800411,
-        "Humidity": 73.54127,
-        "Battery Level": 96,
-        "sample_time_utc": "2024-12-09T03:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.410Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 19.709774,
-        "Humidity": 73.53211,
-        "Battery Level": 96,
-        "sample_time_utc": "2024-12-09T06:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.411Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 19.694668,
-        "Humidity": 73.46497,
-        "Battery Level": 93,
-        "sample_time_utc": "2024-12-09T07:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.411Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 19.66949,
-        "Humidity": 73.22083,
-        "Battery Level": 100,
-        "sample_time_utc": "2024-12-09T09:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.411Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 19.729916,
-        "Humidity": 73.5138,
-        "Battery Level": 93,
-        "sample_time_utc": "2024-12-09T05:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.410Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
         "Temperature": 20.238491,
-        "Humidity": 71.49659,
-        "Battery Level": 86,
-        "sample_time_utc": "2024-12-07T18:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.406Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 20.102535,
-        "Humidity": 71.64002,
+        "Humidity": 0,
+        "External Battery": 8.599974,
+        "Vibration SD": 0.0074779317,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-07T19:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.406Z",
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 3.0761719,
+        "Leak": 0.4625244,
+        "Generic MV": 453.07617,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T04:38:29.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.648Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b55"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 20.04211,
-        "Humidity": 71.82313,
+        "Temperature": 19.614101,
+        "Humidity": 0,
+        "External Battery": 8.611338,
+        "Vibration SD": 0.0073028477,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-07T21:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.406Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.6367188,
+        "Leak": 0.4625244,
+        "Generic MV": 454.1748,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T00:58:47.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.646Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b29"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 20.067287,
-        "Humidity": 71.975716,
-        "Battery Level": 96,
-        "sample_time_utc": "2024-12-07T22:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.406Z",
+        "Temperature": 20.238491,
+        "Humidity": 0,
+        "External Battery": 8.602815,
+        "Vibration SD": 0.007335078,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 2.6367188,
+        "Leak": 0.4616455,
+        "Generic MV": 453.73535,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T03:28:29.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.648Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b47"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
         "Temperature": 20.021969,
-        "Humidity": 71.71632,
+        "Humidity": 0,
+        "External Battery": 8.605657,
+        "Vibration SD": 0.0070433985,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-07T20:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.406Z",
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 2.4169922,
+        "Leak": 0.46098632,
+        "Generic MV": 452.85645,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T02:18:29.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.647Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b39"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 19.97665,
-        "Humidity": 72.253426,
+        "Temperature": 20.22842,
+        "Humidity": 0,
+        "External Battery": 8.614179,
+        "Vibration SD": 0.0073225573,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-08T00:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.407Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 3.2958984,
+        "Leak": 0.46208495,
+        "Generic MV": 456.15234,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T03:48:00.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.648Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b4b"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 19.981686,
-        "Humidity": 72.372444,
+        "Temperature": 20.258633,
+        "Humidity": 0,
+        "External Battery": 8.608497,
+        "Vibration SD": 0.0073994244,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-08T01:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.407Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.1972656,
+        "Leak": 0.46296388,
+        "Generic MV": 454.1748,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T04:58:00.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.649Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b59"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 19.981686,
-        "Humidity": 72.650154,
-        "Battery Level": 96,
-        "sample_time_utc": "2024-12-08T03:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.407Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 19.96658,
-        "Humidity": 72.50672,
+        "Temperature": 20.243526,
+        "Humidity": 0,
+        "External Battery": 8.611338,
+        "Vibration SD": 0.007714119,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-08T02:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.407Z",
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 2.6367188,
+        "Leak": 0.46142578,
+        "Generic MV": 453.73535,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T05:08:42.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.649Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b5b"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 20.027004,
-        "Humidity": 72.113045,
+        "Temperature": 20.248562,
+        "Humidity": 0,
+        "External Battery": 8.625543,
+        "Vibration SD": 0.007145843,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-07T23:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.406Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.4169922,
+        "Leak": 0.46230468,
+        "Generic MV": 453.51562,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T05:38:47.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.649Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b61"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 19.402615,
-        "Humidity": 73.30933,
+        "Temperature": 19.71481,
+        "Humidity": 0,
+        "External Battery": 8.617021,
+        "Vibration SD": 0.007465327,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-08T06:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.407Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.8564453,
+        "Leak": 0.46274415,
+        "Generic MV": 454.39453,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T01:18:11.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.646Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b2d"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 19.936367,
-        "Humidity": 72.982796,
-        "Battery Level": 96,
-        "sample_time_utc": "2024-12-08T05:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.407Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 19.442898,
-        "Humidity": 73.379524,
+        "Temperature": 20.183102,
+        "Humidity": 0,
+        "External Battery": 8.608497,
+        "Vibration SD": 0.007471893,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-08T08:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.408Z",
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 2.4169922,
+        "Leak": 0.46208495,
+        "Generic MV": 452.417,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T02:48:42.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.647Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b3f"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 18.78326,
-        "Humidity": 73.30933,
-        "Battery Level": 96,
-        "sample_time_utc": "2024-12-08T07:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.407Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 19.951473,
-        "Humidity": 72.83631,
-        "Battery Level": 93,
-        "sample_time_utc": "2024-12-08T04:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.407Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 21.925348,
-        "Humidity": 73.88001,
+        "Temperature": 20.208279,
+        "Humidity": 0,
+        "External Battery": 8.617021,
+        "Vibration SD": 0.0077793,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-08T10:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.408Z",
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 2.8564453,
+        "Leak": 0.4616455,
+        "Generic MV": 452.85645,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T02:58:23.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.647Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b41"
         },
         "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 20.606075,
-        "Humidity": 73.556526,
+        "Temperature": 20.22842,
+        "Humidity": 0,
+        "External Battery": 8.619862,
+        "Vibration SD": 0.0072102174,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-08T09:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:18.408Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 3.2958984,
+        "Leak": 0.4616455,
+        "Generic MV": 453.51562,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T03:18:47.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.648Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b45"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 20.303951,
-        "Humidity": 71.35621,
-        "Battery Level": 98,
-        "sample_time_utc": "2024-12-07T17:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:12.481Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lat": 31.2498119452557,
-          "lng": 34.7895184904266
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 19.60403,
-        "Humidity": 71.18226,
-        "Battery Level": 93,
-        "sample_time_utc": "2024-12-07T13:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:12.481Z",
-        "reading_type": "Periodic",
-        "triggers": {},
-        "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
-        "fw_version": {
-          "mcu": "2.8.48+011"
-        },
-        "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
-        },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
-      },
-      {
-        "Temperature": 20.726925,
-        "Humidity": 71.27381,
+        "Temperature": 20.253597,
+        "Humidity": 0,
+        "External Battery": 8.619862,
+        "Vibration SD": 0.0070512136,
         "Battery Level": 100,
-        "sample_time_utc": "2024-12-07T15:54:42.000Z",
-        "gw_read_time_utc": "2024-12-11T18:13:12.481Z",
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.6367188,
+        "Leak": 0.46186525,
+        "Generic MV": 453.95508,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T04:28:47.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.648Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "6665581e2ea7990022f43138",
-        "mac": "E9:19:79:09:A1:AD",
-        "device_name": "G1.2 A1:AD",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
         "fw_version": {
-          "mcu": "2.8.48+011"
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b53"
         },
         "location": {
-          "lng": 34.7895184904266,
-          "lat": 31.2498119452557
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
         },
-        "unit_name": "G1.2 A1:AD",
-        "gw_id": "E6A39A58-24FF-42E2-ADE4-4D646B822B25",
-        "gw_version": "3.3.0+110"
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.198208,
+        "Humidity": 0,
+        "External Battery": 8.563039,
+        "Vibration SD": 0.0072063636,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.8564453,
+        "Leak": 0.46142578,
+        "Generic MV": 455.0537,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T07:38:23.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.650Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b79"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.263668,
+        "Humidity": 0,
+        "External Battery": 8.608497,
+        "Vibration SD": 0.007449695,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.8564453,
+        "Leak": 0.46142578,
+        "Generic MV": 453.51562,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T06:38:05.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.650Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b6d"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.15289,
+        "Humidity": 0,
+        "External Battery": 8.608497,
+        "Vibration SD": 0.0073742606,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 1.5380859,
+        "Leak": 0.46054688,
+        "Generic MV": 455.27344,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T08:18:11.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.651Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b81"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.142818,
+        "Humidity": 0,
+        "External Battery": 8.608497,
+        "Vibration SD": 0.007164938,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 2.8564453,
+        "Leak": 0.4607666,
+        "Generic MV": 454.39453,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T08:28:00.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.651Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b83"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.142818,
+        "Humidity": 0,
+        "External Battery": 8.625543,
+        "Vibration SD": 0.007061842,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.6367188,
+        "Leak": 0.46120605,
+        "Generic MV": 454.39453,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T08:48:23.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.651Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b87"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.248562,
+        "Humidity": 0,
+        "External Battery": 8.614179,
+        "Vibration SD": 0.007433728,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.4169922,
+        "Leak": 0.46142578,
+        "Generic MV": 453.73535,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T06:58:29.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.650Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b71"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.243526,
+        "Humidity": 0,
+        "External Battery": 8.614179,
+        "Vibration SD": 0.0074897064,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.8564453,
+        "Leak": 0.46186525,
+        "Generic MV": 453.95508,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T05:28:05.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.649Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b5f"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.248562,
+        "Humidity": 0,
+        "External Battery": 8.560198,
+        "Vibration SD": 0.007324951,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 2.1972656,
+        "Leak": 0.4607666,
+        "Generic MV": 453.73535,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T05:48:29.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.649Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b63"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 19.66949,
+        "Humidity": 0,
+        "External Battery": 8.608497,
+        "Vibration SD": 0.007526149,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 3.0761719,
+        "Leak": 0.46098632,
+        "Generic MV": 453.51562,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T01:08:29.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.646Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b2b"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.21835,
+        "Humidity": 0,
+        "External Battery": 8.608497,
+        "Vibration SD": 0.0067159017,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.4169922,
+        "Leak": 0.46098632,
+        "Generic MV": 454.1748,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T07:18:00.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.650Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b75"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.132748,
+        "Humidity": 0,
+        "External Battery": 8.611338,
+        "Vibration SD": 0.0072803274,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 2.4169922,
+        "Leak": 0.4616455,
+        "Generic MV": 453.2959,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T02:38:00.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.647Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b3d"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.157925,
+        "Humidity": 0,
+        "External Battery": 8.608497,
+        "Vibration SD": 0.0070126457,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 2.4169922,
+        "Leak": 0.4607666,
+        "Generic MV": 453.2959,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T08:08:29.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.651Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b7f"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.258633,
+        "Humidity": 0,
+        "External Battery": 8.605657,
+        "Vibration SD": 0.008248442,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.1972656,
+        "Leak": 0.46098632,
+        "Generic MV": 456.15234,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T06:28:23.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.650Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b6b"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.248562,
+        "Humidity": 0,
+        "External Battery": 8.619862,
+        "Vibration SD": 0.0073264446,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.6367188,
+        "Leak": 0.46186525,
+        "Generic MV": 453.51562,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T05:18:23.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.649Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b5d"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.248562,
+        "Humidity": 0,
+        "External Battery": 8.574405,
+        "Vibration SD": 0.007459743,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 3.0761719,
+        "Leak": 0.4616455,
+        "Generic MV": 454.39453,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T06:08:00.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.649Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b67"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.183102,
+        "Humidity": 0,
+        "External Battery": 8.608497,
+        "Vibration SD": 0.0071037933,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 3.0761719,
+        "Leak": 0.46120605,
+        "Generic MV": 453.51562,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T07:48:05.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.650Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b7b"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.137783,
+        "Humidity": 0,
+        "External Battery": 8.611338,
+        "Vibration SD": 0.007340253,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 2.6367188,
+        "Leak": 0.46098632,
+        "Generic MV": 452.63672,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T08:38:42.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.651Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b85"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 19.865871,
+        "Humidity": 0,
+        "External Battery": 8.608497,
+        "Vibration SD": 0.007757062,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 3.0761719,
+        "Leak": 0.46032715,
+        "Generic MV": 453.2959,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T01:48:23.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.647Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b33"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.238491,
+        "Humidity": 0,
+        "External Battery": 8.608497,
+        "Vibration SD": 0.007314808,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 2.1972656,
+        "Leak": 0.46032715,
+        "Generic MV": 453.95508,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T04:08:23.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.648Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b4f"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.248562,
+        "Humidity": 0,
+        "External Battery": 8.551675,
+        "Vibration SD": 0.0071491376,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 3.2958984,
+        "Leak": 0.46098632,
+        "Generic MV": 453.95508,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T04:18:05.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.648Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b51"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.263668,
+        "Humidity": 0,
+        "External Battery": 8.611338,
+        "Vibration SD": 0.006948839,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.8564453,
+        "Leak": 0.46098632,
+        "Generic MV": 452.85645,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T06:18:42.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.649Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b69"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.238491,
+        "Humidity": 0,
+        "External Battery": 8.619862,
+        "Vibration SD": 0.0070808255,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.8564453,
+        "Leak": 0.46230468,
+        "Generic MV": 452.85645,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T04:48:11.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.648Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b57"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 19.5285,
+        "Humidity": 0,
+        "External Battery": 8.619862,
+        "Vibration SD": 0.0068898625,
+        "Battery Level": 100,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 3.515625,
+        "Leak": 0.46098632,
+        "Generic MV": 453.73535,
+        "Distance": 0,
+        "sample_time_utc": "2025-04-16T00:38:23.000Z",
+        "gw_read_time_utc": "2025-04-16T12:57:37.646Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D2:34:24:34:68:70",
+        "device_name": "G2.1 68:70",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffa942e3b02532b3205b25"
+        },
+        "location": {
+          "lng": 34.771616169581,
+          "lat": 31.2499921993526
+        },
+        "unit_name": "G2.1 68:70",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
       }
-    ],
-    "pageCount": 2,
-    "totalCount": 200
+    ]
   }
 }

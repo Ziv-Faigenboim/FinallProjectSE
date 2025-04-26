@@ -36,7 +36,7 @@ def get_sensor_readings(token, mac_addresses, start_date, end_date):
         "Authorization": f"Bearer {token}"
     }
 
-    print("🔎 Requesting data with filter:")
+    print("Requesting data with filter:")
     print(json.dumps(sensors_readings_payload, indent=2))
 
     response = requests.post(
@@ -46,11 +46,11 @@ def get_sensor_readings(token, mac_addresses, start_date, end_date):
     )
 
     if response.status_code == 200:
-        print("✅ Data fetched successfully!")
+        print("Data fetched successfully!")
         return response.json()
 
     # הדפסה בולטת במקרה של כישלון
-    print(f"❌ Failed to retrieve sensors readings! Status {response.status_code}")
+    print(f"Failed to retrieve sensors readings! Status {response.status_code}")
     print(response.text)
     raise Exception(f"Failed to retrieve sensors readings: {response.json()}")
 
@@ -118,6 +118,44 @@ def get_historical_sensor_data():
     except Exception as e:
         return {"error": str(e)}
 
+def save_to_readings_json(sensor_readings):
+    """
+    Save the sensor readings data to readings.json, replacing any existing data.
+    """
+    try:
+        # Format the data to match the expected structure in readings.json
+        output_data = {
+            "data": {
+                "readings_data": sensor_readings["data"]["readings_data"]
+            }
+        }
+        
+        # Write to readings.json, overwriting any existing data
+        with open("readings.json", "w") as file:
+            json.dump(output_data, file, indent=2)
+        print("Data successfully saved to readings.json")
+    except Exception as e:
+        print(f"Error saving to readings.json: {str(e)}")
+
+def save_to_radiation_json(sensor_readings):
+    """
+    Save the sensor readings data to readings-radiation.json, replacing any existing data.
+    """
+    try:
+        # Format the data to match the expected structure
+        output_data = {
+            "data": {
+                "readings_data": sensor_readings["data"]["readings_data"]
+            }
+        }
+        
+        # Write to readings-radiation.json, overwriting any existing data
+        with open("readings-radiation.json", "w") as file:
+            json.dump(output_data, file, indent=2)
+        print("Data successfully saved to readings-radiation.json")
+    except Exception as e:
+        print(f"Error saving to readings-radiation.json: {str(e)}")
+
 def main():
     "C4:45:5E:64:F9:3E"
 
@@ -139,6 +177,10 @@ def main():
         sensor_readings = get_sensor_readings(token, mac_addresses, start_date, end_date)
         print("Sensor readings retrieved successfully!")
         print(json.dumps(sensor_readings, indent=2))
+        
+        # Save the sensor readings to readings-radiation.json
+        save_to_radiation_json(sensor_readings)
+        
         sensor_data_collection.insert_one(sensor_readings)
         #//////////////remove
        # sensor_data_collection.delete_one({"sample_time_utc": "2024-12-24T08:37:06.000Z"})
