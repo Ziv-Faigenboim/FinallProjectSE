@@ -27,7 +27,7 @@ def get_sensor_readings(token, mac_addresses, start_date, end_date):
             "start_date": start_date,
             "end_date": end_date,
             "mac": mac_addresses,
-            "createdAt": True
+            "sample_time_utc": True  # סינון לפי sample_time_utc במקום createdAt
         },
         "limit": {"page": 1, "page_size": 100}
     }
@@ -36,13 +36,24 @@ def get_sensor_readings(token, mac_addresses, start_date, end_date):
         "Authorization": f"Bearer {token}"
     }
 
-    response = requests.post(sensors_readings_url, headers=sensors_readings_headers, data=json.dumps(sensors_readings_payload))
+    print("🔎 Requesting data with filter:")
+    print(json.dumps(sensors_readings_payload, indent=2))
+
+    response = requests.post(
+        sensors_readings_url,
+        headers=sensors_readings_headers,
+        data=json.dumps(sensors_readings_payload)
+    )
+
     if response.status_code == 200:
+        print("✅ Data fetched successfully!")
         return response.json()
 
+    # הדפסה בולטת במקרה של כישלון
+    print(f"❌ Failed to retrieve sensors readings! Status {response.status_code}")
+    print(response.text)
     raise Exception(f"Failed to retrieve sensors readings: {response.json()}")
-    # response.raise_for_status()
-    # return response.json()
+
 
 def get_latest_sensor_data():
     """
@@ -108,15 +119,17 @@ def get_historical_sensor_data():
         return {"error": str(e)}
 
 def main():
+    "C4:45:5E:64:F9:3E"
 
-
-    email = "sce@atomation.net"
+    email = "pre_delivery@atomation.net"
     password = "123456"
 
-    mac_addresses = ["D2:34:24:34:68:70"]
-    start_date = "2025-04-16T00:00:00.000Z"
-    end_date = "2025-04-16T23:59:59.000Z"
-    sensor_data_collection=get_db_collection(DBCollections.sensor_data)
+    mac_addresses = ["C4:45:5E:64:F9:3E"]
+    start_date = "2025-04-18T00:00:00.000Z"
+    end_date = "2025-04-18T23:59:59.000Z"
+    sensor_data_collection = get_db_collection(DBCollections.radiationsensor)
+
+    print("Connected to collection:", sensor_data_collection.full_name)
 
     try:
 
