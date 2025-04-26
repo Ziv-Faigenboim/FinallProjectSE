@@ -132,29 +132,58 @@ def main():
     print("Connected to collection:", sensor_data_collection.full_name)
 
     try:
-
         token = get_access_token(email, password)
         print("Access token retrieved successfully!")
         print(token)
         sensor_readings = get_sensor_readings(token, mac_addresses, start_date, end_date)
-        print("Sensor readings retrieved successfully!")
-        print(json.dumps(sensor_readings, indent=2))
+        
+        # Display full sensor data details
+        if "data" in sensor_readings and "readings_data" in sensor_readings["data"]:
+            readings_data = sensor_readings["data"]["readings_data"]
+            print("\n===== RADIATION SENSOR DATA =====")
+            for i, reading in enumerate(readings_data):
+                print(f"\nReading #{i+1}:")
+                print(json.dumps(reading, indent=2))
+                
+                # Display key metrics in a more readable format
+                if reading:
+                    print("\n--- Key Metrics ---")
+                    print(f"Temperature: {reading.get('Temperature', 'N/A')} °C")
+                    print(f"Humidity: {reading.get('Humidity', 'N/A')} %")
+                    print(f"Battery Level: {reading.get('Battery Level', reading.get('BatteryLevel', 'N/A'))} %")
+                    print(f"EMF: {reading.get('EMF', 'N/A')}")
+                    print(f"Strain: {reading.get('Strain', 'N/A')}")
+                    print(f"External Battery: {reading.get('External Battery', reading.get('ExternalBattery', 'N/A'))}")
+                    print(f"Sample Time: {reading.get('sample_time_utc', 'N/A')}")
+                    print("----------------------")
+        else:
+            print("No sensor data found in the response")
+            
+        # Save data to MongoDB as before
         sensor_data_collection.insert_one(sensor_readings)
-        #//////////////remove
-       # sensor_data_collection.delete_one({"sample_time_utc": "2024-12-24T08:37:06.000Z"})
-        #///////////////remove
-
+        
         for reading in sensor_readings['data']['readings_data']:
-        #for reading in reading_data:
             if sensor_data_collection.find_one({"sample_time_utc": reading["sample_time_utc"]}):
-                print("sensor readings data already exists!")
-
+                print("Sensor reading already exists in database!")
                 continue
             sensor_data_collection.insert_one(reading)
-            print("inserted sensor readings data!")
+            print(f"Inserted sensor reading from {reading.get('sample_time_utc', 'unknown')} into database!")
+        
+        # Also print data from MongoDB to verify
+        print("\n===== SAVED RADIATION SENSOR DATA FROM MONGODB =====")
+        saved_readings = list(sensor_data_collection.find({}).limit(5))
+        for i, doc in enumerate(saved_readings):
+            if isinstance(doc, dict):
+                print(f"\nDocument #{i+1} from MongoDB:")
+                if "data" in doc and "readings_data" in doc["data"]:
+                    # This is the complete response structure
+                    print(f"Found {len(doc['data']['readings_data'])} readings")
+                else:
+                    # This is an individual reading
+                    print(json.dumps({k: v for k, v in doc.items() if k != '_id'}, indent=2))
 
     except Exception as e:
-        print(e)
+        print(f"Error: {e}")
 
 def authenticate_and_get_token(email, password, app_version='1.8.5', access_type=5):
     url = 'https://atapi.atomation.net/api/v1/s2s/v1_0/auth/login'
