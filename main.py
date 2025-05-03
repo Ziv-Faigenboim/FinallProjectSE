@@ -7,48 +7,158 @@ from db.connection import get_db_collection
 app = Flask(__name__)
 app.secret_key = "your_secret_key"  # Needed for session and flashing messages
 
-# MongoDB collection for users
+# MongoDB's collection for users
 users_col = get_db_collection(DBCollections.users)
 
 # ===================== Sensor Data from JSON =====================
 def get_latest_sensor_data():
     try:
-        with open("readings.json", "r") as file:
-            data = json.load(file)
-            if "data" in data and "readings_data" in data["data"]:
-                latest_data = data["data"]["readings_data"][-1]
-                return {
-                    "temperature": latest_data.get("Temperature", "N/A"),
-                    "humidity": latest_data.get("Humidity", "N/A"),
-                    "battery": latest_data.get("Battery Level", "N/A"),
-                    "sample_time": latest_data.get("sample_time_utc", "N/A"),
-                }
-            else:
-                raise ValueError("Invalid JSON structure")
+        # Get the latest entries from both JSON files
+        sensor_data = {}
+        radiation_value = "N/A"
+        
+        # Get data from readings.json
+        try:
+            with open("readings.json", "r") as file:
+                data = json.load(file)
+                if "data" in data and "readings_data" in data["data"] and data["data"]["readings_data"]:
+                    latest_data = data["data"]["readings_data"][0]  # Get first item since newest data is now at the top
+                    
+                    # Handle numeric values properly (including 0)
+                    humidity = latest_data.get("Humidity")
+                    # Make sure we don't convert 0 to N/A
+                    if humidity is not None:
+                        humidity_value = humidity
+                    else:
+                        humidity_value = "N/A"
+                        
+                    sensor_data = {
+                        "temperature": latest_data.get("Temperature", "N/A"),
+                        "humidity": humidity_value,
+                        "battery": latest_data.get("Battery Level", "N/A"),
+                        "sample_time": latest_data.get("sample_time_utc", "N/A"),
+                    }
+        except Exception as e:
+            print(f"Error reading sensor data: {str(e)}")
+        
+        # Get radiation data
+        try:
+            radiation_value = get_radiation_value()
+        except Exception as e:
+            print(f"Error getting radiation value: {str(e)}")
+        
+        # Combine the data
+        sensor_data["radiation"] = radiation_value
+        
+        return sensor_data
+            
     except Exception as e:
         print(f"Error in get_latest_sensor_data: {str(e)}")
-        raise RuntimeError("Failed to fetch sensor data")
+        return {
+            "temperature": "N/A",
+            "humidity": "N/A", 
+            "battery": "N/A",
+            "sample_time": "N/A",
+            "radiation": "N/A"
+        }
 
 def get_historical_sensor_data():
     try:
+        # Get sensor data
         with open("readings.json", "r") as file:
-            data = json.load(file)
-            if "data" in data and "readings_data" in data["data"]:
-                historical_data = [
-                    {
-                        "temperature": reading.get("Temperature", "N/A"),
-                        "humidity": reading.get("Humidity", "N/A"),
-                        "battery": reading.get("Battery Level", "N/A"),
-                        "sample_time": reading.get("sample_time_utc", "N/A"),
-                    }
-                    for reading in data["data"]["readings_data"]
-                ]
-                return historical_data
-            else:
-                raise ValueError("Invalid JSON structure")
+            sensor_data = json.load(file)
+            
+        # Get radiation data
+        radiation_data = {}
+        try:
+            with open("readings-radiation.json", "r") as file:
+                rad_json = json.load(file)
+                if "data" in rad_json and "readings_data" in rad_json["data"]:
+                    # Create a dictionary with timestamps as keys for quick lookup
+                    for reading in rad_json["data"]["readings_data"]:
+                        if "sample_time_utc" in reading:
+                            radiation_data[reading["sample_time_utc"]] = reading.get("Radiation", "N/A")
+        except Exception as e:
+            print(f"Error loading radiation data: {str(e)}")
+        
+        # Process sensor data and add radiation values
+        if "data" in sensor_data and "readings_data" in sensor_data["data"]:
+            historical_data = []
+            
+            for reading in sensor_data["data"]["readings_data"]:
+                sample_time = reading.get("sample_time_utc", "N/A")
+                entry = {
+                    "temperature": reading.get("Temperature", "N/A"),
+                    "humidity": reading.get("Humidity", "N/A"),
+                    "battery": reading.get("Battery Level", "N/A"),
+                    "sample_time": sample_time,
+                    # Add radiation data if available for this timestamp
+                    "radiation": radiation_data.get(sample_time, "N/A")
+                }
+                historical_data.append(entry)
+                
+            return historical_data
+        else:
+            raise ValueError("Invalid JSON structure")
     except Exception as e:
         print(f"Error in get_historical_sensor_data: {str(e)}")
         raise RuntimeError("Failed to fetch historical data")
+
+def get_latest_radiation_data():
+    try:
+        with open("readings-radiation.json", "r") as file:
+            data = json.load(file)
+            if "data" in data and "readings_data" in data["data"] and data["data"]["readings_data"]:
+                latest_data = data["data"]["readings_data"][0]  # Get first item since newest data is now at the top
+                return {
+                    "radiation": latest_data.get("Radiation", "N/A"),
+                    "sample_time": latest_data.get("sample_time_utc", "N/A"),
+                }
+            else:
+                raise ValueError("Invalid radiation JSON structure")
+    except Exception as e:
+        print(f"Error in get_latest_radiation_data: {str(e)}")
+        return {"radiation": "N/A", "sample_time": "N/A"}
+
+def get_radiation_value():
+    """Get just the radiation value from the top entry"""
+    try:
+        with open("readings-radiation.json", "r") as file:
+            data = json.load(file)
+            if "data" in data and "readings_data" in data["data"] and data["data"]["readings_data"]:
+                radiation = data["data"]["readings_data"][0].get("Radiation", "N/A")
+                # Try to convert to float if it's a string number
+                if isinstance(radiation, str) and radiation != "N/A":
+                    try:
+                        return float(radiation)
+                    except ValueError:
+                        pass
+                return radiation
+            return "N/A"
+    except Exception as e:
+        print(f"Error reading radiation value: {str(e)}")
+        return "N/A"
+
+# ===================== Weather API =====================
+import requests
+
+def get_weather():
+    api_key = "27b99d8bad72ab73a65e2b96ab43ec97"
+    lat, lon = 31.25181, 34.7913
+    try:
+        url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={api_key}&units=metric&lang=en"
+        response = requests.get(url)
+        data = response.json()
+        return {
+            "temperature": data["main"]["temp"],
+            "description": data["weather"][0]["description"],
+            "humidity": data["main"]["humidity"],
+            "wind": data["wind"]["speed"]
+        }
+    except Exception as e:
+        print("Weather API error:", e)
+        return {"error": "Failed to fetch weather data"}
+
 
 # ===================== Require Login for Protected Routes =====================
 @app.before_request
@@ -94,6 +204,52 @@ def get_sensor_history():
         return jsonify(history), 200
     except Exception as e:
         return jsonify({"error": f"Failed to fetch historical data: {str(e)}"}), 500
+
+@app.route("/get-radiation-data")
+def get_radiation_data():
+    # If user is not logged in, they'll be redirected by the before_request check
+    try:
+        data = get_latest_radiation_data()
+        return jsonify(data), 200
+    except Exception as e:
+        return jsonify({"error": f"Failed to fetch radiation data: {str(e)}"}), 500
+
+@app.route("/get-weather")
+def get_weather_route():
+    weather_data = get_weather()
+    return jsonify(weather_data)
+
+import csv
+from flask import Response
+
+@app.route("/export-csv")
+def export_csv():
+    try:
+        # Get the historical data which already includes radiation values
+        historical_data = get_historical_sensor_data()
+
+        if not historical_data:
+            return "No sensor data available", 404
+
+        # Create CSV string
+        def generate():
+            header = ["Temperature", "Humidity", "Battery Level", "Radiation", "Sample Time"]
+            yield ",".join(header) + "\n"
+            for item in historical_data:
+                line = [
+                    str(item.get("temperature", "")),
+                    str(item.get("humidity", "")),
+                    str(item.get("battery", "")),
+                    str(item.get("radiation", "")),
+                    str(item.get("sample_time", ""))
+                ]
+                yield ",".join(line) + "\n"
+
+        return Response(generate(), mimetype='text/csv',
+                        headers={"Content-Disposition": "attachment;filename=sensor_data.csv"})
+
+    except Exception as e:
+        return f"Error generating CSV: {str(e)}", 500
 
 # ===================== User Registration & Login =====================
 
@@ -161,3 +317,4 @@ def logout():
 # ===================== Run App =====================
 if __name__ == "__main__":
     app.run(debug=True)
+

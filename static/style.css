@@ -10,53 +10,78 @@ body {
 
 #main-header {
   width: 100%;
-  background-color: #007bff;
+  background-color: #48b4e0;
   color: white;
-  text-align: center;
+  text-align: left;
   padding: 0.5rem 0;
   font-size: 1.4rem;
   font-weight: 500;
 }
 
-#nav-bar {
-  margin-top: 0.25rem;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-#nav-bar a {
-  margin: 0 10px;
+.nav-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: white;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.right-nav a {
   color: white;
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 400;
 }
 
-#nav-bar a:hover {
+.right-nav a:hover {
   text-decoration: underline;
+}
+
+/* Remove the old nav-bar styles */
+#nav-bar {
+  display: none;
 }
 
 .container {
   display: flex;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 60px);
+  padding: 0;
 }
 
-#sensor-panel {
-  width: 30%;
-  padding: 1.5rem;
-  border-right: 1px solid #e0e0e0;
+#info-panel {
+  width: 350px;
+  padding: 1rem;
   background: #ffffff;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
 }
 
 #map-container {
+  flex: 1;
   position: relative;
-  width: 70%;
-  height: calc(100vh - 100px);  /* יותר מקום מתחת */
+  height: 100%;
+  min-height: 0;
 }
 
 #map {
-  width: 100%;
-  height: calc(100vh - 210px);  /* גובה המפה קטן יותר כדי לפנות מקום לסרגל */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 #slider-container {
@@ -64,12 +89,13 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 15px 10px;
+  padding: 20px 10px;
   background-color: #ffffff;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-  z-index: 100;  /* הסרגל תמיד יהיה מעל המפה */
+  z-index: 100;
   box-sizing: border-box;
+  border-radius: 0 0 10px 10px;
 }
 
 #time-slider {
@@ -78,9 +104,17 @@ body {
   cursor: pointer;
   -webkit-appearance: none;
   appearance: none;
-  height: 8px;
-  background: #ddd;
-  border-radius: 5px;
+  height: 10px;
+  background: linear-gradient(90deg,
+    #0a1a2a 0%,    /* Night */
+    #5d88b2 20%,   /* Dawn */
+    #87ceeb 40%,   /* Morning */
+    #ffffff 50%,   /* Noon */
+    #87ceeb 60%,   /* Afternoon */
+    #5d88b2 80%,   /* Dusk */
+    #0a1a2a 100%   /* Night again */
+  );
+  border-radius: 10px;
   outline: none;
 }
 
@@ -89,46 +123,69 @@ body {
   appearance: none;
   width: 20px;
   height: 20px;
-  background: #007bff;
+  background: #fff;
+  border: 2px solid #ffb700;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(255, 183, 0, 0.5);
+}
+
+#time-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 2px solid #ffb700;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 183, 0, 0.5);
+}
+
+#morning-label, #evening-label {
+  color: #666;
 }
 
 #sun-icon {
   position: absolute;
-  top: -35px;
+  top: -25px;
   font-size: 2rem;
   transition: left 0.1s ease-in-out;
   transform: translateX(-50%);
+  text-shadow: 0 0 15px rgba(255, 183, 0, 0.7);
+  z-index: 10;
+}
+
+#time-display {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 5px 0;
 }
 
 .time-labels {
   display: flex;
   justify-content: space-between;
-  margin-top: 5px;
-  font-size: 1rem;
+  width: 90%;
+  margin: 5px auto;
+  font-size: 14px;
   color: #555;
+  padding: 0 10px;
 }
-
-
 
 button {
   margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #007bff;
+  padding: 10px 15px;
+  background-color: #48b4e0;
   color: white;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
+  background-color: #3a91b5;
 }
 
 #history-container {
@@ -215,4 +272,152 @@ h2, h3 {
   width: 100%;
   max-width: 600px;
   height: auto;
+}
+
+.leaflet-popup-content {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Popup container */
+.popup-wrapper {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+/* Quality text label */
+.shadow-popup .quality-label {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 6px;
+  padding: 4px 8px;
+  border-radius: 5px;
+  display: inline-block;
+  color: white;
+}
+
+.shadow-popup .quality-label.red {
+  background-color: #d9534f;
+}
+
+.shadow-popup .quality-label.yellow {
+  background-color: #f0ad4e;
+  color: #333;
+}
+
+.shadow-popup .quality-label.green {
+  background-color: #5cb85c;
+}
+
+/* Meter bar */
+.shadow-popup .meter-bar {
+  width: 100%;
+  height: 12px;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.shadow-popup .meter-fill {
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+.shadow-popup .meter-fill.red {
+  background-color: #d9534f;
+}
+
+.shadow-popup .meter-fill.yellow {
+  background-color: #f0ad4e;
+}
+
+.shadow-popup .meter-fill.green {
+  background-color: #5cb85c;
+}
+
+.gradient-meter {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  margin: 10px 0;
+}
+
+.gradient-bar {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(to right, red, yellow, green);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.meter-indicator {
+  position: absolute;
+  top: -5px;
+  width: 10px;
+  height: 30px;
+  background-color: #333;
+  border-radius: 3px;
+  transform: translateX(-50%);
+}
+
+.weather-container {
+  background-color: #e8f4ff;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.weather-container h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.weather-container p {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.weather-container span {
+  font-weight: bold;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  background-color: #48b4e0;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.toggle-button:hover {
+  background-color: #3a91b5;
+}
+
+#weather-box {
+  background-color: white;
+  padding: 15px;
+  border-radius: 0;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #48b4e0;
+  color: white;
+  display: inline-block;
+  margin-right: 10px;
+  text-decoration: none;
 }
