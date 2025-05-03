@@ -5,7 +5,9 @@ from db.db_collections import DBCollections  # Updated import
 
 DB_NAME = "SensorData"
 
-CONNECTION_STRING = 'mongodb://localhost:27017/'
+CONNECTION_STRING = "mongodb+srv://zivfa:Mihlala123%21@cluster0.orsmafk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
+
 
 def get_db_collection(collection_name: DBCollections):
     client = MongoClient(CONNECTION_STRING)
