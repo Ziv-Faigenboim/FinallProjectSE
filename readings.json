@@ -34,7 +34,7 @@
       },
       {
         "Temperature": 19.2868,
-        "Humidity": 0,
+        "Humidity": 25,
         "External Battery": 8.636909,
         "Vibration SD": 0.0069822944,
         "Battery Level": 100,
@@ -65,7 +65,7 @@
       },
       {
         "Temperature": 34.67498,
-        "Humidity": 0,
+        "Humidity": 28,
         "External Battery": 8.503377,
         "Vibration SD": 0.007583636,
         "Battery Level": 100,
@@ -96,7 +96,7 @@
       },
       {
         "Temperature": 19.765163,
-        "Humidity": 0,
+        "Humidity": 35,
         "External Battery": 8.628385,
         "Vibration SD": 0.009095076,
         "Battery Level": 100,
@@ -127,7 +127,7 @@
       },
       {
         "Temperature": 27.252802,
-        "Humidity": 0,
+        "Humidity": 40,
         "External Battery": 8.580086,
         "Vibration SD": 0.0061058234,
         "Battery Level": 100,
@@ -158,7 +158,7 @@
       },
       {
         "Temperature": 18.526455,
-        "Humidity": 0,
+        "Humidity": 35,
         "External Battery": 8.58861,
         "Vibration SD": 0.0064844014,
         "Battery Level": 100,
@@ -189,7 +189,7 @@
       },
       {
         "Temperature": 18.748013,
-        "Humidity": 0,
+        "Humidity": 32,
         "External Battery": 8.6482725,
         "Vibration SD": 0.0060821464,
         "Battery Level": 100,
@@ -220,7 +220,7 @@
       },
       {
         "Temperature": 18.833614,
-        "Humidity": 0,
+        "Humidity": 2,
         "External Battery": 8.639749,
         "Vibration SD": 0.0064074295,
         "Battery Level": 100,
@@ -251,7 +251,7 @@
       },
       {
         "Temperature": 30.228724,
-        "Humidity": 0,
+        "Humidity": 28,
         "External Battery": 8.545993,
         "Vibration SD": 0.0066614924,
         "Battery Level": 100,
@@ -282,7 +282,7 @@
       },
       {
         "Temperature": 34.493706,
-        "Humidity": 0,
+        "Humidity": 32,
         "External Battery": 8.494854,
         "Vibration SD": 0.006583182,
         "Battery Level": 100,
@@ -313,7 +313,7 @@
       },
       {
         "Temperature": 31.50268,
-        "Humidity": 0,
+        "Humidity": 25,
         "External Battery": 8.526106,
         "Vibration SD": 0.0068851174,
         "Battery Level": 100,

@@ -1,6 +1,7 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiZWxhZDc2MTAiLCJhIjoiY205andvMnN2MDZpaDJqc2JvaXhlbWR2bCJ9.BL95xjSj5yW4y3Rb_0_l1w';
 
 let is3D = false;
+let sensorChart = null;
 
 const map = new mapboxgl.Map({
   container: 'map',
@@ -316,6 +317,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const slider = document.getElementById('time-slider');
   const sunIcon = document.getElementById('sun-icon');
   const sliderContainer = document.getElementById('slider-container');
+  const graphButton = document.getElementById('graph-button');
+  const graphModal = document.getElementById('graph-modal');
 
   if (slider && sunIcon) {
     // Create time display element
@@ -372,8 +375,261 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       updateShadows();
     }, 1000); // Small delay to ensure map is fully loaded
+    
+    // Add graph button functionality
+    if (graphButton) {
+      graphButton.addEventListener('click', function() {
+        // Show the modal
+        graphModal.style.display = 'flex';
+        
+        // Fetch sensor history data for the graph
+        fetchAndDisplayGraph();
+      });
+    }
   }
 });
+
+// Function to fetch sensor history and create a graph
+function fetchAndDisplayGraph() {
+  fetch('/get-sensor-history')
+    .then(response => response.json())
+    .then(data => {
+      if (data.length === 0) {
+        document.getElementById('modal-chart-container').innerHTML = '<p>No historical data available</p>';
+        return;
+      }
+      
+      // Process data for chart
+      const timestamps = [];
+      const temperatures = [];
+      const humidities = [];
+      const radiations = [];
+      
+      // Group data by date for daily view
+      const dateGroups = {};
+      
+      data.forEach(item => {
+        const date = new Date(item.sample_time);
+        const timeStr = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        const dateStr = date.toLocaleDateString();
+        
+        if (!dateGroups[dateStr]) {
+          dateGroups[dateStr] = {
+            times: [],
+            temps: [],
+            humidities: [],
+            radiations: []
+          };
+        }
+        
+        dateGroups[dateStr].times.push(timeStr);
+        dateGroups[dateStr].temps.push(item.temperature);
+        dateGroups[dateStr].humidities.push(item.humidity);
+        dateGroups[dateStr].radiations.push(item.radiation || 0);
+      });
+      
+      // Use the most recent date's data
+      const dates = Object.keys(dateGroups).sort();
+      const latestDate = dates[dates.length - 1];
+      const latestData = dateGroups[latestDate];
+      
+      // Format date for display
+      const displayDate = new Date(latestDate).toLocaleDateString('en-US', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+      
+      // Create chart
+      createSensorChart(
+        latestData.times,
+        latestData.temps,
+        latestData.humidities,
+        latestData.radiations,
+        displayDate
+      );
+    })
+    .catch(error => {
+      console.error('Error fetching sensor history for graph:', error);
+      document.getElementById('modal-chart-container').innerHTML = '<p>Error loading graph data</p>';
+    });
+}
+
+// Function to create chart with Chart.js
+function createSensorChart(labels, temperatures, humidities, radiations, dateLabel) {
+  const ctx = document.getElementById('sensor-chart').getContext('2d');
+  
+  // Destroy existing chart if it exists
+  if (sensorChart) {
+    sensorChart.destroy();
+  }
+  
+  // Set chart title
+  document.querySelector('.modal-title').textContent = `Sensor Readings for ${dateLabel}`;
+  
+  // Create gradient for temperature
+  const tempGradient = ctx.createLinearGradient(0, 0, 0, 400);
+  tempGradient.addColorStop(0, 'rgba(255, 99, 132, 0.8)');
+  tempGradient.addColorStop(1, 'rgba(255, 99, 132, 0.1)');
+  
+  // Create gradient for humidity
+  const humidityGradient = ctx.createLinearGradient(0, 0, 0, 400);
+  humidityGradient.addColorStop(0, 'rgba(54, 162, 235, 0.8)');
+  humidityGradient.addColorStop(1, 'rgba(54, 162, 235, 0.1)');
+  
+  // Create gradient for radiation
+  const radiationGradient = ctx.createLinearGradient(0, 0, 0, 400);
+  radiationGradient.addColorStop(0, 'rgba(255, 205, 86, 0.8)');
+  radiationGradient.addColorStop(1, 'rgba(255, 205, 86, 0.1)');
+  
+  sensorChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: 'Temperature (°C)',
+          data: temperatures,
+          borderColor: 'rgb(255, 99, 132)',
+          backgroundColor: tempGradient,
+          tension: 0.4,
+          fill: true,
+          pointRadius: 6,
+          pointBackgroundColor: 'rgb(255, 99, 132)',
+          pointBorderColor: '#fff',
+          pointBorderWidth: 2,
+          yAxisID: 'y'
+        },
+        {
+          label: 'Humidity (%)',
+          data: humidities,
+          borderColor: 'rgb(54, 162, 235)',
+          backgroundColor: humidityGradient,
+          tension: 0.4,
+          fill: true,
+          pointRadius: 6,
+          pointBackgroundColor: 'rgb(54, 162, 235)',
+          pointBorderColor: '#fff',
+          pointBorderWidth: 2,
+          yAxisID: 'y'
+        },
+        {
+          label: 'Radiation',
+          data: radiations,
+          borderColor: 'rgb(255, 205, 86)',
+          backgroundColor: radiationGradient,
+          tension: 0.4,
+          fill: true,
+          pointRadius: 6,
+          pointBackgroundColor: 'rgb(255, 205, 86)',
+          pointBorderColor: '#fff',
+          pointBorderWidth: 2,
+          yAxisID: 'y1'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        title: {
+          display: false
+        },
+        legend: {
+          position: 'top',
+          labels: {
+            font: {
+              size: 14,
+              weight: 'bold'
+            },
+            padding: 20
+          }
+        },
+        tooltip: {
+          mode: 'index',
+          intersect: false,
+          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          titleFont: {
+            size: 16
+          },
+          bodyFont: {
+            size: 14
+          },
+          padding: 12,
+          cornerRadius: 6
+        }
+      },
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: 'Time',
+            font: {
+              size: 14,
+              weight: 'bold'
+            },
+            padding: 10
+          },
+          grid: {
+            display: true,
+            color: 'rgba(0, 0, 0, 0.1)'
+          }
+        },
+        y: {
+          type: 'linear',
+          display: true,
+          position: 'left',
+          title: {
+            display: true,
+            text: 'Temperature (°C) / Humidity (%)',
+            font: {
+              size: 14,
+              weight: 'bold'
+            },
+            padding: 10
+          },
+          grid: {
+            color: 'rgba(0, 0, 0, 0.1)'
+          },
+          ticks: {
+            font: {
+              size: 12
+            }
+          }
+        },
+        y1: {
+          type: 'linear',
+          display: true,
+          position: 'right',
+          title: {
+            display: true,
+            text: 'Radiation',
+            font: {
+              size: 14,
+              weight: 'bold'
+            },
+            padding: 10
+          },
+          grid: {
+            drawOnChartArea: false,
+            color: 'rgba(255, 205, 86, 0.2)'
+          },
+          ticks: {
+            font: {
+              size: 12
+            }
+          }
+        }
+      },
+      elements: {
+        line: {
+          borderWidth: 3
+        }
+      }
+    }
+  });
+}
 
 // Calculate comfort level based on temperature, humidity, and radiation
 function calculateComfortLevel(temp, humidity, radiation) {

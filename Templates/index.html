@@ -43,7 +43,7 @@
     font-size: 1.2rem;
   }
 
-  #sensor-data-container, #history-container {
+  #sensor-data-container, #history-container, #graph-container {
     margin-bottom: 20px;
   }
 
@@ -113,6 +113,114 @@
     border-radius: 4px;
     cursor: pointer;
   }
+  
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    width: 70%;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #555;
+  }
+  
+  .close-modal:hover {
+    color: #000;
+  }
+  
+  .modal-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    padding-right: 30px;
+  }
+  
+  #modal-chart-container {
+    width: 100%;
+    height: 400px;
+  }
+  
+  /* Filter styles */
+  .filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+  }
+  
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 80px;
+  }
+  
+  .filter-group label {
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .filter-group select {
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .filter-apply {
+    align-self: flex-end;
+    margin-top: auto;
+    background-color: #48b4e0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .filter-apply:hover {
+    background-color: #3a91b5;
+  }
+  
+  #history-list {
+    padding-left: 20px;
+  }
+  
+  #history-list li {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
 </style>
 
 <div class="container">
@@ -134,9 +242,36 @@
     <a href="/export-csv" class="button" download>
     📥 Download CSV
     </a>
+    <button id="graph-button" class="button">📊 Graph</button>
 
     <div id="history-container" style="display: none;">
       <h3>Historical Data</h3>
+      <div class="filter-controls">
+        <div class="filter-group">
+          <label for="day-filter">Day</label>
+          <select id="day-filter">
+            <option value="all" selected>All</option>
+            <!-- Days 1-31 will be added by JavaScript -->
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="month-filter">Month</label>
+          <select id="month-filter">
+            <option value="all" selected>All</option>
+            <!-- Months will be added by JavaScript -->
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="time-filter">Time Range</label>
+          <select id="time-filter">
+            <option value="all" selected>All</option>
+            <option value="morning">Morning (00:00-12:00)</option>
+            <option value="afternoon">Afternoon (12:00-18:00)</option>
+            <option value="evening">Evening (18:00-24:00)</option>
+          </select>
+        </div>
+        <button id="apply-filter" class="filter-apply">Apply</button>
+      </div>
       <ul id="history-list"></ul>
     </div>
   </div>
@@ -149,6 +284,17 @@
     <div id="slider-container">
       <input type="range" id="time-slider" min="0" max="23" value="12" step="1">
       <div id="sun-icon">☀️</div>
+    </div>
+  </div>
+</div>
+
+<!-- Graph Modal -->
+<div id="graph-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h3 class="modal-title">Sensor Data Visualization</h3>
+    <div id="modal-chart-container">
+      <canvas id="sensor-chart"></canvas>
     </div>
   </div>
 </div>
@@ -169,10 +315,40 @@
       }
     });
 
+  // Store sensor history data globally
+  let sensorHistoryData = [];
+  
+  // Initialize filter dropdowns
+  function initializeFilters() {
+    // Add days 1-31
+    const dayFilter = document.getElementById('day-filter');
+    for (let i = 1; i <= 31; i++) {
+      const option = document.createElement('option');
+      option.value = i;
+      option.textContent = i;
+      dayFilter.appendChild(option);
+    }
+    
+    // Add months
+    const monthFilter = document.getElementById('month-filter');
+    const months = [
+      'January', 'February', 'March', 'April', 'May', 'June',
+      'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+    months.forEach((month, index) => {
+      const option = document.createElement('option');
+      option.value = index + 1;
+      option.textContent = month;
+      monthFilter.appendChild(option);
+    });
+  }
+  
+  // Initialize filters when DOM is loaded
+  document.addEventListener('DOMContentLoaded', initializeFilters);
+
   // Load sensor history
   document.getElementById('history-button').addEventListener('click', function () {
     const historyContainer = document.getElementById('history-container');
-    const historyList = document.getElementById('history-list');
 
     // Toggle visibility
     historyContainer.style.display = historyContainer.style.display === 'none' ? 'block' : 'none';
@@ -181,19 +357,95 @@
       fetch('/get-sensor-history')
         .then(response => response.json())
         .then(data => {
-          historyList.innerHTML = '';
-          data.forEach(item => {
-            const li = document.createElement('li');
-            li.innerHTML = `
-              <strong>Temperature:</strong> ${item.temperature} °C<br>
-              <strong>Humidity:</strong> ${item.humidity} %<br>
-              <strong>Battery:</strong> ${item.battery} %<br>
-              <strong>Radiation:</strong> ${item.radiation || 'N/A'}<br>
-              <strong>Time:</strong> ${item.sample_time}
-            `;
-            historyList.appendChild(li);
-          });
+          sensorHistoryData = data;
+          // Sort by time (newest first) as default
+          sensorHistoryData.sort((a, b) => new Date(b.sample_time) - new Date(a.sample_time));
+          displayFilteredHistory();
         });
+    }
+  });
+  
+  // Apply filters and display history
+  document.getElementById('apply-filter').addEventListener('click', function() {
+    displayFilteredHistory();
+  });
+  
+  // Filter and display history data
+  function displayFilteredHistory() {
+    const historyList = document.getElementById('history-list');
+    historyList.innerHTML = '';
+    
+    const dayFilter = document.getElementById('day-filter').value;
+    const monthFilter = document.getElementById('month-filter').value;
+    const timeFilter = document.getElementById('time-filter').value;
+    
+    // Filter the data
+    const filteredData = sensorHistoryData.filter(item => {
+      const date = new Date(item.sample_time);
+      const day = date.getDate();
+      const month = date.getMonth() + 1; // JavaScript months are 0-indexed
+      const hour = date.getHours();
+      
+      // Apply day filter
+      if (dayFilter !== 'all' && day !== parseInt(dayFilter)) {
+        return false;
+      }
+      
+      // Apply month filter
+      if (monthFilter !== 'all' && month !== parseInt(monthFilter)) {
+        return false;
+      }
+      
+      // Apply time filter
+      if (timeFilter !== 'all') {
+        if (timeFilter === 'morning' && (hour < 0 || hour >= 12)) {
+          return false;
+        } else if (timeFilter === 'afternoon' && (hour < 12 || hour >= 18)) {
+          return false;
+        } else if (timeFilter === 'evening' && (hour < 18 || hour >= 24)) {
+          return false;
+        }
+      }
+      
+      return true;
+    });
+    
+    // Display filtered data
+    if (filteredData.length === 0) {
+      historyList.innerHTML = '<p>No data matches the selected filters.</p>';
+      return;
+    }
+    
+    filteredData.forEach(item => {
+      const date = new Date(item.sample_time);
+      const formattedDate = date.toLocaleDateString();
+      const formattedTime = date.toLocaleTimeString();
+      
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <strong>Temperature:</strong> ${item.temperature} °C<br>
+        <strong>Humidity:</strong> ${item.humidity} %<br>
+        <strong>Battery:</strong> ${item.battery} %<br>
+        <strong>Radiation:</strong> ${item.radiation || 'N/A'}<br>
+        <strong>Time:</strong> ${formattedDate} ${formattedTime}
+      `;
+      historyList.appendChild(li);
+    });
+  }
+  
+  // Modal handling
+  const modal = document.getElementById('graph-modal');
+  const closeBtn = document.querySelector('.close-modal');
+  
+  // Close modal when clicking the X
+  closeBtn.addEventListener('click', function() {
+    modal.style.display = 'none';
+  });
+  
+  // Close modal when clicking outside
+  window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+      modal.style.display = 'none';
     }
   });
 </script>
