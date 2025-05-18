@@ -221,6 +221,46 @@
     padding-bottom: 10px;
     border-bottom: 1px solid #eee;
   }
+  
+  /* Map search box styles */
+  .map-search-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    width: 250px;
+    max-width: calc(100% - 20px);
+  }
+  
+  .map-search-box {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    font-size: 14px;
+  }
+  
+  .search-results {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    margin-top: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+  }
+  
+  .search-result-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .search-result-item:hover {
+    background-color: #f5f5f5;
+  }
 </style>
 
 <div class="container">
@@ -278,6 +318,10 @@
 
   <div id="map-container">
     <div id="map"></div>
+    <div class="map-search-container">
+      <input type="text" id="map-search" class="map-search-box" placeholder="Search location (e.g., Tel Aviv)">
+      <div class="search-results" id="search-results"></div>
+    </div>
     <button class="toggle-button" onclick="toggleView()">
       Toggle 2D/3D
     </button>
@@ -432,6 +476,71 @@
       historyList.appendChild(li);
     });
   }
+  
+  // Map search functionality
+  const searchBox = document.getElementById('map-search');
+  const searchResults = document.getElementById('search-results');
+  let searchTimeout;
+  
+  searchBox.addEventListener('input', function() {
+    // Clear any pending search
+    clearTimeout(searchTimeout);
+    
+    const query = this.value.trim();
+    if (query.length < 2) {
+      searchResults.style.display = 'none';
+      return;
+    }
+    
+    // Debounce the search to avoid too many API calls
+    searchTimeout = setTimeout(() => {
+      // Perform the geocoding search
+      const geocodingUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(query)}.json?access_token=${mapboxgl.accessToken}&limit=5`;
+      
+      fetch(geocodingUrl)
+        .then(response => response.json())
+        .then(data => {
+          // Display search results
+          if (data.features && data.features.length > 0) {
+            searchResults.innerHTML = '';
+            data.features.forEach(feature => {
+              const resultItem = document.createElement('div');
+              resultItem.className = 'search-result-item';
+              resultItem.textContent = feature.place_name;
+              resultItem.addEventListener('click', () => {
+                // Fly to the selected location
+                map.flyTo({
+                  center: feature.center,
+                  zoom: 13,
+                  essential: true
+                });
+                // Clear search results
+                searchResults.style.display = 'none';
+                // Update search box with selected location
+                searchBox.value = feature.place_name;
+              });
+              searchResults.appendChild(resultItem);
+            });
+            searchResults.style.display = 'block';
+          } else {
+            searchResults.innerHTML = '<div class="search-result-item">No results found</div>';
+            searchResults.style.display = 'block';
+          }
+        })
+        .catch(error => {
+          console.error('Error searching location:', error);
+          searchResults.innerHTML = '<div class="search-result-item">Error searching location</div>';
+          searchResults.style.display = 'block';
+        });
+    }, 300); // 300ms debounce time
+  });
+  
+  // Close search results when clicking elsewhere
+  document.addEventListener('click', function(event) {
+    if (!searchBox.contains(event.target) && !searchResults.contains(event.target)) {
+      searchResults.style.display = 'none';
+    }
+  });
   
   // Modal handling
   const modal = document.getElementById('graph-modal');
