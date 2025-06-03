@@ -639,7 +639,7 @@ function calculateComfortLevel(temp, humidity, radiation) {
   // Include radiation in comfort calculation if available
   if (radiation && typeof radiation === 'number') {
     // Reduce comfort by 1 point for each unit of radiation above the safe threshold
-    const safeRadiationThreshold = 0.5; // Example threshold
+    const safeRadiationThreshold = 0.5;
     if (radiation > safeRadiationThreshold) {
       comfort -= (radiation - safeRadiationThreshold) * 10;
     }
