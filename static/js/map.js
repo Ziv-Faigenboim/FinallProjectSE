@@ -2,6 +2,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiZWxhZDc2MTAiLCJhIjoiY205andvMnN2MDZpaDJqc2Jva
 
 let is3D = false;
 let sensorChart = null;
+let landUseVisible = false;
 
 const map = new mapboxgl.Map({
   container: 'map',
@@ -104,6 +105,9 @@ map.on('load', () => {
     }
   }, '3d-buildings');
 
+  // Add land use layers (standardized)
+  addLandUseLayers();
+
   // Add the sensor marker
   const marker = new mapboxgl.Marker()
     .setLngLat([34.7895184904266, 31.2498119452557])
@@ -203,6 +207,216 @@ map.on('load', () => {
     }
   });
 });
+
+// Add land use layers based on standardized categories
+function addLandUseLayers() {
+  try {
+    // Use the correct Mapbox composite source which includes land use data
+    // This data comes from OpenStreetMap and is available globally
+    
+    // Standardized land use colors based on international standards
+    const landUseColors = {
+      'residential': '#FFC72C',      // Yellow - Residential areas
+      'commercial': '#FF6B6B',       // Red - Commercial and business
+      'industrial': '#9B59B6',       // Purple - Industrial areas
+      'park': '#4ECDC4',             // Teal - Parks and recreation
+      'cemetery': '#95A5A6',         // Gray - Cemeteries
+      'hospital': '#E74C3C',         // Dark red - Medical facilities
+      'school': '#3498DB',           // Blue - Educational facilities
+      'agriculture': '#2ECC71',      // Green - Agricultural land
+      'grass': '#A8E6CF',            // Light green - Grassland
+      'scrub': '#D5E8D4',            // Very light green - Scrubland
+      'wood': '#228B22',             // Forest green - Wooded areas
+      'water': '#5DADE2',            // Light blue - Water bodies
+      'airport': '#BDC3C7',          // Light gray - Airport areas
+      'parking': '#34495E',          // Dark gray - Parking lots
+      'pitch': '#52C41A',            // Bright green - Sports fields
+      'sand': '#F39C12',             // Orange - Sandy areas
+      'rock': '#7F8C8D'              // Medium gray - Rocky areas
+    };
+
+    // Add fill layer for land use using the composite source
+    map.addLayer({
+      'id': 'land-use-fill',
+      'type': 'fill',
+      'source': 'composite',
+      'source-layer': 'landuse',
+      'minzoom': 6,
+      'maxzoom': 24,
+      'layout': {
+        'visibility': 'none'
+      },
+      'paint': {
+        'fill-color': [
+          'match',
+          ['get', 'class'],
+          ['residential', 'suburb'], landUseColors.residential,
+          ['commercial', 'retail'], landUseColors.commercial,
+          ['industrial', 'construction'], landUseColors.industrial,
+          ['park', 'recreation_ground', 'playground'], landUseColors.park,
+          'cemetery', landUseColors.cemetery,
+          ['hospital', 'clinic'], landUseColors.hospital,
+          ['school', 'college', 'university'], landUseColors.school,
+          ['agriculture', 'farmland', 'farmyard'], landUseColors.agriculture,
+          ['grass', 'meadow'], landUseColors.grass,
+          ['scrub', 'scrubland'], landUseColors.scrub,
+          ['wood', 'forest'], landUseColors.wood,
+          'airport', landUseColors.airport,
+          'parking', landUseColors.parking,
+          ['pitch', 'sports_pitch'], landUseColors.pitch,
+          'sand', landUseColors.sand,
+          'rock', landUseColors.rock,
+          '#E0E0E0' // Default light gray for unclassified
+        ],
+        'fill-opacity': [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          6, 0.3,
+          10, 0.5,
+          14, 0.7,
+          18, 0.8
+        ]
+      }
+    });
+
+         // Add natural land cover layer for better coverage
+     map.addLayer({
+       'id': 'natural-land-use',
+       'type': 'fill',
+       'source': 'composite',
+       'source-layer': 'natural_label',
+       'minzoom': 6,
+       'maxzoom': 24,
+       'layout': {
+         'visibility': 'none'
+       },
+       'paint': {
+         'fill-color': [
+           'match',
+           ['get', 'class'],
+           'wood', landUseColors.wood,
+           'water', landUseColors.water,
+           'grass', landUseColors.grass,
+           'sand', landUseColors.sand,
+           'rock', landUseColors.rock,
+           '#D0D0D0'
+         ],
+         'fill-opacity': [
+           'interpolate',
+           ['linear'],
+           ['zoom'],
+           6, 0.3,
+           10, 0.4,
+           14, 0.6,
+           18, 0.7
+         ]
+       }
+     });
+
+      // Add additional building-based land use for better zoom coverage
+      map.addLayer({
+        'id': 'building-land-use',
+        'type': 'fill',
+        'source': 'composite',
+        'source-layer': 'building',
+        'minzoom': 14,
+        'maxzoom': 24,
+        'layout': {
+          'visibility': 'none'
+        },
+        'paint': {
+          'fill-color': [
+            'match',
+            ['get', 'type'],
+            ['house', 'apartments', 'residential'], landUseColors.residential,
+            ['commercial', 'office', 'retail'], landUseColors.commercial,
+            ['industrial', 'warehouse'], landUseColors.industrial,
+            ['hospital', 'clinic'], landUseColors.hospital,
+            ['school', 'university'], landUseColors.school,
+            '#F0F0F0' // Light gray for general buildings
+          ],
+          'fill-opacity': 0.4
+        }
+      });
+
+         // Add outline layer for better definition
+     map.addLayer({
+       'id': 'land-use-outline',
+       'type': 'line',
+       'source': 'composite',
+       'source-layer': 'landuse',
+       'minzoom': 12,
+       'maxzoom': 24,
+       'layout': {
+         'visibility': 'none'
+       },
+       'paint': {
+         'line-color': '#555555',
+         'line-width': [
+           'interpolate',
+           ['linear'],
+           ['zoom'],
+           12, 0.3,
+           16, 0.5,
+           20, 0.8
+         ],
+         'line-opacity': 0.4
+       }
+     });
+
+    console.log('Land use layers added successfully');
+  } catch (error) {
+    console.error('Error adding land use layers:', error);
+  }
+}
+
+// Toggle land use layer visibility
+function toggleLandUse() {
+  landUseVisible = !landUseVisible;
+  const button = document.querySelector('.land-use-button');
+  const legend = document.getElementById('land-use-legend');
+  
+  if (landUseVisible) {
+    // Show all land use related layers
+    if (map.getLayer('land-use-fill')) {
+      map.setLayoutProperty('land-use-fill', 'visibility', 'visible');
+    }
+    if (map.getLayer('land-use-outline')) {
+      map.setLayoutProperty('land-use-outline', 'visibility', 'visible');
+    }
+    if (map.getLayer('natural-land-use')) {
+      map.setLayoutProperty('natural-land-use', 'visibility', 'visible');
+    }
+    if (map.getLayer('building-land-use')) {
+      map.setLayoutProperty('building-land-use', 'visibility', 'visible');
+    }
+    
+    button.classList.add('active');
+    button.textContent = 'Hide Land Use';
+    if (legend) legend.style.display = 'block';
+    console.log('Land use layers enabled');
+  } else {
+    // Hide all land use related layers
+    if (map.getLayer('land-use-fill')) {
+      map.setLayoutProperty('land-use-fill', 'visibility', 'none');
+    }
+    if (map.getLayer('land-use-outline')) {
+      map.setLayoutProperty('land-use-outline', 'visibility', 'none');
+    }
+    if (map.getLayer('natural-land-use')) {
+      map.setLayoutProperty('natural-land-use', 'visibility', 'none');
+    }
+    if (map.getLayer('building-land-use')) {
+      map.setLayoutProperty('building-land-use', 'visibility', 'none');
+    }
+    
+    button.classList.remove('active');
+    button.textContent = 'Land Use';
+    if (legend) legend.style.display = 'none';
+    console.log('Land use layers disabled');
+  }
+}
 
 function toggleView() {
   if (is3D) {

@@ -273,6 +273,44 @@
       <p><strong>Wind:</strong> <span id="w-wind">--</span> km/h</p>
     </div>
 
+    <div id="land-use-legend" style="display: none; margin-bottom: 20px;">
+      <h3>Land Use Legend</h3>
+      <div style="font-size: 12px;">
+        <div style="display: flex; align-items: center; margin: 2px 0;">
+          <div style="width: 15px; height: 15px; background-color: #FFC72C; margin-right: 8px; border: 1px solid #ccc;"></div>
+          <span>Residential</span>
+        </div>
+        <div style="display: flex; align-items: center; margin: 2px 0;">
+          <div style="width: 15px; height: 15px; background-color: #FF6B6B; margin-right: 8px; border: 1px solid #ccc;"></div>
+          <span>Commercial</span>
+        </div>
+        <div style="display: flex; align-items: center; margin: 2px 0;">
+          <div style="width: 15px; height: 15px; background-color: #9B59B6; margin-right: 8px; border: 1px solid #ccc;"></div>
+          <span>Industrial</span>
+        </div>
+        <div style="display: flex; align-items: center; margin: 2px 0;">
+          <div style="width: 15px; height: 15px; background-color: #4ECDC4; margin-right: 8px; border: 1px solid #ccc;"></div>
+          <span>Parks & Recreation</span>
+        </div>
+        <div style="display: flex; align-items: center; margin: 2px 0;">
+          <div style="width: 15px; height: 15px; background-color: #3498DB; margin-right: 8px; border: 1px solid #ccc;"></div>
+          <span>Educational</span>
+        </div>
+        <div style="display: flex; align-items: center; margin: 2px 0;">
+          <div style="width: 15px; height: 15px; background-color: #2ECC71; margin-right: 8px; border: 1px solid #ccc;"></div>
+          <span>Agriculture</span>
+        </div>
+        <div style="display: flex; align-items: center; margin: 2px 0;">
+          <div style="width: 15px; height: 15px; background-color: #228B22; margin-right: 8px; border: 1px solid #ccc;"></div>
+          <span>Wooded Areas</span>
+        </div>
+        <div style="display: flex; align-items: center; margin: 2px 0;">
+          <div style="width: 15px; height: 15px; background-color: #5DADE2; margin-right: 8px; border: 1px solid #ccc;"></div>
+          <span>Water Bodies</span>
+        </div>
+      </div>
+    </div>
+
     <h2>Sensor Data</h2>
     <div id="sensor-data-container">
       <p>Click on the sensor marker on the map to load data.</p>
@@ -324,6 +362,9 @@
     </div>
     <button class="toggle-button" onclick="toggleView()">
       Toggle 2D/3D
+    </button>
+    <button class="land-use-button" onclick="toggleLandUse()">
+      Land Use
     </button>
     <div id="slider-container">
       <input type="range" id="time-slider" min="0" max="23" value="12" step="1">
@@ -508,12 +549,33 @@
               resultItem.className = 'search-result-item';
               resultItem.textContent = feature.place_name;
               resultItem.addEventListener('click', () => {
+                // Determine appropriate zoom level based on place type
+                let zoomLevel = 13; // default
+                const placeTypes = feature.place_type || [];
+                
+                if (placeTypes.includes('neighborhood') || placeTypes.includes('locality')) {
+                  zoomLevel = 16; // Closer zoom for neighborhoods
+                } else if (placeTypes.includes('place') || placeTypes.includes('district')) {
+                  zoomLevel = 14; // Medium zoom for districts
+                } else if (placeTypes.includes('region') || placeTypes.includes('country')) {
+                  zoomLevel = 10; // Farther zoom for regions
+                }
+                
+                // If there's a bbox (bounding box), use fitBounds for better framing
+                if (feature.bbox) {
+                  map.fitBounds(feature.bbox, {
+                    padding: 50,
+                    maxZoom: zoomLevel
+                  });
+                } else {
                 // Fly to the selected location
                 map.flyTo({
                   center: feature.center,
-                  zoom: 13,
+                    zoom: zoomLevel,
                   essential: true
                 });
+                }
+                
                 // Clear search results
                 searchResults.style.display = 'none';
                 // Update search box with selected location
