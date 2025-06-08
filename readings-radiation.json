@@ -3,7 +3,7 @@
     "readings_data": [
       {
         "Temperature": 21.771572,
-        "Radiation": 2.5,
+        "Radiation": 1,
         "Battery Level": 100,
         "sample_time_utc": "2025-04-18T23:52:49.000Z",
         "gw_read_time_utc": "2025-04-21T07:23:21.032Z",

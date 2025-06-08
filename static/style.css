@@ -349,7 +349,7 @@ h2, h3 {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  background: linear-gradient(to right, red, yellow, green);
+  background-color: #ffa500; /* Single orange color */
   box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -361,6 +361,24 @@ h2, h3 {
   background-color: #333;
   border-radius: 3px;
   transform: translateX(-50%);
+}
+
+.comfort-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.comfort-level-text {
+  font-weight: bold;
+  color: #333;
+}
+
+.comfort-score {
+  color: #666;
+  font-size: 13px;
 }
 
 .weather-container {

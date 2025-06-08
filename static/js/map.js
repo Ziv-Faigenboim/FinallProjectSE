@@ -124,13 +124,49 @@ map.on('load', () => {
       
       // Calculate comfort level based on temperature, humidity, and radiation
       const comfort = calculateComfortLevel(temp, humidity, radiation);
+      const comfortInfo = getComfortLevelInfo(comfort);
+
+      // Calculate needle angle - semicircle from left (0%) to right (100%)
+      // At 0%: needle points left, at 50%: needle points up, at 100%: needle points right
+      const needleAngle = Math.PI - (comfort / 100) * Math.PI; // π to 0 radians
+      const needleX = 60 * Math.cos(needleAngle);
+      const needleY = -60 * Math.sin(needleAngle); // negative Y to point upward in SVG
 
       const popupContent = `
-        <div>
-          <strong>Comfort Level</strong><br>
-          <div class="gradient-meter">
-            <div class="gradient-bar"></div>
-            <div class="meter-indicator" style="left: ${comfort}%;"></div>
+        <div style="text-align: center; font-family: Arial, sans-serif;">
+          <div style="position: relative; width: 200px; height: 120px; margin: 10px auto;">
+            <svg width="200" height="120" viewBox="0 0 200 120">
+              <!-- Background - light gray semicircle -->
+              <path d="M 20 100 A 80 80 0 0 1 180 100" 
+                    fill="#f5f5f5" 
+                    stroke="none"/>
+              
+              <!-- Orange arc (single color) -->
+              <path d="M 20 100 A 80 80 0 0 1 180 100" 
+                    fill="none" 
+                    stroke="#ffa500" 
+                    stroke-width="20" 
+                    stroke-linecap="round"/>
+              
+              <!-- Needle -->
+              <g transform="translate(100,100)">
+                <line x1="0" y1="0" 
+                      x2="${needleX}" 
+                      y2="${needleY}" 
+                      stroke="#333" 
+                      stroke-width="3" 
+                      stroke-linecap="round"/>
+                <circle cx="0" cy="0" r="6" fill="#333"/>
+              </g>
+            </svg>
+          </div>
+          <div style="margin-top: 15px;">
+            <div style="font-size: 20px; font-weight: bold; color: #333; margin-bottom: 5px;">
+              ${comfortInfo.text}
+            </div>
+            <div style="font-size: 16px; color: #666;">
+              Comfort Score: ${Math.round(comfort)}%
+            </div>
           </div>
         </div>
       `;
@@ -148,10 +184,18 @@ map.on('load', () => {
         <p><strong>Battery:</strong> ${battery}%</p>
         <p><strong>Radiation:</strong> ${typeof radiation === 'number' ? radiation.toFixed(2) : radiation}</p>
         <p><strong>Sample Time:</strong> ${time}</p>
-        <p><strong>Comfort Level:</strong></p>
-        <div class="gradient-meter">
-          <div class="gradient-bar"></div>
-          <div class="meter-indicator" style="left: ${comfort}%;"></div>
+        <p><strong>Comfort Level:</strong> ${comfortInfo.text}</p>
+        <div style="margin-top: 15px; margin-bottom: 20px;">
+          <div style="text-align: center; font-size: 18px; font-weight: bold; margin-bottom: 5px;">
+            ${comfortInfo.text}
+          </div>
+          <div style="text-align: center; font-size: 16px; color: #666; margin-bottom: 10px;">
+            Comfort Score: ${Math.round(comfort)}%
+          </div>
+          <div class="gradient-meter">
+            <div class="gradient-bar"></div>
+            <div class="meter-indicator" style="left: ${comfort}%;"></div>
+          </div>
         </div>
       `;
     } catch (err) {
@@ -646,4 +690,19 @@ function calculateComfortLevel(temp, humidity, radiation) {
   }
   
   return Math.max(0, Math.min(100, comfort));
+}
+
+// Get comfort level text and category
+function getComfortLevelInfo(comfortScore) {
+  if (comfortScore >= 80) {
+    return { text: "Very High Comfort", category: "very-high" };
+  } else if (comfortScore >= 60) {
+    return { text: "High Comfort", category: "high" };
+  } else if (comfortScore >= 40) {
+    return { text: "Medium Comfort", category: "medium" };
+  } else if (comfortScore >= 20) {
+    return { text: "Low Comfort", category: "low" };
+  } else {
+    return { text: "Very Low Comfort", category: "very-low" };
+  }
 }
