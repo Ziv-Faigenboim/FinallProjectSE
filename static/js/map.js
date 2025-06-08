@@ -657,56 +657,54 @@ function fetchAndDisplayGraph() {
         return;
       }
       
-      // Process data for chart
-      const timestamps = [];
+      // Process ALL data points (no grouping, no filtering)
+      const allDataPoints = [];
+      
+      // Parse and sort all data by timestamp
+      data.forEach(item => {
+        const date = new Date(item.sample_time);
+        allDataPoints.push({
+          timestamp: date,
+          temperature: item.temperature,
+          humidity: item.humidity,
+          radiation: item.radiation || 0
+        });
+      });
+      
+      // Sort by timestamp (oldest first for proper time axis)
+      allDataPoints.sort((a, b) => a.timestamp - b.timestamp);
+      
+      // Extract arrays for chart
+      const times = [];
       const temperatures = [];
       const humidities = [];
       const radiations = [];
       
-      // Group data by date for daily view
-      const dateGroups = {};
-      
-      data.forEach(item => {
-        const date = new Date(item.sample_time);
-        const timeStr = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        const dateStr = date.toLocaleDateString();
-        
-        if (!dateGroups[dateStr]) {
-          dateGroups[dateStr] = {
-            times: [],
-            temps: [],
-            humidities: [],
-            radiations: []
-          };
-        }
-        
-        dateGroups[dateStr].times.push(timeStr);
-        dateGroups[dateStr].temps.push(item.temperature);
-        dateGroups[dateStr].humidities.push(item.humidity);
-        dateGroups[dateStr].radiations.push(item.radiation || 0);
+      allDataPoints.forEach(point => {
+        // Format time as HH:MM
+        times.push(point.timestamp.toLocaleTimeString('en-GB', { 
+          hour: '2-digit', 
+          minute: '2-digit', 
+          hour12: false 
+        }));
+        temperatures.push(point.temperature);
+        humidities.push(point.humidity);
+        radiations.push(point.radiation);
       });
       
-      // Use the most recent date's data
-      const dates = Object.keys(dateGroups).sort();
-      const latestDate = dates[dates.length - 1];
-      const latestData = dateGroups[latestDate];
-      
-      // Format date for display
-      const displayDate = new Date(latestDate).toLocaleDateString('en-US', {
+      // Get display date from first data point
+      const displayDate = allDataPoints[0].timestamp.toLocaleDateString('en-US', {
         weekday: 'long',
         year: 'numeric',
         month: 'long',
         day: 'numeric'
       });
       
-      // Create chart
-      createSensorChart(
-        latestData.times,
-        latestData.temps,
-        latestData.humidities,
-        latestData.radiations,
-        displayDate
-      );
+      console.log(`Displaying graph with ${allDataPoints.length} data points`);
+      console.log(`Time range: ${times[0]} to ${times[times.length - 1]}`);
+      
+      // Create chart with ALL data points
+      createSensorChart(times, temperatures, humidities, radiations, displayDate);
     })
     .catch(error => {
       console.error('Error fetching sensor history for graph:', error);
@@ -832,6 +830,20 @@ function createSensorChart(labels, temperatures, humidities, radiations, dateLab
           grid: {
             display: true,
             color: 'rgba(0, 0, 0, 0.1)'
+          },
+          ticks: {
+            maxTicksLimit: 24,
+            callback: function(value, index, values) {
+              // Show every hour on the hour (00:00, 01:00, etc.)
+              const label = this.getLabelForValue(value);
+              if (label.endsWith(':00')) {
+                return label;
+              }
+              return '';
+            },
+            font: {
+              size: 12
+            }
           }
         },
         y: {

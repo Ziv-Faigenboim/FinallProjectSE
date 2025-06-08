@@ -2,11 +2,11 @@
   "data": {
     "readings_data": [
       {
-        "Temperature": 21.771572,
-        "Radiation": 1,
+        "Temperature": 14,
+        "Radiation": 0.052,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T23:52:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.032Z",
+        "sample_time_utc": "2025-04-16T23:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T23:50:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -14,7 +14,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad48"
+          "_id": "6805f269ad48203c2b87a08f"
         },
         "location": {
           "lng": 0,
@@ -25,11 +25,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 21.841002,
-        "Radiation": 0,
+        "Temperature": 14.45073,
+        "Radiation": 0.051,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T23:42:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.032Z",
+        "sample_time_utc": "2025-04-16T23:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T23:40:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -37,7 +37,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad46"
+          "_id": "6805f269ad48203c2b87a08e"
         },
         "location": {
           "lng": 0,
@@ -48,11 +48,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 21.910429,
-        "Radiation": 0,
+        "Temperature": 14,
+        "Radiation": 0.053,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T23:32:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.032Z",
+        "sample_time_utc": "2025-04-16T23:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T23:30:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -60,7 +60,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad44"
+          "_id": "6805f269ad48203c2b87a08d"
         },
         "location": {
           "lng": 0,
@@ -71,11 +71,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 21.953156,
-        "Radiation": 0,
+        "Temperature": 14.878367,
+        "Radiation": 0.052,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T23:22:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.032Z",
+        "sample_time_utc": "2025-04-16T23:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T23:20:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -83,7 +83,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad42"
+          "_id": "6805f269ad48203c2b87a08c"
         },
         "location": {
           "lng": 0,
@@ -94,11 +94,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 21.910429,
-        "Radiation": 0,
+        "Temperature": 14.292591,
+        "Radiation": 0.048,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T23:12:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.032Z",
+        "sample_time_utc": "2025-04-16T23:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T23:10:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -106,7 +106,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad40"
+          "_id": "6805f269ad48203c2b87a08b"
         },
         "location": {
           "lng": 0,
@@ -117,11 +117,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 21.99588,
-        "Radiation": 0,
+        "Temperature": 14,
+        "Radiation": 0.043,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T23:02:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.032Z",
+        "sample_time_utc": "2025-04-16T23:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T23:00:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -129,7 +129,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad3e"
+          "_id": "6805f269ad48203c2b87a08a"
         },
         "location": {
           "lng": 0,
@@ -140,11 +140,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.038605,
-        "Radiation": 0,
+        "Temperature": 14,
+        "Radiation": 0.047,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T22:52:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.031Z",
+        "sample_time_utc": "2025-04-16T22:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T22:50:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -152,7 +152,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad3c"
+          "_id": "6805f269ad48203c2b87a089"
         },
         "location": {
           "lng": 0,
@@ -163,11 +163,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.278934,
-        "Radiation": 0,
+        "Temperature": 14,
+        "Radiation": 0.048,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T22:42:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.031Z",
+        "sample_time_utc": "2025-04-16T22:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T22:40:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -175,7 +175,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad3a"
+          "_id": "6805f269ad48203c2b87a088"
         },
         "location": {
           "lng": 0,
@@ -186,11 +186,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.335012,
-        "Radiation": 0,
+        "Temperature": 14,
+        "Radiation": 0.046,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T22:32:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.031Z",
+        "sample_time_utc": "2025-04-16T22:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T22:30:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -198,7 +198,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad38"
+          "_id": "6805f269ad48203c2b87a087"
         },
         "location": {
           "lng": 0,
@@ -209,11 +209,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.417791,
-        "Radiation": 0,
+        "Temperature": 15.224751,
+        "Radiation": 0.046,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T22:22:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.031Z",
+        "sample_time_utc": "2025-04-16T22:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T22:20:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -221,7 +221,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad36"
+          "_id": "6805f269ad48203c2b87a086"
         },
         "location": {
           "lng": 0,
@@ -232,11 +232,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.516594,
-        "Radiation": 0,
+        "Temperature": 14.7737,
+        "Radiation": 0.041,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T22:12:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.031Z",
+        "sample_time_utc": "2025-04-16T22:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T22:10:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -244,7 +244,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad34"
+          "_id": "6805f269ad48203c2b87a085"
         },
         "location": {
           "lng": 0,
@@ -255,11 +255,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.516594,
-        "Radiation": 0,
+        "Temperature": 14.874727,
+        "Radiation": 0.042,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T22:02:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.031Z",
+        "sample_time_utc": "2025-04-16T22:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T22:00:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -267,7 +267,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad32"
+          "_id": "6805f269ad48203c2b87a084"
         },
         "location": {
           "lng": 0,
@@ -278,11 +278,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.503242,
-        "Radiation": 0,
+        "Temperature": 15.092438,
+        "Radiation": 0.041,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T21:52:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.031Z",
+        "sample_time_utc": "2025-04-16T21:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T21:50:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -290,7 +290,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad30"
+          "_id": "6805f269ad48203c2b87a083"
         },
         "location": {
           "lng": 0,
@@ -301,11 +301,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.47387,
-        "Radiation": 0,
+        "Temperature": 15.664223,
+        "Radiation": 0.042,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T21:42:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.030Z",
+        "sample_time_utc": "2025-04-16T21:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T21:40:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -313,7 +313,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad2e"
+          "_id": "6805f269ad48203c2b87a082"
         },
         "location": {
           "lng": 0,
@@ -324,11 +324,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.572672,
-        "Radiation": 0,
+        "Temperature": 15.994293,
+        "Radiation": 0.044,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T21:32:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.030Z",
+        "sample_time_utc": "2025-04-16T21:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T21:30:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -336,7 +336,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad2c"
+          "_id": "6805f269ad48203c2b87a081"
         },
         "location": {
           "lng": 0,
@@ -347,11 +347,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.658121,
-        "Radiation": 0,
+        "Temperature": 15.717916,
+        "Radiation": 0.04,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T21:22:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.030Z",
+        "sample_time_utc": "2025-04-16T21:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T21:20:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -359,7 +359,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad2a"
+          "_id": "6805f269ad48203c2b87a080"
         },
         "location": {
           "lng": 0,
@@ -370,11 +370,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.698177,
-        "Radiation": 0,
+        "Temperature": 15.403867,
+        "Radiation": 0.04,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T21:12:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.030Z",
+        "sample_time_utc": "2025-04-16T21:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T21:10:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -382,7 +382,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad28"
+          "_id": "6805f269ad48203c2b87a07f"
         },
         "location": {
           "lng": 0,
@@ -393,11 +393,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.829023,
-        "Radiation": 0,
+        "Temperature": 16.664916,
+        "Radiation": 0.036,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T21:02:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.030Z",
+        "sample_time_utc": "2025-04-16T21:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T21:00:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -405,7 +405,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad26"
+          "_id": "6805f269ad48203c2b87a07e"
         },
         "location": {
           "lng": 0,
@@ -416,11 +416,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 23.037308,
-        "Radiation": 0,
+        "Temperature": 16.60084,
+        "Radiation": 0.037,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T20:52:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.030Z",
+        "sample_time_utc": "2025-04-16T20:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T20:50:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -428,7 +428,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad24"
+          "_id": "6805f269ad48203c2b87a07d"
         },
         "location": {
           "lng": 0,
@@ -439,11 +439,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 23.317694,
-        "Radiation": 0,
+        "Temperature": 17.169416,
+        "Radiation": 0.039,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T20:42:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.030Z",
+        "sample_time_utc": "2025-04-16T20:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T20:40:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -451,7 +451,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad22"
+          "_id": "6805f269ad48203c2b87a07c"
         },
         "location": {
           "lng": 0,
@@ -462,11 +462,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 23.432516,
-        "Radiation": 0,
+        "Temperature": 17.678615,
+        "Radiation": 0.038,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T20:32:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.030Z",
+        "sample_time_utc": "2025-04-16T20:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T20:30:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -474,7 +474,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad20"
+          "_id": "6805f269ad48203c2b87a07b"
         },
         "location": {
           "lng": 0,
@@ -485,11 +485,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 23.600748,
-        "Radiation": 0,
+        "Temperature": 17.677268,
+        "Radiation": 0.039,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T20:22:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.030Z",
+        "sample_time_utc": "2025-04-16T20:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T20:20:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -497,7 +497,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad1e"
+          "_id": "6805f269ad48203c2b87a07a"
         },
         "location": {
           "lng": 0,
@@ -508,11 +508,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 23.811703,
-        "Radiation": 0,
+        "Temperature": 17.501,
+        "Radiation": 0.035,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T20:12:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.029Z",
+        "sample_time_utc": "2025-04-16T20:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T20:10:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -520,7 +520,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad1c"
+          "_id": "6805f269ad48203c2b87a079"
         },
         "location": {
           "lng": 0,
@@ -531,11 +531,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 23.93988,
-        "Radiation": 0,
+        "Temperature": 18.208271,
+        "Radiation": 0.033,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T20:02:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.029Z",
+        "sample_time_utc": "2025-04-16T20:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T20:00:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -543,7 +543,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad1a"
+          "_id": "6805f269ad48203c2b87a078"
         },
         "location": {
           "lng": 0,
@@ -554,11 +554,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 23.969254,
-        "Radiation": 0,
+        "Temperature": 17.897993,
+        "Radiation": 0.034,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T19:52:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.029Z",
+        "sample_time_utc": "2025-04-16T19:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T19:50:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -566,7 +566,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad18"
+          "_id": "6805f269ad48203c2b87a077"
         },
         "location": {
           "lng": 0,
@@ -577,11 +577,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 23.969254,
-        "Radiation": 0,
+        "Temperature": 18.330018,
+        "Radiation": 0.036,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T19:42:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.029Z",
+        "sample_time_utc": "2025-04-16T19:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T19:40:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -589,7 +589,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad16"
+          "_id": "6805f269ad48203c2b87a076"
         },
         "location": {
           "lng": 0,
@@ -600,11 +600,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 24.011978,
-        "Radiation": 0,
+        "Temperature": 18.735136,
+        "Radiation": 0.036,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T19:32:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.029Z",
+        "sample_time_utc": "2025-04-16T19:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T19:30:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -612,7 +612,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad14"
+          "_id": "6805f269ad48203c2b87a075"
         },
         "location": {
           "lng": 0,
@@ -623,11 +623,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 24.068056,
-        "Radiation": 0,
+        "Temperature": 19.075855,
+        "Radiation": 0.035,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T19:22:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.029Z",
+        "sample_time_utc": "2025-04-16T19:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T19:20:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -635,7 +635,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad12"
+          "_id": "6805f269ad48203c2b87a074"
         },
         "location": {
           "lng": 0,
@@ -646,11 +646,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 24.137484,
-        "Radiation": 0,
+        "Temperature": 19.825087,
+        "Radiation": 0.031,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T19:12:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.029Z",
+        "sample_time_utc": "2025-04-16T19:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T19:10:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -658,7 +658,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad10"
+          "_id": "6805f269ad48203c2b87a073"
         },
         "location": {
           "lng": 0,
@@ -669,11 +669,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 24.180208,
-        "Radiation": 0,
+        "Temperature": 19.087557,
+        "Radiation": 0.049,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T19:02:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.029Z",
+        "sample_time_utc": "2025-04-16T19:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T19:00:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -681,7 +681,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad0e"
+          "_id": "6805f269ad48203c2b87a072"
         },
         "location": {
           "lng": 0,
@@ -692,11 +692,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 24.220264,
-        "Radiation": 0,
+        "Temperature": 19.821717,
+        "Radiation": 0.142,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T18:52:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.029Z",
+        "sample_time_utc": "2025-04-16T18:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T18:50:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -704,7 +704,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad0c"
+          "_id": "6805f269ad48203c2b87a071"
         },
         "location": {
           "lng": 0,
@@ -715,11 +715,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 24.305714,
-        "Radiation": 0,
+        "Temperature": 20.29662,
+        "Radiation": 0.223,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T18:42:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.029Z",
+        "sample_time_utc": "2025-04-16T18:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T18:40:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -727,7 +727,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad0a"
+          "_id": "6805f269ad48203c2b87a070"
         },
         "location": {
           "lng": 0,
@@ -738,11 +738,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 24.34844,
-        "Radiation": 0,
+        "Temperature": 19.786351,
+        "Radiation": 0.275,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T18:32:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.028Z",
+        "sample_time_utc": "2025-04-16T18:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T18:30:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -750,7 +750,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad08"
+          "_id": "6805f269ad48203c2b87a06f"
         },
         "location": {
           "lng": 0,
@@ -761,11 +761,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 24.417868,
-        "Radiation": 0,
+        "Temperature": 20.371417,
+        "Radiation": 0.303,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T18:22:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.028Z",
+        "sample_time_utc": "2025-04-16T18:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T18:20:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -773,7 +773,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad06"
+          "_id": "6805f269ad48203c2b87a06e"
         },
         "location": {
           "lng": 0,
@@ -784,11 +784,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 24.489967,
-        "Radiation": 0,
+        "Temperature": 21.531183,
+        "Radiation": 0.335,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T18:12:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.028Z",
+        "sample_time_utc": "2025-04-16T18:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T18:10:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -796,7 +796,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad04"
+          "_id": "6805f269ad48203c2b87a06d"
         },
         "location": {
           "lng": 0,
@@ -807,11 +807,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 24.51934,
-        "Radiation": 0,
+        "Temperature": 21.616932,
+        "Radiation": 0.35,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T18:02:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.028Z",
+        "sample_time_utc": "2025-04-16T18:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T18:00:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -819,7 +819,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad02"
+          "_id": "6805f269ad48203c2b87a06c"
         },
         "location": {
           "lng": 0,
@@ -830,11 +830,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 24.58877,
-        "Radiation": 0,
+        "Temperature": 21.363755,
+        "Radiation": 0.432,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T17:52:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.028Z",
+        "sample_time_utc": "2025-04-16T17:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T17:50:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -842,7 +842,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87ad00"
+          "_id": "6805f269ad48203c2b87a06b"
         },
         "location": {
           "lng": 0,
@@ -853,11 +853,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 24.658197,
-        "Radiation": 0,
+        "Temperature": 21.615753,
+        "Radiation": 0.496,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T17:42:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.028Z",
+        "sample_time_utc": "2025-04-16T17:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T17:40:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -865,7 +865,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87acfe"
+          "_id": "6805f269ad48203c2b87a06a"
         },
         "location": {
           "lng": 0,
@@ -876,11 +876,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 24.799725,
-        "Radiation": 0,
+        "Temperature": 22.120204,
+        "Radiation": 0.561,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T17:32:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:21.028Z",
+        "sample_time_utc": "2025-04-16T17:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T17:30:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -888,7 +888,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f269ad48203c2b87acfc"
+          "_id": "6805f269ad48203c2b87a069"
         },
         "location": {
           "lng": 0,
@@ -899,11 +899,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 24.895857,
-        "Radiation": 0,
+        "Temperature": 22.780876,
+        "Radiation": 0.639,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T17:22:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.038Z",
+        "sample_time_utc": "2025-04-16T17:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T17:20:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -911,7 +911,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b962192373c4"
+          "_id": "6805f269ad48203c2b87a068"
         },
         "location": {
           "lng": 0,
@@ -922,11 +922,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 25.00801,
-        "Radiation": 0,
+        "Temperature": 23.622149,
+        "Radiation": 0.694,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T17:12:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.038Z",
+        "sample_time_utc": "2025-04-16T17:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T17:10:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -934,7 +934,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b962192373c2"
+          "_id": "6805f269ad48203c2b87a067"
         },
         "location": {
           "lng": 0,
@@ -945,11 +945,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 25.152208,
-        "Radiation": 0,
+        "Temperature": 22.709708,
+        "Radiation": 0.742,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T17:02:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.038Z",
+        "sample_time_utc": "2025-04-16T17:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T17:00:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -957,7 +957,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b962192373c0"
+          "_id": "6805f269ad48203c2b87a066"
         },
         "location": {
           "lng": 0,
@@ -968,11 +968,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 25.277714,
-        "Radiation": 0,
+        "Temperature": 24.425408,
+        "Radiation": 0.847,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T16:52:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.037Z",
+        "sample_time_utc": "2025-04-16T16:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T16:50:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -980,7 +980,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b962192373be"
+          "_id": "6805f269ad48203c2b87a065"
         },
         "location": {
           "lng": 0,
@@ -991,11 +991,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 25.445946,
-        "Radiation": 0,
+        "Temperature": 24.844358,
+        "Radiation": 0.836,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T16:42:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.037Z",
+        "sample_time_utc": "2025-04-16T16:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T16:40:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1003,7 +1003,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b962192373bc"
+          "_id": "6805f269ad48203c2b87a064"
         },
         "location": {
           "lng": 0,
@@ -1014,11 +1014,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 25.64622,
-        "Radiation": 0,
+        "Temperature": 24.865037,
+        "Radiation": 0.913,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T16:32:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.037Z",
+        "sample_time_utc": "2025-04-16T16:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T16:30:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1026,7 +1026,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b962192373ba"
+          "_id": "6805f269ad48203c2b87a063"
         },
         "location": {
           "lng": 0,
@@ -1037,11 +1037,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 25.953308,
-        "Radiation": 0,
+        "Temperature": 24.428505,
+        "Radiation": 0.974,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T16:22:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.037Z",
+        "sample_time_utc": "2025-04-16T16:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T16:20:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1049,7 +1049,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b962192373b8"
+          "_id": "6805f269ad48203c2b87a062"
         },
         "location": {
           "lng": 0,
@@ -1060,11 +1060,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 26.364538,
-        "Radiation": 0,
+        "Temperature": 24.796489,
+        "Radiation": 0.998,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T16:12:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.037Z",
+        "sample_time_utc": "2025-04-16T16:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T16:10:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1072,7 +1072,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b962192373b6"
+          "_id": "6805f269ad48203c2b87a061"
         },
         "location": {
           "lng": 0,
@@ -1083,11 +1083,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 26.773098,
-        "Radiation": 0,
+        "Temperature": 25.407022,
+        "Radiation": 1.122,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T16:02:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.037Z",
+        "sample_time_utc": "2025-04-16T16:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T16:00:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1095,7 +1095,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b962192373b4"
+          "_id": "6805f269ad48203c2b87a060"
         },
         "location": {
           "lng": 0,
@@ -1106,11 +1106,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 27.178988,
-        "Radiation": 0,
+        "Temperature": 25.651309,
+        "Radiation": 1.167,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T15:52:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.037Z",
+        "sample_time_utc": "2025-04-16T15:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T15:50:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1118,7 +1118,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b962192373b2"
+          "_id": "6805f269ad48203c2b87a05f"
         },
         "location": {
           "lng": 0,
@@ -1129,11 +1129,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 27.448692,
-        "Radiation": 0,
+        "Temperature": 26.315156,
+        "Radiation": 1.161,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T15:42:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.037Z",
+        "sample_time_utc": "2025-04-16T15:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T15:40:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1141,7 +1141,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b962192373b0"
+          "_id": "6805f269ad48203c2b87a05e"
         },
         "location": {
           "lng": 0,
@@ -1152,11 +1152,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 27.616922,
-        "Radiation": 0,
+        "Temperature": 25.461079,
+        "Radiation": 1.202,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T15:32:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.037Z",
+        "sample_time_utc": "2025-04-16T15:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T15:30:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1164,7 +1164,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b962192373ae"
+          "_id": "6805f269ad48203c2b87a05d"
         },
         "location": {
           "lng": 0,
@@ -1175,11 +1175,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 27.68635,
-        "Radiation": 0.1834,
+        "Temperature": 25.888525,
+        "Radiation": 1.263,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T15:22:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.037Z",
+        "sample_time_utc": "2025-04-16T15:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T15:20:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1187,7 +1187,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b962192373ac"
+          "_id": "6805f269ad48203c2b87a05c"
         },
         "location": {
           "lng": 0,
@@ -1198,11 +1198,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 27.547493,
-        "Radiation": 0.1834,
+        "Temperature": 26.479952,
+        "Radiation": 1.258,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T15:12:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.036Z",
+        "sample_time_utc": "2025-04-16T15:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T15:10:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1210,7 +1210,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b962192373aa"
+          "_id": "6805f269ad48203c2b87a05b"
         },
         "location": {
           "lng": 0,
@@ -1221,11 +1221,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 27.547493,
-        "Radiation": 0.1834,
+        "Temperature": 26.495352,
+        "Radiation": 1.31,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T15:02:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.036Z",
+        "sample_time_utc": "2025-04-16T15:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T15:00:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1233,7 +1233,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b962192373a8"
+          "_id": "6805f269ad48203c2b87a05a"
         },
         "location": {
           "lng": 0,
@@ -1244,11 +1244,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 27.58755,
-        "Radiation": 0.1834,
+        "Temperature": 26.431241,
+        "Radiation": 1.328,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T14:52:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.036Z",
+        "sample_time_utc": "2025-04-16T14:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T14:50:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1256,7 +1256,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b962192373a6"
+          "_id": "6805f269ad48203c2b87a059"
         },
         "location": {
           "lng": 0,
@@ -1267,11 +1267,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 27.729076,
-        "Radiation": 0.1834,
+        "Temperature": 27.742897,
+        "Radiation": 1.3,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T14:42:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.036Z",
+        "sample_time_utc": "2025-04-16T14:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T14:40:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1279,7 +1279,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b962192373a4"
+          "_id": "6805f269ad48203c2b87a058"
         },
         "location": {
           "lng": 0,
@@ -1290,11 +1290,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 27.969406,
-        "Radiation": 0.1834,
+        "Temperature": 27.369886,
+        "Radiation": 1.325,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T14:32:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.036Z",
+        "sample_time_utc": "2025-04-16T14:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T14:30:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1302,7 +1302,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b962192373a2"
+          "_id": "6805f269ad48203c2b87a057"
         },
         "location": {
           "lng": 0,
@@ -1313,11 +1313,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 28.038834,
-        "Radiation": 1.2751,
+        "Temperature": 28.40127,
+        "Radiation": 1.339,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T14:22:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.036Z",
+        "sample_time_utc": "2025-04-16T14:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T14:20:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1325,7 +1325,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b962192373a0"
+          "_id": "6805f269ad48203c2b87a056"
         },
         "location": {
           "lng": 0,
@@ -1336,11 +1336,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 27.969406,
-        "Radiation": 1.2751,
+        "Temperature": 27.813641,
+        "Radiation": 1.36,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T14:12:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.036Z",
+        "sample_time_utc": "2025-04-16T14:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T14:10:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1348,7 +1348,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b9621923739e"
+          "_id": "6805f269ad48203c2b87a055"
         },
         "location": {
           "lng": 0,
@@ -1359,11 +1359,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 27.870604,
-        "Radiation": 1.2751,
+        "Temperature": 28.01731,
+        "Radiation": 1.444,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T14:02:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.036Z",
+        "sample_time_utc": "2025-04-16T14:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T14:00:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1371,7 +1371,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b9621923739c"
+          "_id": "6805f269ad48203c2b87a054"
         },
         "location": {
           "lng": 0,
@@ -1382,11 +1382,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 27.774471,
-        "Radiation": 1.2751,
+        "Temperature": 27.729227,
+        "Radiation": 1.483,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T13:52:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.036Z",
+        "sample_time_utc": "2025-04-16T13:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T13:50:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1394,7 +1394,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b9621923739a"
+          "_id": "6805f269ad48203c2b87a053"
         },
         "location": {
           "lng": 0,
@@ -1405,11 +1405,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 27.643625,
-        "Radiation": 1.2751,
+        "Temperature": 28.104327,
+        "Radiation": 1.548,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T13:42:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.036Z",
+        "sample_time_utc": "2025-04-16T13:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T13:40:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1417,7 +1417,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237398"
+          "_id": "6805f269ad48203c2b87a052"
         },
         "location": {
           "lng": 0,
@@ -1428,11 +1428,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 27.475395,
-        "Radiation": 1.2751,
+        "Temperature": 28.537846,
+        "Radiation": 1.653,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T13:32:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.035Z",
+        "sample_time_utc": "2025-04-16T13:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T13:30:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1440,7 +1440,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237396"
+          "_id": "6805f269ad48203c2b87a051"
         },
         "location": {
           "lng": 0,
@@ -1451,11 +1451,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 27.419317,
-        "Radiation": 1.2751,
+        "Temperature": 27.785898,
+        "Radiation": 1.755,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T13:22:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.035Z",
+        "sample_time_utc": "2025-04-16T13:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T13:20:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1463,7 +1463,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237394"
+          "_id": "6805f269ad48203c2b87a050"
         },
         "location": {
           "lng": 0,
@@ -1474,11 +1474,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 27.379263,
-        "Radiation": 1.2751,
+        "Temperature": 28.856269,
+        "Radiation": 1.844,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T13:12:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.035Z",
+        "sample_time_utc": "2025-04-16T13:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T13:10:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1486,7 +1486,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237392"
+          "_id": "6805f269ad48203c2b87a04f"
         },
         "location": {
           "lng": 0,
@@ -1497,11 +1497,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 27.293812,
-        "Radiation": 0.1834,
+        "Temperature": 29,
+        "Radiation": 1.924,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T13:02:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.035Z",
+        "sample_time_utc": "2025-04-16T13:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T13:00:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1509,7 +1509,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237390"
+          "_id": "6805f269ad48203c2b87a04e"
         },
         "location": {
           "lng": 0,
@@ -1520,11 +1520,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 27.122911,
-        "Radiation": 1.2751,
+        "Temperature": 29,
+        "Radiation": 1.874,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T12:52:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.035Z",
+        "sample_time_utc": "2025-04-16T12:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T12:50:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1532,7 +1532,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b9621923738e"
+          "_id": "6805f269ad48203c2b87a04d"
         },
         "location": {
           "lng": 0,
@@ -1543,11 +1543,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 26.968033,
-        "Radiation": 1.2751,
+        "Temperature": 29,
+        "Radiation": 1.778,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T12:42:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.035Z",
+        "sample_time_utc": "2025-04-16T12:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T12:40:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1555,7 +1555,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b9621923738c"
+          "_id": "6805f269ad48203c2b87a04c"
         },
         "location": {
           "lng": 0,
@@ -1566,11 +1566,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 26.674295,
-        "Radiation": 1.2751,
+        "Temperature": 28.828096,
+        "Radiation": 1.639,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T12:32:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.035Z",
+        "sample_time_utc": "2025-04-16T12:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T12:30:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1578,7 +1578,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b9621923738a"
+          "_id": "6805f269ad48203c2b87a04b"
         },
         "location": {
           "lng": 0,
@@ -1589,11 +1589,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 26.46067,
-        "Radiation": 1.2751,
+        "Temperature": 29,
+        "Radiation": 1.661,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T12:22:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.035Z",
+        "sample_time_utc": "2025-04-16T12:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T12:20:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1601,7 +1601,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237388"
+          "_id": "6805f269ad48203c2b87a04a"
         },
         "location": {
           "lng": 0,
@@ -1612,11 +1612,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 26.265736,
-        "Radiation": 1.2751,
+        "Temperature": 28.542949,
+        "Radiation": 1.442,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T12:12:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.035Z",
+        "sample_time_utc": "2025-04-16T12:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T12:10:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1624,7 +1624,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237386"
+          "_id": "6805f269ad48203c2b87a049"
         },
         "location": {
           "lng": 0,
@@ -1635,11 +1635,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 26.081484,
-        "Radiation": 1.2751,
+        "Temperature": 29,
+        "Radiation": 1.357,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T12:02:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.034Z",
+        "sample_time_utc": "2025-04-16T12:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T12:00:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1647,7 +1647,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237384"
+          "_id": "6805f269ad48203c2b87a048"
         },
         "location": {
           "lng": 0,
@@ -1658,11 +1658,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 25.827803,
-        "Radiation": 1.2751,
+        "Temperature": 28.370577,
+        "Radiation": 1.503,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T11:52:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.034Z",
+        "sample_time_utc": "2025-04-16T11:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T11:50:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1670,7 +1670,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237382"
+          "_id": "6805f269ad48203c2b87a047"
         },
         "location": {
           "lng": 0,
@@ -1681,11 +1681,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 25.475319,
-        "Radiation": 1.2751,
+        "Temperature": 29,
+        "Radiation": 1.311,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T11:42:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.034Z",
+        "sample_time_utc": "2025-04-16T11:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T11:40:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1693,7 +1693,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237380"
+          "_id": "6805f269ad48203c2b87a046"
         },
         "location": {
           "lng": 0,
@@ -1704,11 +1704,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 24.938583,
-        "Radiation": 1.2751,
+        "Temperature": 28.323397,
+        "Radiation": 1.37,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T11:32:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.034Z",
+        "sample_time_utc": "2025-04-16T11:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T11:30:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1716,7 +1716,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b9621923737e"
+          "_id": "6805f269ad48203c2b87a045"
         },
         "location": {
           "lng": 0,
@@ -1727,11 +1727,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 24.503319,
-        "Radiation": 1.2751,
+        "Temperature": 29,
+        "Radiation": 1.229,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T11:22:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.034Z",
+        "sample_time_utc": "2025-04-16T11:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T11:20:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1739,7 +1739,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b9621923737c"
+          "_id": "6805f269ad48203c2b87a044"
         },
         "location": {
           "lng": 0,
@@ -1750,11 +1750,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 24.038681,
-        "Radiation": 0.1834,
+        "Temperature": 28.921801,
+        "Radiation": 1.169,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T11:12:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.034Z",
+        "sample_time_utc": "2025-04-16T11:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T11:10:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1762,7 +1762,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b9621923737a"
+          "_id": "6805f269ad48203c2b87a043"
         },
         "location": {
           "lng": 0,
@@ -1773,11 +1773,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 23.405813,
-        "Radiation": 0.1834,
+        "Temperature": 28.455566,
+        "Radiation": 1.12,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T11:02:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.034Z",
+        "sample_time_utc": "2025-04-16T11:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T11:00:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1785,7 +1785,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237378"
+          "_id": "6805f269ad48203c2b87a042"
         },
         "location": {
           "lng": 0,
@@ -1796,11 +1796,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 23.333715,
-        "Radiation": 0.1834,
+        "Temperature": 27.950825,
+        "Radiation": 1.086,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T10:52:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.034Z",
+        "sample_time_utc": "2025-04-16T10:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T10:50:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1808,7 +1808,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237376"
+          "_id": "6805f269ad48203c2b87a041"
         },
         "location": {
           "lng": 0,
@@ -1819,11 +1819,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 23.20554,
-        "Radiation": 0.1834,
+        "Temperature": 28.052346,
+        "Radiation": 1.057,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T10:42:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.034Z",
+        "sample_time_utc": "2025-04-16T10:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T10:40:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1831,7 +1831,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237374"
+          "_id": "6805f269ad48203c2b87a040"
         },
         "location": {
           "lng": 0,
@@ -1842,11 +1842,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 23.122759,
-        "Radiation": 0.1834,
+        "Temperature": 28.281757,
+        "Radiation": 0.994,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T10:32:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.034Z",
+        "sample_time_utc": "2025-04-16T10:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T10:30:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1854,7 +1854,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237372"
+          "_id": "6805f269ad48203c2b87a03f"
         },
         "location": {
           "lng": 0,
@@ -1865,11 +1865,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 23.066683,
-        "Radiation": 0.1834,
+        "Temperature": 27.798179,
+        "Radiation": 0.881,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T10:22:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.033Z",
+        "sample_time_utc": "2025-04-16T10:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T10:20:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1877,7 +1877,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237370"
+          "_id": "6805f269ad48203c2b87a03e"
         },
         "location": {
           "lng": 0,
@@ -1888,11 +1888,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 23.010605,
-        "Radiation": 0.1834,
+        "Temperature": 27.509503,
+        "Radiation": 0.883,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T10:12:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.033Z",
+        "sample_time_utc": "2025-04-16T10:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T10:10:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1900,7 +1900,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b9621923736e"
+          "_id": "6805f269ad48203c2b87a03d"
         },
         "location": {
           "lng": 0,
@@ -1911,11 +1911,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.96788,
-        "Radiation": 0.1834,
+        "Temperature": 27.51195,
+        "Radiation": 0.846,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T10:02:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.033Z",
+        "sample_time_utc": "2025-04-16T10:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T10:00:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1923,7 +1923,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b9621923736c"
+          "_id": "6805f269ad48203c2b87a03c"
         },
         "location": {
           "lng": 0,
@@ -1934,11 +1934,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.869078,
-        "Radiation": 0.1834,
+        "Temperature": 28.149249,
+        "Radiation": 0.814,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T09:52:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.033Z",
+        "sample_time_utc": "2025-04-16T09:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T09:50:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1946,7 +1946,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b9621923736a"
+          "_id": "6805f269ad48203c2b87a03b"
         },
         "location": {
           "lng": 0,
@@ -1957,11 +1957,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.829023,
-        "Radiation": 0.1834,
+        "Temperature": 27.887935,
+        "Radiation": 0.741,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T09:42:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.033Z",
+        "sample_time_utc": "2025-04-16T09:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T09:40:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1969,7 +1969,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237368"
+          "_id": "6805f269ad48203c2b87a03a"
         },
         "location": {
           "lng": 0,
@@ -1980,11 +1980,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.855726,
-        "Radiation": 0.1834,
+        "Temperature": 27.630917,
+        "Radiation": 0.668,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T09:32:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.033Z",
+        "sample_time_utc": "2025-04-16T09:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T09:30:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -1992,7 +1992,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237366"
+          "_id": "6805f269ad48203c2b87a039"
         },
         "location": {
           "lng": 0,
@@ -2003,11 +2003,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.89845,
-        "Radiation": 0.1834,
+        "Temperature": 27.602814,
+        "Radiation": 0.677,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T09:22:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.033Z",
+        "sample_time_utc": "2025-04-16T09:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T09:20:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -2015,7 +2015,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237364"
+          "_id": "6805f269ad48203c2b87a038"
         },
         "location": {
           "lng": 0,
@@ -2026,11 +2026,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.8851,
-        "Radiation": 0.1834,
+        "Temperature": 27.303461,
+        "Radiation": 0.602,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T09:12:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.033Z",
+        "sample_time_utc": "2025-04-16T09:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T09:10:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -2038,7 +2038,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237362"
+          "_id": "6805f269ad48203c2b87a037"
         },
         "location": {
           "lng": 0,
@@ -2049,11 +2049,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.925154,
-        "Radiation": 0.1834,
+        "Temperature": 27.452826,
+        "Radiation": 0.589,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T09:02:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.033Z",
+        "sample_time_utc": "2025-04-16T09:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T09:00:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -2061,7 +2061,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237360"
+          "_id": "6805f269ad48203c2b87a036"
         },
         "location": {
           "lng": 0,
@@ -2072,11 +2072,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.911802,
-        "Radiation": 0.1834,
+        "Temperature": 27.100139,
+        "Radiation": 0.535,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T08:52:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.033Z",
+        "sample_time_utc": "2025-04-16T08:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T08:50:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -2084,7 +2084,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b9621923735e"
+          "_id": "6805f269ad48203c2b87a035"
         },
         "location": {
           "lng": 0,
@@ -2095,11 +2095,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 23.023956,
-        "Radiation": 0.1834,
+        "Temperature": 26.798266,
+        "Radiation": 0.528,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T08:42:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.032Z",
+        "sample_time_utc": "2025-04-16T08:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T08:40:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -2107,7 +2107,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b9621923735c"
+          "_id": "6805f269ad48203c2b87a034"
         },
         "location": {
           "lng": 0,
@@ -2118,11 +2118,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 23.037308,
-        "Radiation": 0.1834,
+        "Temperature": 25.401188,
+        "Radiation": 0.467,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T08:32:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.032Z",
+        "sample_time_utc": "2025-04-16T08:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T08:30:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -2130,7 +2130,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b9621923735a"
+          "_id": "6805f269ad48203c2b87a033"
         },
         "location": {
           "lng": 0,
@@ -2141,11 +2141,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.855726,
-        "Radiation": 0.1834,
+        "Temperature": 26.345123,
+        "Radiation": 0.462,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T08:22:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.032Z",
+        "sample_time_utc": "2025-04-16T08:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T08:20:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -2153,7 +2153,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237358"
+          "_id": "6805f269ad48203c2b87a032"
         },
         "location": {
           "lng": 0,
@@ -2164,11 +2164,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.489891,
-        "Radiation": 0.1834,
+        "Temperature": 25.310851,
+        "Radiation": 0.44,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T08:12:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.032Z",
+        "sample_time_utc": "2025-04-16T08:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T08:10:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -2176,7 +2176,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237356"
+          "_id": "6805f269ad48203c2b87a031"
         },
         "location": {
           "lng": 0,
@@ -2187,11 +2187,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.40444,
-        "Radiation": 0,
+        "Temperature": 24.945362,
+        "Radiation": 0.394,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T08:02:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.032Z",
+        "sample_time_utc": "2025-04-16T08:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T08:00:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -2199,7 +2199,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237354"
+          "_id": "6805f269ad48203c2b87a030"
         },
         "location": {
           "lng": 0,
@@ -2210,11 +2210,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.335012,
-        "Radiation": 0,
+        "Temperature": 24.677492,
+        "Radiation": 0.372,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T07:52:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.032Z",
+        "sample_time_utc": "2025-04-16T07:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T07:50:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -2222,7 +2222,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237352"
+          "_id": "6805f269ad48203c2b87a02f"
         },
         "location": {
           "lng": 0,
@@ -2233,11 +2233,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.265583,
-        "Radiation": 0,
+        "Temperature": 24.928585,
+        "Radiation": 0.36,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T07:42:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.032Z",
+        "sample_time_utc": "2025-04-16T07:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T07:40:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -2245,7 +2245,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b96219237350"
+          "_id": "6805f269ad48203c2b87a02e"
         },
         "location": {
           "lng": 0,
@@ -2256,11 +2256,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.177462,
-        "Radiation": 0,
+        "Temperature": 23.63646,
+        "Radiation": 0.371,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T07:32:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.032Z",
+        "sample_time_utc": "2025-04-16T07:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T07:30:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -2268,7 +2268,7 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b9621923734e"
+          "_id": "6805f269ad48203c2b87a02d"
         },
         "location": {
           "lng": 0,
@@ -2279,11 +2279,11 @@
         "gw_version": "3.3.4+115"
       },
       {
-        "Temperature": 22.121386,
-        "Radiation": 0,
+        "Temperature": 23.733108,
+        "Radiation": 0.339,
         "Battery Level": 100,
-        "sample_time_utc": "2025-04-18T07:22:49.000Z",
-        "gw_read_time_utc": "2025-04-21T07:23:15.032Z",
+        "sample_time_utc": "2025-04-16T07:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T07:20:00.000Z",
         "reading_type": "Periodic",
         "triggers": {},
         "business_unit_id": "65d7587844a0240010842522",
@@ -2291,7 +2291,1019 @@
         "device_name": "Rad sns AT-R2 F9:3E",
         "fw_version": {
           "mcu": "2.8.48+011",
-          "_id": "6805f263f5d0b9621923734c"
+          "_id": "6805f269ad48203c2b87a02c"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 22.971355,
+        "Radiation": 0.358,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T07:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T07:10:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a02b"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 22.806777,
+        "Radiation": 0.351,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T07:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T07:00:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a02a"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 23.716816,
+        "Radiation": 0.309,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T06:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T06:50:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a029"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 22.988314,
+        "Radiation": 0.267,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T06:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T06:40:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a028"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 21.870113,
+        "Radiation": 0.215,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T06:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T06:30:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a027"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 22.641284,
+        "Radiation": 0.19,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T06:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T06:20:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a026"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 21.837785,
+        "Radiation": 0.156,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T06:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T06:10:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a025"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 21.74791,
+        "Radiation": 0.123,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T06:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T06:00:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a024"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.683974,
+        "Radiation": 0.104,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T05:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T05:50:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a023"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 20.274,
+        "Radiation": 0.087,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T05:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T05:40:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a022"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 21.264972,
+        "Radiation": 0.071,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T05:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T05:30:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a021"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 19.88816,
+        "Radiation": 0.058,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T05:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T05:20:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a020"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 19.71401,
+        "Radiation": 0.051,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T05:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T05:10:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a01f"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 19.375014,
+        "Radiation": 0.052,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T05:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T05:00:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a01e"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 19.992095,
+        "Radiation": 0.069,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T04:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T04:50:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a01d"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 19.244651,
+        "Radiation": 0.07,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T04:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T04:40:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a01c"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 19.307769,
+        "Radiation": 0.077,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T04:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T04:30:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a01b"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 18.581245,
+        "Radiation": 0.072,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T04:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T04:20:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a01a"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 17.60885,
+        "Radiation": 0.071,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T04:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T04:10:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a019"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 18.086699,
+        "Radiation": 0.068,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T04:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T04:00:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a018"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 17.669111,
+        "Radiation": 0.072,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T03:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T03:50:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a017"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 16.516384,
+        "Radiation": 0.068,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T03:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T03:40:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a016"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 17.030873,
+        "Radiation": 0.073,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T03:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T03:30:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a015"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 16.838708,
+        "Radiation": 0.069,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T03:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T03:20:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a014"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 16.769482,
+        "Radiation": 0.064,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T03:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T03:10:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a013"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 16.648307,
+        "Radiation": 0.065,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T03:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T03:00:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a012"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 16.43852,
+        "Radiation": 0.064,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T02:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T02:50:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a011"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 15.161681,
+        "Radiation": 0.063,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T02:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T02:40:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a010"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 14.93386,
+        "Radiation": 0.067,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T02:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T02:30:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a00f"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 15.909153,
+        "Radiation": 0.068,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T02:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T02:20:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a00e"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 15.192763,
+        "Radiation": 0.064,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T02:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T02:10:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a00d"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 15.787887,
+        "Radiation": 0.06,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T02:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T02:00:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a00c"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 15.642201,
+        "Radiation": 0.06,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T01:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T01:50:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a00b"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 14.033032,
+        "Radiation": 0.06,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T01:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T01:40:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a00a"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 14.518599,
+        "Radiation": 0.063,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T01:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T01:30:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a009"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 14,
+        "Radiation": 0.057,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T01:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T01:20:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a008"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 15.146543,
+        "Radiation": 0.058,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T01:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T01:10:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a007"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 14.082487,
+        "Radiation": 0.052,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T01:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T01:00:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a006"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 14.078433,
+        "Radiation": 0.056,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T00:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T00:50:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a005"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 14,
+        "Radiation": 0.057,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T00:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T00:40:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a004"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 14.558309,
+        "Radiation": 0.056,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T00:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T00:30:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a003"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 14,
+        "Radiation": 0.058,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T00:20:00.000Z",
+        "gw_read_time_utc": "2025-04-16T00:20:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a002"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 14.498963,
+        "Radiation": 0.051,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T00:10:00.000Z",
+        "gw_read_time_utc": "2025-04-16T00:10:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a001"
+        },
+        "location": {
+          "lng": 0,
+          "lat": 0
+        },
+        "unit_name": "Rad sns AT-R2 F9:3E",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 14.213377,
+        "Radiation": 0.049,
+        "Battery Level": 100,
+        "sample_time_utc": "2025-04-16T00:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T00:00:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "65d7587844a0240010842522",
+        "mac": "C4:45:5E:64:F9:3E",
+        "device_name": "Rad sns AT-R2 F9:3E",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "6805f269ad48203c2b87a000"
         },
         "location": {
           "lng": 0,
