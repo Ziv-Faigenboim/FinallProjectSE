@@ -145,10 +145,17 @@ map.on('load', () => {
                     fill="#f5f5f5" 
                     stroke="none"/>
               
-              <!-- Orange arc (single color) -->
+              <!-- Gradient arc (red-yellow-green) -->
+              <defs>
+                <linearGradient id="comfortGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#ff0000"/>
+                  <stop offset="50%" style="stop-color:#ffff00"/>
+                  <stop offset="100%" style="stop-color:#00ff00"/>
+                </linearGradient>
+              </defs>
               <path d="M 20 100 A 80 80 0 0 1 180 100" 
                     fill="none" 
-                    stroke="#ffa500" 
+                    stroke="url(#comfortGradient)" 
                     stroke-width="20" 
                     stroke-linecap="round"/>
               

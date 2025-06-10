@@ -349,7 +349,7 @@ h2, h3 {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  background-color: #ffa500; /* Single orange color */
+  background: linear-gradient(to right, #ff0000, #ffff00, #00ff00); /* Red-yellow-green gradient */
   box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
