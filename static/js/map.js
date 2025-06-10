@@ -11,7 +11,7 @@ let selectedSensorId = null;
 const sensors = [
   {
     id: 'original',
-    name: 'Original Sensor',
+    name: 'SCE College',
     coordinates: [34.7895184904266, 31.2498119452557],
     color: '#ff0000'
   },
@@ -173,6 +173,18 @@ map.on('load', () => {
       try {
         // Set selected sensor
         selectedSensorId = sensor.id;
+        
+        // If history is currently shown, refresh it for the new sensor
+        const historyContainer = document.getElementById('history-container');
+        if (historyContainer && historyContainer.style.display === 'block') {
+          // Hide history to trigger a refresh
+          historyContainer.style.display = 'none';
+          // Reset the button text to show it can be clicked again
+          const historyButton = document.getElementById('history-button');
+          if (historyButton) {
+            historyButton.textContent = 'Show History';
+          }
+        }
         
         // Fetch sensor data (which now includes radiation)
         const response = await fetch(`/get-sensor-data?sensor_id=${sensor.id}`);
@@ -744,8 +756,19 @@ function fetchAndDisplayGraph() {
         });
       });
       
-      // Sort by timestamp (oldest first for proper time axis)
-      allDataPoints.sort((a, b) => a.timestamp - b.timestamp);
+      // Sort by time of day (00:00 to 23:59) for proper chronological display
+      allDataPoints.sort((a, b) => {
+        const hourA = a.timestamp.getHours();
+        const minuteA = a.timestamp.getMinutes();
+        const hourB = b.timestamp.getHours();
+        const minuteB = b.timestamp.getMinutes();
+        
+        // Convert to minutes since midnight for proper sorting
+        const totalMinutesA = hourA * 60 + minuteA;
+        const totalMinutesB = hourB * 60 + minuteB;
+        
+        return totalMinutesA - totalMinutesB;
+      });
       
       // Extract arrays for chart
       const times = [];
@@ -754,12 +777,10 @@ function fetchAndDisplayGraph() {
       const radiations = [];
       
       allDataPoints.forEach(point => {
-        // Format time as HH:MM
-        times.push(point.timestamp.toLocaleTimeString('en-GB', { 
-          hour: '2-digit', 
-          minute: '2-digit', 
-          hour12: false 
-        }));
+        // Format time as HH:MM in 24-hour format
+        const hours = String(point.timestamp.getHours()).padStart(2, '0');
+        const minutes = String(point.timestamp.getMinutes()).padStart(2, '0');
+        times.push(`${hours}:${minutes}`);
         temperatures.push(point.temperature);
         humidities.push(point.humidity);
         radiations.push(point.radiation);
@@ -912,10 +933,12 @@ function createSensorChart(labels, temperatures, humidities, radiations, dateLab
           ticks: {
             maxTicksLimit: 24,
             callback: function(value, index, values) {
-              // Show every hour on the hour (00:00, 01:00, etc.)
-              const label = this.getLabelForValue(value);
-              if (label.endsWith(':00')) {
-                return label;
+              // Show hourly labels (00:00, 01:00, 02:00, etc.)
+              if (index % Math.max(1, Math.floor(values.length / 24)) === 0) {
+                const label = this.getLabelForValue(value);
+                if (label && label.includes(':')) {
+                  return label;
+                }
               }
               return '';
             },

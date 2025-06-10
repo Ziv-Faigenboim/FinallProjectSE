@@ -458,6 +458,7 @@
     historyContainer.style.display = historyContainer.style.display === 'none' ? 'block' : 'none';
 
     if (historyContainer.style.display === 'block') {
+      // Always fetch fresh data for the selected sensor
       fetch(`/get-sensor-history?sensor_id=${selectedSensorId}`)
         .then(response => response.json())
         .then(data => {
@@ -465,6 +466,10 @@
           // Sort by time (newest first) as default
           sensorHistoryData.sort((a, b) => new Date(b.sample_time) - new Date(a.sample_time));
           displayFilteredHistory();
+        })
+        .catch(error => {
+          console.error('Error fetching sensor history:', error);
+          document.getElementById('history-list').innerHTML = '<p>Error loading history data.</p>';
         });
     }
   });
