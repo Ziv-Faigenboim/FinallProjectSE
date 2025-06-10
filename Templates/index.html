@@ -446,13 +446,19 @@
 
   // Load sensor history
   document.getElementById('history-button').addEventListener('click', function () {
+    // Check if a sensor is selected
+    if (!selectedSensorId) {
+      alert('Please select a sensor on the map first before viewing the history.');
+      return;
+    }
+    
     const historyContainer = document.getElementById('history-container');
 
     // Toggle visibility
     historyContainer.style.display = historyContainer.style.display === 'none' ? 'block' : 'none';
 
     if (historyContainer.style.display === 'block') {
-      fetch('/get-sensor-history')
+      fetch(`/get-sensor-history?sensor_id=${selectedSensorId}`)
         .then(response => response.json())
         .then(data => {
           sensorHistoryData = data;

@@ -1,0 +1,294 @@
+{
+  "data": {
+    "readings_data": [
+      {
+        "Temperature": 21.5,
+        "Humidity": 65,
+        "External Battery": 8.851817,
+        "Vibration SD": 0.0084179878,
+        "Battery Level": 98,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.958571,
+        "Leak": 0.46378442,
+        "Generic MV": 453.23802,
+        "Distance": 0,
+        "Radiation": 0.018,
+        "sample_time_utc": "2025-04-16T23:50:00.000Z",
+        "gw_read_time_utc": "2025-04-16T23:50:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D4:44:55:66:77:88",
+        "device_name": "BGU University Campus",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffe008f924d08f22469208d"
+        },
+        "location": {
+          "lng": 34.8094,
+          "lat": 31.2622
+        },
+        "unit_name": "BGU Campus Sensor",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 22.1,
+        "Humidity": 63,
+        "External Battery": 8.754745,
+        "Vibration SD": 0.0085207096,
+        "Battery Level": 98,
+        "ANEMOMETER": 0,
+        "EMF": 478,
+        "Strain": 2.365622,
+        "Leak": 0.46719286,
+        "Generic MV": 454.65965,
+        "Distance": 0,
+        "Radiation": 0.016,
+        "sample_time_utc": "2025-04-16T23:40:00.000Z",
+        "gw_read_time_utc": "2025-04-16T23:40:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D4:44:55:66:77:88",
+        "device_name": "BGU University Campus",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffe008c924d08f22469208d"
+        },
+        "location": {
+          "lng": 34.8094,
+          "lat": 31.2622
+        },
+        "unit_name": "BGU Campus Sensor",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 21.8,
+        "Humidity": 67,
+        "External Battery": 8.695677,
+        "Vibration SD": 0.0079185017,
+        "Battery Level": 98,
+        "ANEMOMETER": 0,
+        "EMF": 477,
+        "Strain": 2.287058,
+        "Leak": 0.45296861,
+        "Generic MV": 453.73553,
+        "Distance": 0,
+        "Radiation": 0.014,
+        "sample_time_utc": "2025-04-16T23:30:00.000Z",
+        "gw_read_time_utc": "2025-04-16T23:30:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D4:44:55:66:77:88",
+        "device_name": "BGU University Campus",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffe0085924d08f22469208d"
+        },
+        "location": {
+          "lng": 34.8094,
+          "lat": 31.2622
+        },
+        "unit_name": "BGU Campus Sensor",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 21.2,
+        "Humidity": 68,
+        "External Battery": 8.820855,
+        "Vibration SD": 0.0003094706,
+        "Battery Level": 98,
+        "ANEMOMETER": 0,
+        "EMF": 475,
+        "Strain": 2.977013,
+        "Leak": 0.46686861,
+        "Generic MV": 455.32508,
+        "Distance": 0,
+        "Radiation": 0.012,
+        "sample_time_utc": "2025-04-16T22:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T22:00:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D4:44:55:66:77:88",
+        "device_name": "BGU University Campus",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffe0084924d08f22469208d"
+        },
+        "location": {
+          "lng": 34.8094,
+          "lat": 31.2622
+        },
+        "unit_name": "BGU Campus Sensor",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 22.5,
+        "Humidity": 62,
+        "External Battery": 8.911535,
+        "Vibration SD": 0.0098032566,
+        "Battery Level": 98,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 2.261838,
+        "Leak": 0.463454,
+        "Generic MV": 456.96319,
+        "Distance": 0,
+        "Radiation": 0.020,
+        "sample_time_utc": "2025-04-16T18:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T18:00:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D4:44:55:66:77:88",
+        "device_name": "BGU University Campus",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffe0082924d08f22469208d"
+        },
+        "location": {
+          "lng": 34.8094,
+          "lat": 31.2622
+        },
+        "unit_name": "BGU Campus Sensor",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 24.5,
+        "Humidity": 58,
+        "External Battery": 8.78805,
+        "Vibration SD": 0.0038672068,
+        "Battery Level": 98,
+        "ANEMOMETER": 0,
+        "EMF": 479,
+        "Strain": 3.299504,
+        "Leak": 0.46203879,
+        "Generic MV": 455.32124,
+        "Distance": 0,
+        "Radiation": 0.032,
+        "sample_time_utc": "2025-04-16T15:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T15:00:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D4:44:55:66:77:88",
+        "device_name": "BGU University Campus",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffe007f924d08f22469208d"
+        },
+        "location": {
+          "lng": 34.8094,
+          "lat": 31.2622
+        },
+        "unit_name": "BGU Campus Sensor",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 23.8,
+        "Humidity": 60,
+        "External Battery": 8.686941,
+        "Vibration SD": 0.00326315,
+        "Battery Level": 98,
+        "ANEMOMETER": 0,
+        "EMF": 477,
+        "Strain": 3.351363,
+        "Leak": 0.46762456,
+        "Generic MV": 454.09332,
+        "Distance": 0,
+        "Radiation": 0.028,
+        "sample_time_utc": "2025-04-16T12:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T12:00:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D4:44:55:66:77:88",
+        "device_name": "BGU University Campus",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffe007a924d08f22469208d"
+        },
+        "location": {
+          "lng": 34.8094,
+          "lat": 31.2622
+        },
+        "unit_name": "BGU Campus Sensor",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 22.3,
+        "Humidity": 64,
+        "External Battery": 8.894167,
+        "Vibration SD": 0.0010760483,
+        "Battery Level": 98,
+        "ANEMOMETER": 0,
+        "EMF": 476,
+        "Strain": 3.473496,
+        "Leak": 0.46981549,
+        "Generic MV": 454.55206,
+        "Distance": 0,
+        "Radiation": 0.024,
+        "sample_time_utc": "2025-04-16T09:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T09:00:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D4:44:55:66:77:88",
+        "device_name": "BGU University Campus",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffe0070924d08f22469208d"
+        },
+        "location": {
+          "lng": 34.8094,
+          "lat": 31.2622
+        },
+        "unit_name": "BGU Campus Sensor",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      },
+      {
+        "Temperature": 21.0,
+        "Humidity": 69,
+        "External Battery": 8.740584,
+        "Vibration SD": 0.0047934279,
+        "Battery Level": 98,
+        "ANEMOMETER": 0,
+        "EMF": 477,
+        "Strain": 2.732458,
+        "Leak": 0.46793012,
+        "Generic MV": 455.73813,
+        "Distance": 0,
+        "Radiation": 0.015,
+        "sample_time_utc": "2025-04-16T06:00:00.000Z",
+        "gw_read_time_utc": "2025-04-16T06:00:00.000Z",
+        "reading_type": "Periodic",
+        "triggers": {},
+        "business_unit_id": "6665581e2ea7990022f43138",
+        "mac": "D4:44:55:66:77:88",
+        "device_name": "BGU University Campus",
+        "fw_version": {
+          "mcu": "2.8.48+011",
+          "_id": "67ffe0067924d08f22469208d"
+        },
+        "location": {
+          "lng": 34.8094,
+          "lat": 31.2622
+        },
+        "unit_name": "BGU Campus Sensor",
+        "gw_id": "6DD4D29C-C96A-480E-A8F5-305E01DA3208",
+        "gw_version": "3.3.4+115"
+      }
+    ]
+  }
+} 

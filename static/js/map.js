@@ -4,6 +4,49 @@ let is3D = false;
 let sensorChart = null;
 let landUseVisible = false;
 
+// Global variable to track selected sensor (accessible from HTML)
+let selectedSensorId = null;
+
+// Sensor definitions with their locations and IDs (accessible from HTML)
+const sensors = [
+  {
+    id: 'original',
+    name: 'Original Sensor',
+    coordinates: [34.7895184904266, 31.2498119452557],
+    color: '#ff0000'
+  },
+  {
+    id: 'park-givaat-rambam',
+    name: 'Givaat Rambam Park',
+    coordinates: [34.7750, 31.2820],
+    color: '#00ff00'
+  },
+  {
+    id: 'gan-hashlosha-park',
+    name: 'Gan Hashlosha Park',
+    coordinates: [34.7580, 31.2680],
+    color: '#ffff00'
+  },
+  {
+    id: 'central-bus-station',
+    name: 'Central Bus Station',
+    coordinates: [34.7913, 31.2431],
+    color: '#ff6600'
+  },
+  {
+    id: 'bgu-university',
+    name: 'BGU University Campus',
+    coordinates: [34.8094, 31.2622],
+    color: '#00ffff'
+  },
+  {
+    id: 'soroka-medical-center',
+    name: 'Soroka Medical Center',
+    coordinates: [34.7982, 31.2580],
+    color: '#ff00ff'
+  }
+];
+
 const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/streets-v11', // Using light style for better shadow visibility
@@ -108,110 +151,128 @@ map.on('load', () => {
   // Add land use layers (standardized)
   addLandUseLayers();
 
-  // Add the sensor marker
-  const marker = new mapboxgl.Marker()
-    .setLngLat([34.7895184904266, 31.2498119452557])
-    .addTo(map);
 
-  marker.getElement().addEventListener('click', async () => {
-    try {
-      // Fetch sensor data (which now includes radiation)
-      const response = await fetch('/get-sensor-data');
-      const data = await response.json();
+
+  // Add sensor markers
+  sensors.forEach(sensor => {
+    const markerElement = document.createElement('div');
+    markerElement.className = 'custom-marker';
+    markerElement.style.backgroundColor = sensor.color;
+    markerElement.style.width = '20px';
+    markerElement.style.height = '20px';
+    markerElement.style.borderRadius = '50%';
+    markerElement.style.border = '3px solid white';
+    markerElement.style.cursor = 'pointer';
+    markerElement.style.boxShadow = '0 2px 4px rgba(0,0,0,0.3)';
+
+    const marker = new mapboxgl.Marker(markerElement)
+      .setLngLat(sensor.coordinates)
+      .addTo(map);
+
+    markerElement.addEventListener('click', async () => {
+      try {
+        // Set selected sensor
+        selectedSensorId = sensor.id;
+        
+        // Fetch sensor data (which now includes radiation)
+        const response = await fetch(`/get-sensor-data?sensor_id=${sensor.id}`);
+        const data = await response.json();
       
-      // Extract data from the response
-      const temp = data.temperature !== undefined ? data.temperature : "N/A";
-      const humidity = data.humidity !== undefined ? data.humidity : "N/A";
-      const battery = data.battery !== undefined ? data.battery : "N/A";
-      const radiation = data.radiation !== undefined ? data.radiation : "N/A";
-      const time = data.sample_time || "N/A";
-      
-      // Calculate comfort level based on temperature, humidity, and radiation
-      const comfort = calculateComfortLevel(temp, humidity, radiation);
-      const comfortInfo = getComfortLevelInfo(comfort);
+        // Extract data from the response
+        const temp = data.temperature !== undefined ? data.temperature : "N/A";
+        const humidity = data.humidity !== undefined ? data.humidity : "N/A";
+        const battery = data.battery !== undefined ? data.battery : "N/A";
+        const radiation = data.radiation !== undefined ? data.radiation : "N/A";
+        const time = data.sample_time || "N/A";
+        
+        // Calculate comfort level based on temperature, humidity, and radiation
+        const comfort = calculateComfortLevel(temp, humidity, radiation);
+        const comfortInfo = getComfortLevelInfo(comfort);
 
-      // Calculate needle angle - semicircle from left (0%) to right (100%)
-      // At 0%: needle points left, at 50%: needle points up, at 100%: needle points right
-      const needleAngle = Math.PI - (comfort / 100) * Math.PI; // π to 0 radians
-      const needleX = 60 * Math.cos(needleAngle);
-      const needleY = -60 * Math.sin(needleAngle); // negative Y to point upward in SVG
+        // Calculate needle angle - semicircle from left (0%) to right (100%)
+        // At 0%: needle points left, at 50%: needle points up, at 100%: needle points right
+        const needleAngle = Math.PI - (comfort / 100) * Math.PI; // π to 0 radians
+        const needleX = 60 * Math.cos(needleAngle);
+        const needleY = -60 * Math.sin(needleAngle); // negative Y to point upward in SVG
 
-      const popupContent = `
-        <div style="text-align: center; font-family: Arial, sans-serif;">
-          <div style="position: relative; width: 200px; height: 120px; margin: 10px auto;">
-            <svg width="200" height="120" viewBox="0 0 200 120">
-              <!-- Background - light gray semicircle -->
-              <path d="M 20 100 A 80 80 0 0 1 180 100" 
-                    fill="#f5f5f5" 
-                    stroke="none"/>
-              
-              <!-- Gradient arc (red-yellow-green) -->
-              <defs>
-                <linearGradient id="comfortGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" style="stop-color:#ff0000"/>
-                  <stop offset="50%" style="stop-color:#ffff00"/>
-                  <stop offset="100%" style="stop-color:#00ff00"/>
-                </linearGradient>
-              </defs>
-              <path d="M 20 100 A 80 80 0 0 1 180 100" 
-                    fill="none" 
-                    stroke="url(#comfortGradient)" 
-                    stroke-width="20" 
-                    stroke-linecap="round"/>
-              
-              <!-- Needle -->
-              <g transform="translate(100,100)">
-                <line x1="0" y1="0" 
-                      x2="${needleX}" 
-                      y2="${needleY}" 
-                      stroke="#333" 
-                      stroke-width="3" 
+        const popupContent = `
+          <div style="text-align: center; font-family: Arial, sans-serif;">
+            <h4 style="margin: 0 0 10px 0; color: #333;">${sensor.name}</h4>
+            <div style="position: relative; width: 200px; height: 120px; margin: 10px auto;">
+              <svg width="200" height="120" viewBox="0 0 200 120">
+                <!-- Background - light gray semicircle -->
+                <path d="M 20 100 A 80 80 0 0 1 180 100" 
+                      fill="#f5f5f5" 
+                      stroke="none"/>
+                
+                <!-- Gradient arc (red-yellow-green) -->
+                <defs>
+                  <linearGradient id="comfortGradient${sensor.id}" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#ff0000"/>
+                    <stop offset="50%" style="stop-color:#ffff00"/>
+                    <stop offset="100%" style="stop-color:#00ff00"/>
+                  </linearGradient>
+                </defs>
+                <path d="M 20 100 A 80 80 0 0 1 180 100" 
+                      fill="none" 
+                      stroke="url(#comfortGradient${sensor.id})" 
+                      stroke-width="20" 
                       stroke-linecap="round"/>
-                <circle cx="0" cy="0" r="6" fill="#333"/>
-              </g>
-            </svg>
+                
+                <!-- Needle -->
+                <g transform="translate(100,100)">
+                  <line x1="0" y1="0" 
+                        x2="${needleX}" 
+                        y2="${needleY}" 
+                        stroke="#333" 
+                        stroke-width="3" 
+                        stroke-linecap="round"/>
+                  <circle cx="0" cy="0" r="6" fill="#333"/>
+                </g>
+              </svg>
+            </div>
+            <div style="margin-top: 15px;">
+              <div style="font-size: 20px; font-weight: bold; color: #333; margin-bottom: 5px;">
+                ${comfortInfo.text}
+              </div>
+              <div style="font-size: 16px; color: #666;">
+                Comfort Score: ${Math.round(comfort)}%
+              </div>
+            </div>
           </div>
-          <div style="margin-top: 15px;">
-            <div style="font-size: 20px; font-weight: bold; color: #333; margin-bottom: 5px;">
+        `;
+
+        new mapboxgl.Popup()
+          .setLngLat(sensor.coordinates)
+          .setHTML(popupContent)
+          .addTo(map);
+
+        const container = document.getElementById('sensor-data-container');
+        container.innerHTML = `
+          <h3>Live Sensor Readings - ${sensor.name}</h3>
+          <p><strong>Temperature:</strong> ${typeof temp === 'number' ? temp.toFixed(1) : temp}°C</p>
+          <p><strong>Humidity:</strong> ${typeof humidity === 'number' ? humidity.toFixed(1) : humidity}%</p>
+          <p><strong>Battery:</strong> ${battery}%</p>
+          <p><strong>Radiation:</strong> ${typeof radiation === 'number' ? radiation.toFixed(2) : radiation}</p>
+          <p><strong>Sample Time:</strong> ${time}</p>
+          <p><strong>Comfort Level:</strong> ${comfortInfo.text}</p>
+          <div style="margin-top: 15px; margin-bottom: 20px;">
+            <div style="text-align: center; font-size: 18px; font-weight: bold; margin-bottom: 5px;">
               ${comfortInfo.text}
             </div>
-            <div style="font-size: 16px; color: #666;">
+            <div style="text-align: center; font-size: 16px; color: #666; margin-bottom: 10px;">
               Comfort Score: ${Math.round(comfort)}%
             </div>
+            <div class="gradient-meter">
+              <div class="gradient-bar"></div>
+              <div class="meter-indicator" style="left: ${comfort}%;"></div>
+            </div>
           </div>
-        </div>
-      `;
-
-      new mapboxgl.Popup()
-        .setLngLat([34.7895184904266, 31.2498119452557])
-        .setHTML(popupContent)
-        .addTo(map);
-
-      const container = document.getElementById('sensor-data-container');
-      container.innerHTML = `
-        <h3>Live Sensor Readings</h3>
-        <p><strong>Temperature:</strong> ${typeof temp === 'number' ? temp.toFixed(1) : temp}°C</p>
-        <p><strong>Humidity:</strong> ${typeof humidity === 'number' ? humidity.toFixed(1) : humidity}%</p>
-        <p><strong>Battery:</strong> ${battery}%</p>
-        <p><strong>Radiation:</strong> ${typeof radiation === 'number' ? radiation.toFixed(2) : radiation}</p>
-        <p><strong>Sample Time:</strong> ${time}</p>
-        <p><strong>Comfort Level:</strong> ${comfortInfo.text}</p>
-        <div style="margin-top: 15px; margin-bottom: 20px;">
-          <div style="text-align: center; font-size: 18px; font-weight: bold; margin-bottom: 5px;">
-            ${comfortInfo.text}
-          </div>
-          <div style="text-align: center; font-size: 16px; color: #666; margin-bottom: 10px;">
-            Comfort Score: ${Math.round(comfort)}%
-          </div>
-          <div class="gradient-meter">
-            <div class="gradient-bar"></div>
-            <div class="meter-indicator" style="left: ${comfort}%;"></div>
-          </div>
-        </div>
-      `;
-    } catch (err) {
-      console.error('Error fetching sensor data:', err);
-    }
+        `;
+      } catch (err) {
+        console.error('Error fetching sensor data:', err);
+      }
+    });
   });
 });
 
@@ -656,7 +717,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Function to fetch sensor history and create a graph
 function fetchAndDisplayGraph() {
-  fetch('/get-sensor-history')
+  if (!selectedSensorId) {
+    alert('Please select a sensor on the map first before viewing the graph.');
+    return;
+  }
+  
+  fetch(`/get-sensor-history?sensor_id=${selectedSensorId}`)
     .then(response => response.json())
     .then(data => {
       if (data.length === 0) {
@@ -710,8 +776,12 @@ function fetchAndDisplayGraph() {
       console.log(`Displaying graph with ${allDataPoints.length} data points`);
       console.log(`Time range: ${times[0]} to ${times[times.length - 1]}`);
       
+      // Find the selected sensor name
+      const selectedSensor = sensors.find(s => s.id === selectedSensorId);
+      const sensorName = selectedSensor ? selectedSensor.name : 'Unknown Sensor';
+      
       // Create chart with ALL data points
-      createSensorChart(times, temperatures, humidities, radiations, displayDate);
+      createSensorChart(times, temperatures, humidities, radiations, displayDate, sensorName);
     })
     .catch(error => {
       console.error('Error fetching sensor history for graph:', error);
@@ -720,7 +790,7 @@ function fetchAndDisplayGraph() {
 }
 
 // Function to create chart with Chart.js
-function createSensorChart(labels, temperatures, humidities, radiations, dateLabel) {
+function createSensorChart(labels, temperatures, humidities, radiations, dateLabel, sensorName = '') {
   const ctx = document.getElementById('sensor-chart').getContext('2d');
   
   // Destroy existing chart if it exists
@@ -729,7 +799,8 @@ function createSensorChart(labels, temperatures, humidities, radiations, dateLab
   }
   
   // Set chart title
-  document.querySelector('.modal-title').textContent = `Sensor Readings for ${dateLabel}`;
+  const titleText = sensorName ? `${sensorName} - Readings for ${dateLabel}` : `Sensor Readings for ${dateLabel}`;
+  document.querySelector('.modal-title').textContent = titleText;
   
   // Create gradient for temperature
   const tempGradient = ctx.createLinearGradient(0, 0, 0, 400);
@@ -939,3 +1010,4 @@ function getComfortLevelInfo(comfortScore) {
     return { text: "Very Low Comfort", category: "very-low" };
   }
 }
+

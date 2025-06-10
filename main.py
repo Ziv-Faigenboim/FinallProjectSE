@@ -11,15 +11,27 @@ app.secret_key = "your_secret_key"  # Needed for session and flashing messages
 users_col = get_db_collection(DBCollections.users)
 
 # ===================== Sensor Data from JSON =====================
-def get_latest_sensor_data():
+# Map sensor IDs to their data files
+SENSOR_FILES = {
+    "original": "readings.json",
+    "park-givaat-rambam": "sensor-park-givaat-rambam.json",
+    "gan-hashlosha-park": "sensor-gan-hashlosha-park.json",
+    "central-bus-station": "sensor-central-bus-station.json",
+    "bgu-university": "sensor-bgu-university.json",
+    "soroka-medical-center": "sensor-soroka-medical-center.json"
+}
+
+def get_latest_sensor_data(sensor_id="original"):
     try:
-        # Get the latest entries from both JSON files
-        sensor_data = {}
-        radiation_value = "N/A"
+        # Get the filename for the sensor
+        filename = SENSOR_FILES.get(sensor_id, "readings.json")
         
-        # Get data from readings.json
+        # Get the latest entries from the sensor JSON file
+        sensor_data = {}
+        
+        # Get data from the specified sensor file
         try:
-            with open("readings.json", "r") as file:
+            with open(filename, "r") as file:
                 data = json.load(file)
                 if "data" in data and "readings_data" in data["data"] and data["data"]["readings_data"]:
                     latest_data = data["data"]["readings_data"][0]  # Get first item since newest data is now at the top
@@ -31,24 +43,27 @@ def get_latest_sensor_data():
                         humidity_value = humidity
                     else:
                         humidity_value = "N/A"
+                    
+                    # For new sensors, radiation is included in the same file
+                    radiation_value = latest_data.get("Radiation", "N/A")
                         
                     sensor_data = {
                         "temperature": latest_data.get("Temperature", "N/A"),
                         "humidity": humidity_value,
                         "battery": latest_data.get("Battery Level", "N/A"),
                         "sample_time": latest_data.get("sample_time_utc", "N/A"),
+                        "radiation": radiation_value
                     }
         except Exception as e:
-            print(f"Error reading sensor data: {str(e)}")
+            print(f"Error reading sensor data from {filename}: {str(e)}")
         
-        # Get radiation data
-        try:
-            radiation_value = get_radiation_value()
-        except Exception as e:
-            print(f"Error getting radiation value: {str(e)}")
-        
-        # Combine the data
-        sensor_data["radiation"] = radiation_value
+        # For the original sensor, get radiation from separate file
+        if sensor_id == "original":
+            try:
+                radiation_value = get_radiation_value()
+                sensor_data["radiation"] = radiation_value
+            except Exception as e:
+                print(f"Error getting radiation value: {str(e)}")
         
         return sensor_data
             
@@ -62,24 +77,28 @@ def get_latest_sensor_data():
             "radiation": "N/A"
         }
 
-def get_historical_sensor_data():
+def get_historical_sensor_data(sensor_id="original"):
     try:
+        # Get the filename for the sensor
+        filename = SENSOR_FILES.get(sensor_id, "readings.json")
+        
         # Get sensor data
-        with open("readings.json", "r") as file:
+        with open(filename, "r") as file:
             sensor_data = json.load(file)
             
-        # Get radiation data
+        # Get radiation data (only for original sensor)
         radiation_data = {}
-        try:
-            with open("readings-radiation.json", "r") as file:
-                rad_json = json.load(file)
-                if "data" in rad_json and "readings_data" in rad_json["data"]:
-                    # Create a dictionary with timestamps as keys for quick lookup
-                    for reading in rad_json["data"]["readings_data"]:
-                        if "sample_time_utc" in reading:
-                            radiation_data[reading["sample_time_utc"]] = reading.get("Radiation", "N/A")
-        except Exception as e:
-            print(f"Error loading radiation data: {str(e)}")
+        if sensor_id == "original":
+            try:
+                with open("readings-radiation.json", "r") as file:
+                    rad_json = json.load(file)
+                    if "data" in rad_json and "readings_data" in rad_json["data"]:
+                        # Create a dictionary with timestamps as keys for quick lookup
+                        for reading in rad_json["data"]["readings_data"]:
+                            if "sample_time_utc" in reading:
+                                radiation_data[reading["sample_time_utc"]] = reading.get("Radiation", "N/A")
+            except Exception as e:
+                print(f"Error loading radiation data: {str(e)}")
         
         # Process sensor data and add radiation values
         if "data" in sensor_data and "readings_data" in sensor_data["data"]:
@@ -87,13 +106,19 @@ def get_historical_sensor_data():
             
             for reading in sensor_data["data"]["readings_data"]:
                 sample_time = reading.get("sample_time_utc", "N/A")
+                
+                # For new sensors, radiation is in the same file
+                if sensor_id == "original":
+                    radiation_value = radiation_data.get(sample_time, "N/A")
+                else:
+                    radiation_value = reading.get("Radiation", "N/A")
+                
                 entry = {
                     "temperature": reading.get("Temperature", "N/A"),
                     "humidity": reading.get("Humidity", "N/A"),
                     "battery": reading.get("Battery Level", "N/A"),
                     "sample_time": sample_time,
-                    # Add radiation data if available for this timestamp
-                    "radiation": radiation_data.get(sample_time, "N/A")
+                    "radiation": radiation_value
                 }
                 historical_data.append(entry)
                 
@@ -191,7 +216,8 @@ def shadow_history():
 def get_sensor_data():
     # If user is not logged in, they'll be redirected by the before_request check
     try:
-        data = get_latest_sensor_data()
+        sensor_id = request.args.get('sensor_id', 'original')
+        data = get_latest_sensor_data(sensor_id)
         return jsonify(data), 200
     except Exception as e:
         return jsonify({"error": f"Failed to fetch sensor data: {str(e)}"}), 500
@@ -200,7 +226,8 @@ def get_sensor_data():
 def get_sensor_history():
     # If user is not logged in, they'll be redirected by the before_request check
     try:
-        history = get_historical_sensor_data()
+        sensor_id = request.args.get('sensor_id', 'original')
+        history = get_historical_sensor_data(sensor_id)
         return jsonify(history), 200
     except Exception as e:
         return jsonify({"error": f"Failed to fetch historical data: {str(e)}"}), 500
