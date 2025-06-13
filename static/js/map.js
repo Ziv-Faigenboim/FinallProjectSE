@@ -12,38 +12,32 @@ const sensors = [
   {
     id: 'original',
     name: 'SCE College',
-    coordinates: [34.7895184904266, 31.2498119452557],
-    color: '#ff0000'
+    coordinates: [34.7895184904266, 31.2498119452557]
   },
   {
     id: 'park-givaat-rambam',
     name: 'Givaat Rambam Park',
-    coordinates: [34.7750, 31.2820],
-    color: '#00ff00'
+    coordinates: [34.7750, 31.2820]
   },
   {
     id: 'gan-hashlosha-park',
     name: 'Gan Hashlosha Park',
-    coordinates: [34.7580, 31.2680],
-    color: '#ffff00'
+    coordinates: [34.7580, 31.2680]
   },
   {
     id: 'central-bus-station',
     name: 'Central Bus Station',
-    coordinates: [34.7913, 31.2431],
-    color: '#ff6600'
+    coordinates: [34.7913, 31.2431]
   },
   {
     id: 'bgu-university',
     name: 'BGU University Campus',
-    coordinates: [34.8094, 31.2622],
-    color: '#00ffff'
+    coordinates: [34.8094, 31.2622]
   },
   {
     id: 'soroka-medical-center',
     name: 'Soroka Medical Center',
-    coordinates: [34.7982, 31.2580],
-    color: '#ff00ff'
+    coordinates: [34.7982, 31.2580]
   }
 ];
 
@@ -151,19 +145,21 @@ map.on('load', () => {
   // Add land use layers (standardized)
   addLandUseLayers();
 
-
-
   // Add sensor markers
   sensors.forEach(sensor => {
     const markerElement = document.createElement('div');
     markerElement.className = 'custom-marker';
-    markerElement.style.backgroundColor = sensor.color;
-    markerElement.style.width = '20px';
-    markerElement.style.height = '20px';
+    // Use a single, clearly visible color and larger size for all markers
+    markerElement.style.backgroundColor = '#0074D9'; // Bright blue
+    markerElement.style.width = '28px';
+    markerElement.style.height = '28px';
     markerElement.style.borderRadius = '50%';
-    markerElement.style.border = '3px solid white';
+    markerElement.style.border = '4px solid white';
     markerElement.style.cursor = 'pointer';
-    markerElement.style.boxShadow = '0 2px 4px rgba(0,0,0,0.3)';
+    markerElement.style.boxShadow = '0 4px 8px rgba(0,0,0,0.4)';
+    markerElement.style.zIndex = '1000';
+    // Optionally, add a white plus icon for extra visibility
+    markerElement.innerHTML = '<svg width="18" height="18" viewBox="0 0 18 18" style="position:absolute;top:5px;left:5px;"><circle cx="9" cy="9" r="8" fill="none" stroke="white" stroke-width="2"/><line x1="9" y1="4" x2="9" y2="14" stroke="white" stroke-width="2"/><line x1="4" y1="9" x2="14" y2="9" stroke="white" stroke-width="2"/></svg>';
 
     const marker = new mapboxgl.Marker(markerElement)
       .setLngLat(sensor.coordinates)
