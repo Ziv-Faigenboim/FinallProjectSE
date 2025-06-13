@@ -1000,30 +1000,38 @@ function createSensorChart(labels, temperatures, humidities, radiations, dateLab
 
 // Calculate comfort level based on temperature, humidity, and radiation
 function calculateComfortLevel(temp, humidity, radiation) {
-  // Base comfort calculation based on ideal temperature of 22°C and humidity of 60%
-  let comfort = 100 - Math.abs(22 - temp) * 2 - Math.abs(60 - humidity) * 0.5;
-  
-  // Include radiation in comfort calculation if available
-  if (radiation && typeof radiation === 'number') {
-    // Reduce comfort by 1 point for each unit of radiation above the safe threshold
-    const safeRadiationThreshold = 0.5;
-    if (radiation > safeRadiationThreshold) {
-      comfort -= (radiation - safeRadiationThreshold) * 10;
-    }
-  }
-  
-  return Math.max(0, Math.min(100, comfort));
+  // 1) define "ideal" conditions
+  const T_IDEAL = 22;      // °C
+  const H_IDEAL = 60;      // %
+  const R_MAX   = 1.2;     // Radiation max (W/m², normalized like SCE College)
+
+  // 2) normalize each component to [0…1]
+  //    – temperature: zero if |Δ|≥15°C from ideal
+  const tScore = Math.max(0, 1 - Math.abs(temp - T_IDEAL) / 15);
+
+  //    – humidity: zero if |Δ|≥40% from ideal
+  const hScore = Math.max(0, 1 - Math.abs(humidity - H_IDEAL) / 40);
+
+  //    – radiation: 1 at R=0, 0 at R≥R_MAX
+  const rScore = Math.max(0, 1 - Math.min(radiation, R_MAX) / R_MAX);
+
+  // 3) weight each factor by its real-world impact
+  const wT = 0.5,  wH = 0.3,  wR = 0.2;
+
+  // 4) compute composite comfort [0…1], then scale to [0…100]
+  const composite = wT*tScore + wH*hScore + wR*rScore;
+  return Math.round(composite * 100);
 }
 
-// Get comfort level text and category
+// Update comfort level categories for new scale
 function getComfortLevelInfo(comfortScore) {
-  if (comfortScore >= 80) {
-    return { text: "Very High Comfort", category: "very-high" };
-  } else if (comfortScore >= 60) {
-    return { text: "High Comfort", category: "high" };
-  } else if (comfortScore >= 40) {
-    return { text: "Medium Comfort", category: "medium" };
-  } else if (comfortScore >= 20) {
+  if (comfortScore >= 85) {
+    return { text: "Excellent Comfort", category: "excellent" };
+  } else if (comfortScore >= 70) {
+    return { text: "Good Comfort", category: "good" };
+  } else if (comfortScore >= 50) {
+    return { text: "Moderate Comfort", category: "moderate" };
+  } else if (comfortScore >= 30) {
     return { text: "Low Comfort", category: "low" };
   } else {
     return { text: "Very Low Comfort", category: "very-low" };
