@@ -1,14 +1,14 @@
 import json
 from flask import Flask, render_template, jsonify, request, redirect, url_for, flash, session
 # Update these imports to match your file structure
-from db.db_collections import DBCollections  # rename your old collections.py to db_collections.py
-from db.connection import get_db_collection
+# from db.db_collections import DBCollections  # rename your old collections.py to db_collections.py
+# from db.connection import get_db_collection
 
 app = Flask(__name__)
 app.secret_key = "your_secret_key"  # Needed for session and flashing messages
 
-# MongoDB's collection for users
-users_col = get_db_collection(DBCollections.users)
+# Temporary hardcoded user credentials (no MongoDB needed)
+TEMP_USER = {"username": "user", "password": "1234"}
 
 # ===================== Sensor Data from JSON =====================
 # Map sensor IDs to their data files
@@ -283,47 +283,40 @@ def export_csv():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """
-    Allows new users to register. If user already exists, shows a warning.
+    Temporary registration - only accepts the hardcoded user credentials.
     """
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
 
-        # Check if user already exists
-        existing_user = users_col.find_one({"email": username})
-        if existing_user:
-            flash("User already exists", "warning")
+        # Check if trying to register the correct temporary user
+        if username == TEMP_USER["username"] and password == TEMP_USER["password"]:
+            flash(f"Registration successful for user {username}", "success")
+            return redirect(url_for("login"))
+        else:
+            flash("Only user 'user' with password '1234' is allowed for temporary access", "warning")
             return redirect(url_for("register"))
-
-        # Insert new user
-        users_col.insert_one({
-            "email": username,
-            "password": password  # Plain text (for demonstration only)
-        })
-        flash(f"Registration successful for user {username}", "success")
-        return redirect(url_for("login"))
 
     return render_template("register.html")
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """
-    Logs the user in by checking credentials. If success, sets session.
+    Logs the user in by checking against hardcoded credentials. If success, sets session.
     """
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
 
-        # Attempt to find user with matching credentials
-        user = users_col.find_one({"email": username, "password": password})
-        if user:
+        # Check against hardcoded credentials
+        if username == TEMP_USER["username"] and password == TEMP_USER["password"]:
             # Save user info in session
             session['logged_in'] = True
             session['username'] = username
             flash(f"Welcome back, {username}!", "success")
             return redirect(url_for("index"))
         else:
-            flash("Invalid credentials", "danger")
+            flash("Invalid credentials. Use username: 'user' and password: '1234'", "danger")
             return redirect(url_for("login"))
 
     # If already logged in, no need to see login page
