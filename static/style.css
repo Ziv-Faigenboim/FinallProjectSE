@@ -349,7 +349,7 @@ h2, h3 {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  background: linear-gradient(to right, red, yellow, green);
+  background: linear-gradient(to right, #ff0000, #ffff00, #00ff00); /* Red-yellow-green gradient */
   box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -361,6 +361,24 @@ h2, h3 {
   background-color: #333;
   border-radius: 3px;
   transform: translateX(-50%);
+}
+
+.comfort-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.comfort-level-text {
+  font-weight: bold;
+  color: #333;
+}
+
+.comfort-score {
+  color: #666;
+  font-size: 13px;
 }
 
 .weather-container {
@@ -407,6 +425,33 @@ h2, h3 {
   background-color: #3a91b5;
 }
 
+.land-use-button {
+  position: absolute;
+  top: 10px;
+  right: 120px;
+  z-index: 1000;
+  background-color: #28a745;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.land-use-button:hover {
+  background-color: #218838;
+}
+
+.land-use-button.active {
+  background-color: #dc3545;
+}
+
+.land-use-button.active:hover {
+  background-color: #c82333;
+}
+
 #weather-box {
   background-color: white;
   padding: 15px;
@@ -420,4 +465,38 @@ h2, h3 {
   display: inline-block;
   margin-right: 10px;
   text-decoration: none;
+}
+
+/* --- Mapbox popup fixes: close button and stacking order --- */
+/* Ensure the popup appears above custom markers */
+.mapboxgl-popup {
+  z-index: 3000 !important;
+}
+
+/* Reset styles overridden by the global `button` rule so the × shows properly */
+button.mapboxgl-popup-close-button {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent !important;
+  color: #333 !important;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 700;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+button.mapboxgl-popup-close-button:hover {
+  background: rgba(0,0,0,0.06);
+  border-radius: 50%;
+}
+
+/* Add a bit of room so the close button doesn't overlap content */
+.mapboxgl-popup-content {
+  padding-top: 10px;
 }

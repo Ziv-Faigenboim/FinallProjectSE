@@ -2,6 +2,44 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiZWxhZDc2MTAiLCJhIjoiY205andvMnN2MDZpaDJqc2Jva
 
 let is3D = false;
 let sensorChart = null;
+let landUseVisible = false;
+
+// Global variable to track selected sensor (accessible from HTML)
+let selectedSensorId = null;
+
+// Sensor definitions with their locations and IDs (accessible from HTML)
+const sensors = [
+  {
+    id: 'original',
+    name: 'SCE College',
+    coordinates: [34.7895184904266, 31.2498119452557]
+  },
+  {
+    id: 'park-givaat-rambam',
+    name: 'Givaat Rambam Park',
+    coordinates: [34.7750, 31.2820]
+  },
+  {
+    id: 'gan-hashlosha-park',
+    name: 'Gan Hashlosha Park',
+    coordinates: [34.7580, 31.2680]
+  },
+  {
+    id: 'central-bus-station',
+    name: 'Central Bus Station',
+    coordinates: [34.7913, 31.2431]
+  },
+  {
+    id: 'bgu-university',
+    name: 'BGU University Campus',
+    coordinates: [34.8094, 31.2622]
+  },
+  {
+    id: 'soroka-medical-center',
+    name: 'Soroka Medical Center',
+    coordinates: [34.7982, 31.2580]
+  }
+];
 
 const map = new mapboxgl.Map({
   container: 'map',
@@ -104,61 +142,357 @@ map.on('load', () => {
     }
   }, '3d-buildings');
 
-  // Add the sensor marker
-  const marker = new mapboxgl.Marker()
-    .setLngLat([34.7895184904266, 31.2498119452557])
-    .addTo(map);
+  // Add land use layers (standardized)
+  addLandUseLayers();
 
-  marker.getElement().addEventListener('click', async () => {
-    try {
-      // Fetch sensor data (which now includes radiation)
-      const response = await fetch('/get-sensor-data');
-      const data = await response.json();
-      
-      // Extract data from the response
-      const temp = data.temperature !== undefined ? data.temperature : "N/A";
-      const humidity = data.humidity !== undefined ? data.humidity : "N/A";
-      const battery = data.battery !== undefined ? data.battery : "N/A";
-      const radiation = data.radiation !== undefined ? data.radiation : "N/A";
-      const time = data.sample_time || "N/A";
-      
-      // Calculate comfort level based on temperature, humidity, and radiation
-      const comfort = calculateComfortLevel(temp, humidity, radiation);
+  // Add sensor markers
+  sensors.forEach(sensor => {
+    const markerElement = document.createElement('div');
+    markerElement.className = 'custom-marker';
+    // Use a single, clearly visible color and larger size for all markers
+    markerElement.style.backgroundColor = '#0074D9'; // Bright blue
+    markerElement.style.width = '28px';
+    markerElement.style.height = '28px';
+    markerElement.style.borderRadius = '50%';
+    markerElement.style.border = '4px solid white';
+    markerElement.style.cursor = 'pointer';
+    markerElement.style.boxShadow = '0 4px 8px rgba(0,0,0,0.4)';
+    markerElement.style.zIndex = '1000';
+    // Optionally, add a white plus icon for extra visibility
+    markerElement.innerHTML = '<svg width="18" height="18" viewBox="0 0 18 18" style="position:absolute;top:5px;left:5px;"><circle cx="9" cy="9" r="8" fill="none" stroke="white" stroke-width="2"/><line x1="9" y1="4" x2="9" y2="14" stroke="white" stroke-width="2"/><line x1="4" y1="9" x2="14" y2="9" stroke="white" stroke-width="2"/></svg>';
 
-      const popupContent = `
-        <div>
-          <strong>Comfort Level</strong><br>
-          <div class="gradient-meter">
-            <div class="gradient-bar"></div>
-            <div class="meter-indicator" style="left: ${comfort}%;"></div>
+    const marker = new mapboxgl.Marker(markerElement)
+      .setLngLat(sensor.coordinates)
+      .addTo(map);
+
+    markerElement.addEventListener('click', async () => {
+      try {
+        // Set selected sensor
+        selectedSensorId = sensor.id;
+        
+        // If history is currently shown, refresh it for the new sensor
+        const historyContainer = document.getElementById('history-container');
+        if (historyContainer && historyContainer.style.display === 'block') {
+          // Hide history to trigger a refresh
+          historyContainer.style.display = 'none';
+          // Reset the button text to show it can be clicked again
+          const historyButton = document.getElementById('history-button');
+          if (historyButton) {
+            historyButton.textContent = 'Show History';
+          }
+        }
+        
+        // Fetch sensor data (which now includes radiation)
+        const response = await fetch(`/get-sensor-data?sensor_id=${sensor.id}`);
+        const data = await response.json();
+      
+        // Extract data from the response
+        const temp = data.temperature !== undefined ? data.temperature : "N/A";
+        const humidity = data.humidity !== undefined ? data.humidity : "N/A";
+        const battery = data.battery !== undefined ? data.battery : "N/A";
+        const radiation = data.radiation !== undefined ? data.radiation : "N/A";
+        const time = data.sample_time || "N/A";
+        
+        // Calculate comfort level based on temperature, humidity, and radiation
+        const comfort = calculateComfortLevel(temp, humidity, radiation);
+        const comfortInfo = getComfortLevelInfo(comfort);
+
+        // Calculate needle angle - semicircle from left (0%) to right (100%)
+        // At 0%: needle points left, at 50%: needle points up, at 100%: needle points right
+        const needleAngle = Math.PI - (comfort / 100) * Math.PI; // π to 0 radians
+        const needleX = 60 * Math.cos(needleAngle);
+        const needleY = -60 * Math.sin(needleAngle); // negative Y to point upward in SVG
+
+        const popupContent = `
+          <div style="text-align: center; font-family: Arial, sans-serif;">
+            <h4 style="margin: 0 0 10px 0; color: #333;">${sensor.name}</h4>
+            <div style="position: relative; width: 200px; height: 120px; margin: 10px auto;">
+              <svg width="200" height="120" viewBox="0 0 200 120">
+                <!-- Background - light gray semicircle -->
+                <path d="M 20 100 A 80 80 0 0 1 180 100" 
+                      fill="#f5f5f5" 
+                      stroke="none"/>
+                
+                <!-- Gradient arc (red-yellow-green) -->
+                <defs>
+                  <linearGradient id="comfortGradient${sensor.id}" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#ff0000"/>
+                    <stop offset="50%" style="stop-color:#ffff00"/>
+                    <stop offset="100%" style="stop-color:#00ff00"/>
+                  </linearGradient>
+                </defs>
+                <path d="M 20 100 A 80 80 0 0 1 180 100" 
+                      fill="none" 
+                      stroke="url(#comfortGradient${sensor.id})" 
+                      stroke-width="20" 
+                      stroke-linecap="round"/>
+                
+                <!-- Needle -->
+                <g transform="translate(100,100)">
+                  <line x1="0" y1="0" 
+                        x2="${needleX}" 
+                        y2="${needleY}" 
+                        stroke="#333" 
+                        stroke-width="3" 
+                        stroke-linecap="round"/>
+                  <circle cx="0" cy="0" r="6" fill="#333"/>
+                </g>
+              </svg>
+            </div>
+            <div style="margin-top: 15px;">
+              <div style="font-size: 20px; font-weight: bold; color: #333; margin-bottom: 5px;">
+                ${comfortInfo.text}
+              </div>
+              <div style="font-size: 16px; color: #666;">
+                Comfort Score: ${Math.round(comfort)}%
+              </div>
+            </div>
           </div>
-        </div>
-      `;
+        `;
 
-      new mapboxgl.Popup()
-        .setLngLat([34.7895184904266, 31.2498119452557])
-        .setHTML(popupContent)
-        .addTo(map);
+        new mapboxgl.Popup()
+          .setLngLat(sensor.coordinates)
+          .setHTML(popupContent)
+          .addTo(map);
 
-      const container = document.getElementById('sensor-data-container');
-      container.innerHTML = `
-        <h3>Live Sensor Readings</h3>
-        <p><strong>Temperature:</strong> ${typeof temp === 'number' ? temp.toFixed(1) : temp}°C</p>
-        <p><strong>Humidity:</strong> ${typeof humidity === 'number' ? humidity.toFixed(1) : humidity}%</p>
-        <p><strong>Battery:</strong> ${battery}%</p>
-        <p><strong>Radiation:</strong> ${typeof radiation === 'number' ? radiation.toFixed(2) : radiation}</p>
-        <p><strong>Sample Time:</strong> ${time}</p>
-        <p><strong>Comfort Level:</strong></p>
-        <div class="gradient-meter">
-          <div class="gradient-bar"></div>
-          <div class="meter-indicator" style="left: ${comfort}%;"></div>
-        </div>
-      `;
-    } catch (err) {
-      console.error('Error fetching sensor data:', err);
-    }
+        const container = document.getElementById('sensor-data-container');
+        container.innerHTML = `
+          <h3>Live Sensor Readings - ${sensor.name}</h3>
+          <p><strong>Temperature:</strong> ${typeof temp === 'number' ? temp.toFixed(1) : temp}°C</p>
+          <p><strong>Humidity:</strong> ${typeof humidity === 'number' ? humidity.toFixed(1) : humidity}%</p>
+          <p><strong>Battery:</strong> ${battery}%</p>
+          <p><strong>Radiation:</strong> ${typeof radiation === 'number' ? radiation.toFixed(2) : radiation}</p>
+          <p><strong>Sample Time:</strong> ${time}</p>
+          <p><strong>Comfort Level:</strong> ${comfortInfo.text}</p>
+          <div style="margin-top: 15px; margin-bottom: 20px;">
+            <div style="text-align: center; font-size: 18px; font-weight: bold; margin-bottom: 5px;">
+              ${comfortInfo.text}
+            </div>
+            <div style="text-align: center; font-size: 16px; color: #666; margin-bottom: 10px;">
+              Comfort Score: ${Math.round(comfort)}%
+            </div>
+            <div class="gradient-meter">
+              <div class="gradient-bar"></div>
+              <div class="meter-indicator" style="left: ${comfort}%;"></div>
+            </div>
+          </div>
+        `;
+      } catch (err) {
+        console.error('Error fetching sensor data:', err);
+      }
+    });
   });
 });
+
+// Add land use layers based on standardized categories
+function addLandUseLayers() {
+  try {
+    // Use the correct Mapbox composite source which includes land use data
+    // This data comes from OpenStreetMap
+    
+    // Standardized land use colors based on international standards
+    const landUseColors = {
+      'residential': '#FFC72C',      // Yellow - Residential areas
+      'commercial': '#FF6B6B',       // Red - Commercial and business
+      'industrial': '#9B59B6',       // Purple - Industrial areas
+      'park': '#4ECDC4',             // Teal - Parks and recreation
+      'cemetery': '#95A5A6',         // Gray - Cemeteries
+      'hospital': '#E74C3C',         // Dark red - Medical facilities
+      'school': '#3498DB',           // Blue - Educational facilities
+      'agriculture': '#2ECC71',      // Green - Agricultural land
+      'grass': '#A8E6CF',            // Light green - Grassland
+      'scrub': '#D5E8D4',            // Very light green - Scrubland
+      'wood': '#228B22',             // Forest green - Wooded areas
+      'water': '#5DADE2',            // Light blue - Water bodies
+      'airport': '#BDC3C7',          // Light gray - Airport areas
+      'parking': '#34495E',          // Dark gray - Parking lots
+      'pitch': '#52C41A',            // Bright green - Sports fields
+      'sand': '#F39C12',             // Orange - Sandy areas
+      'rock': '#7F8C8D'              // Medium gray - Rocky areas
+    };
+
+    // Add fill layer for land use using the composite source
+    map.addLayer({
+      'id': 'land-use-fill',
+      'type': 'fill',
+      'source': 'composite',
+      'source-layer': 'landuse',
+      'minzoom': 6,
+      'maxzoom': 24,
+      'layout': {
+        'visibility': 'none'
+      },
+      'paint': {
+        'fill-color': [
+          'match',
+          ['get', 'class'],
+          ['residential', 'suburb'], landUseColors.residential,
+          ['commercial', 'retail'], landUseColors.commercial,
+          ['industrial', 'construction'], landUseColors.industrial,
+          ['park', 'recreation_ground', 'playground'], landUseColors.park,
+          'cemetery', landUseColors.cemetery,
+          ['hospital', 'clinic'], landUseColors.hospital,
+          ['school', 'college', 'university'], landUseColors.school,
+          ['agriculture', 'farmland', 'farmyard'], landUseColors.agriculture,
+          ['grass', 'meadow'], landUseColors.grass,
+          ['scrub', 'scrubland'], landUseColors.scrub,
+          ['wood', 'forest'], landUseColors.wood,
+          'airport', landUseColors.airport,
+          'parking', landUseColors.parking,
+          ['pitch', 'sports_pitch'], landUseColors.pitch,
+          'sand', landUseColors.sand,
+          'rock', landUseColors.rock,
+          '#E0E0E0' // Default light gray for unclassified
+        ],
+        'fill-opacity': [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          6, 0.3,
+          10, 0.5,
+          14, 0.7,
+          18, 0.8
+        ]
+      }
+    });
+
+         // Add natural land cover layer for better coverage
+     map.addLayer({
+       'id': 'natural-land-use',
+       'type': 'fill',
+       'source': 'composite',
+       'source-layer': 'natural_label',
+       'minzoom': 6,
+       'maxzoom': 24,
+       'layout': {
+         'visibility': 'none'
+       },
+       'paint': {
+         'fill-color': [
+           'match',
+           ['get', 'class'],
+           'wood', landUseColors.wood,
+           'water', landUseColors.water,
+           'grass', landUseColors.grass,
+           'sand', landUseColors.sand,
+           'rock', landUseColors.rock,
+           '#D0D0D0'
+         ],
+         'fill-opacity': [
+           'interpolate',
+           ['linear'],
+           ['zoom'],
+           6, 0.3,
+           10, 0.4,
+           14, 0.6,
+           18, 0.7
+         ]
+       }
+     });
+
+      // Add additional building-based land use for better zoom coverage
+      map.addLayer({
+        'id': 'building-land-use',
+        'type': 'fill',
+        'source': 'composite',
+        'source-layer': 'building',
+        'minzoom': 14,
+        'maxzoom': 24,
+        'layout': {
+          'visibility': 'none'
+        },
+        'paint': {
+          'fill-color': [
+            'match',
+            ['get', 'type'],
+            ['house', 'apartments', 'residential'], landUseColors.residential,
+            ['commercial', 'office', 'retail'], landUseColors.commercial,
+            ['industrial', 'warehouse'], landUseColors.industrial,
+            ['hospital', 'clinic'], landUseColors.hospital,
+            ['school', 'university'], landUseColors.school,
+            '#F0F0F0' // Light gray for general buildings
+          ],
+          'fill-opacity': 0.4
+        }
+      });
+
+         // Add outline layer for better definition
+     map.addLayer({
+       'id': 'land-use-outline',
+       'type': 'line',
+       'source': 'composite',
+       'source-layer': 'landuse',
+       'minzoom': 12,
+       'maxzoom': 24,
+       'layout': {
+         'visibility': 'none'
+       },
+       'paint': {
+         'line-color': '#555555',
+         'line-width': [
+           'interpolate',
+           ['linear'],
+           ['zoom'],
+           12, 0.3,
+           16, 0.5,
+           20, 0.8
+         ],
+         'line-opacity': 0.4
+       }
+     });
+
+    console.log('Land use layers added successfully');
+  } catch (error) {
+    console.error('Error adding land use layers:', error);
+  }
+}
+
+// Toggle land use layer visibility
+function toggleLandUse() {
+  landUseVisible = !landUseVisible;
+  const button = document.querySelector('.land-use-button');
+  const legend = document.getElementById('land-use-legend');
+  
+  if (landUseVisible) {
+    // Show all land use related layers
+    if (map.getLayer('land-use-fill')) {
+      map.setLayoutProperty('land-use-fill', 'visibility', 'visible');
+    }
+    if (map.getLayer('land-use-outline')) {
+      map.setLayoutProperty('land-use-outline', 'visibility', 'visible');
+    }
+    if (map.getLayer('natural-land-use')) {
+      map.setLayoutProperty('natural-land-use', 'visibility', 'visible');
+    }
+    if (map.getLayer('building-land-use')) {
+      map.setLayoutProperty('building-land-use', 'visibility', 'visible');
+    }
+    
+    button.classList.add('active');
+    button.textContent = 'Hide Land Use';
+    if (legend) legend.style.display = 'block';
+    console.log('Land use layers enabled');
+  } else {
+    // Hide all land use related layers
+    if (map.getLayer('land-use-fill')) {
+      map.setLayoutProperty('land-use-fill', 'visibility', 'none');
+    }
+    if (map.getLayer('land-use-outline')) {
+      map.setLayoutProperty('land-use-outline', 'visibility', 'none');
+    }
+    if (map.getLayer('natural-land-use')) {
+      map.setLayoutProperty('natural-land-use', 'visibility', 'none');
+    }
+    if (map.getLayer('building-land-use')) {
+      map.setLayoutProperty('building-land-use', 'visibility', 'none');
+    }
+    
+    button.classList.remove('active');
+    button.textContent = 'Land Use';
+    if (legend) legend.style.display = 'none';
+    console.log('Land use layers disabled');
+  }
+}
 
 function toggleView() {
   if (is3D) {
@@ -391,7 +725,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Function to fetch sensor history and create a graph
 function fetchAndDisplayGraph() {
-  fetch('/get-sensor-history')
+  if (!selectedSensorId) {
+    alert('Please select a sensor on the map first before viewing the graph.');
+    return;
+  }
+  
+  fetch(`/get-sensor-history?sensor_id=${selectedSensorId}`)
     .then(response => response.json())
     .then(data => {
       if (data.length === 0) {
@@ -399,56 +738,67 @@ function fetchAndDisplayGraph() {
         return;
       }
       
-      // Process data for chart
-      const timestamps = [];
+      // Process ALL data points (no grouping, no filtering)
+      const allDataPoints = [];
+      
+      // Parse and sort all data by timestamp
+      data.forEach(item => {
+        const date = new Date(item.sample_time);
+        allDataPoints.push({
+          timestamp: date,
+          temperature: item.temperature,
+          humidity: item.humidity,
+          radiation: item.radiation || 0
+        });
+      });
+      
+      // Sort by time of day (00:00 to 23:59) for proper chronological display
+      allDataPoints.sort((a, b) => {
+        const hourA = a.timestamp.getHours();
+        const minuteA = a.timestamp.getMinutes();
+        const hourB = b.timestamp.getHours();
+        const minuteB = b.timestamp.getMinutes();
+        
+        // Convert to minutes since midnight for proper sorting
+        const totalMinutesA = hourA * 60 + minuteA;
+        const totalMinutesB = hourB * 60 + minuteB;
+        
+        return totalMinutesA - totalMinutesB;
+      });
+      
+      // Extract arrays for chart
+      const times = [];
       const temperatures = [];
       const humidities = [];
       const radiations = [];
       
-      // Group data by date for daily view
-      const dateGroups = {};
-      
-      data.forEach(item => {
-        const date = new Date(item.sample_time);
-        const timeStr = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        const dateStr = date.toLocaleDateString();
-        
-        if (!dateGroups[dateStr]) {
-          dateGroups[dateStr] = {
-            times: [],
-            temps: [],
-            humidities: [],
-            radiations: []
-          };
-        }
-        
-        dateGroups[dateStr].times.push(timeStr);
-        dateGroups[dateStr].temps.push(item.temperature);
-        dateGroups[dateStr].humidities.push(item.humidity);
-        dateGroups[dateStr].radiations.push(item.radiation || 0);
+      allDataPoints.forEach(point => {
+        // Format time as HH:MM in 24-hour format
+        const hours = String(point.timestamp.getHours()).padStart(2, '0');
+        const minutes = String(point.timestamp.getMinutes()).padStart(2, '0');
+        times.push(`${hours}:${minutes}`);
+        temperatures.push(point.temperature);
+        humidities.push(point.humidity);
+        radiations.push(point.radiation);
       });
       
-      // Use the most recent date's data
-      const dates = Object.keys(dateGroups).sort();
-      const latestDate = dates[dates.length - 1];
-      const latestData = dateGroups[latestDate];
-      
-      // Format date for display
-      const displayDate = new Date(latestDate).toLocaleDateString('en-US', {
+      // Get display date from first data point
+      const displayDate = allDataPoints[0].timestamp.toLocaleDateString('en-US', {
         weekday: 'long',
         year: 'numeric',
         month: 'long',
         day: 'numeric'
       });
       
-      // Create chart
-      createSensorChart(
-        latestData.times,
-        latestData.temps,
-        latestData.humidities,
-        latestData.radiations,
-        displayDate
-      );
+      console.log(`Displaying graph with ${allDataPoints.length} data points`);
+      console.log(`Time range: ${times[0]} to ${times[times.length - 1]}`);
+      
+      // Find the selected sensor name
+      const selectedSensor = sensors.find(s => s.id === selectedSensorId);
+      const sensorName = selectedSensor ? selectedSensor.name : 'Unknown Sensor';
+      
+      // Create chart with ALL data points
+      createSensorChart(times, temperatures, humidities, radiations, displayDate, sensorName);
     })
     .catch(error => {
       console.error('Error fetching sensor history for graph:', error);
@@ -457,7 +807,7 @@ function fetchAndDisplayGraph() {
 }
 
 // Function to create chart with Chart.js
-function createSensorChart(labels, temperatures, humidities, radiations, dateLabel) {
+function createSensorChart(labels, temperatures, humidities, radiations, dateLabel, sensorName = '') {
   const ctx = document.getElementById('sensor-chart').getContext('2d');
   
   // Destroy existing chart if it exists
@@ -466,7 +816,8 @@ function createSensorChart(labels, temperatures, humidities, radiations, dateLab
   }
   
   // Set chart title
-  document.querySelector('.modal-title').textContent = `Sensor Readings for ${dateLabel}`;
+  const titleText = sensorName ? `${sensorName} - Readings for ${dateLabel}` : `Sensor Readings for ${dateLabel}`;
+  document.querySelector('.modal-title').textContent = titleText;
   
   // Create gradient for temperature
   const tempGradient = ctx.createLinearGradient(0, 0, 0, 400);
@@ -574,6 +925,22 @@ function createSensorChart(labels, temperatures, humidities, radiations, dateLab
           grid: {
             display: true,
             color: 'rgba(0, 0, 0, 0.1)'
+          },
+          ticks: {
+            maxTicksLimit: 24,
+            callback: function(value, index, values) {
+              // Show hourly labels (00:00, 01:00, 02:00, etc.)
+              if (index % Math.max(1, Math.floor(values.length / 24)) === 0) {
+                const label = this.getLabelForValue(value);
+                if (label && label.includes(':')) {
+                  return label;
+                }
+              }
+              return '';
+            },
+            font: {
+              size: 12
+            }
           }
         },
         y: {
@@ -633,17 +1000,41 @@ function createSensorChart(labels, temperatures, humidities, radiations, dateLab
 
 // Calculate comfort level based on temperature, humidity, and radiation
 function calculateComfortLevel(temp, humidity, radiation) {
-  // Base comfort calculation based on ideal temperature of 22°C and humidity of 60%
-  let comfort = 100 - Math.abs(22 - temp) * 2 - Math.abs(60 - humidity) * 0.5;
-  
-  // Include radiation in comfort calculation if available
-  if (radiation && typeof radiation === 'number') {
-    // Reduce comfort by 1 point for each unit of radiation above the safe threshold
-    const safeRadiationThreshold = 0.5; // Example threshold
-    if (radiation > safeRadiationThreshold) {
-      comfort -= (radiation - safeRadiationThreshold) * 10;
-    }
-  }
-  
-  return Math.max(0, Math.min(100, comfort));
+  // 1) define "ideal" conditions
+  const T_IDEAL = 22;      // °C
+  const H_IDEAL = 60;      // %
+  const R_MAX   = 1.2;     // Radiation max (W/m², normalized like SCE College)
+
+  // 2) normalize each component to [0…1]
+  //    – temperature: zero if |Δ|≥15°C from ideal
+  const tScore = Math.max(0, 1 - Math.abs(temp - T_IDEAL) / 15);
+
+  //    – humidity: zero if |Δ|≥40% from ideal
+  const hScore = Math.max(0, 1 - Math.abs(humidity - H_IDEAL) / 40);
+
+  //    – radiation: 1 at R=0, 0 at R≥R_MAX
+  const rScore = Math.max(0, 1 - Math.min(radiation, R_MAX) / R_MAX);
+
+  // 3) weight each factor by its real-world impact
+  const wT = 0.5,  wH = 0.3,  wR = 0.2;
+
+  // 4) compute composite comfort [0…1], then scale to [0…100]
+  const composite = wT*tScore + wH*hScore + wR*rScore;
+  return Math.round(composite * 100);
 }
+
+// Update comfort level categories for new scale
+function getComfortLevelInfo(comfortScore) {
+  if (comfortScore >= 85) {
+    return { text: "Excellent Comfort", category: "excellent" };
+  } else if (comfortScore >= 70) {
+    return { text: "Good Comfort", category: "good" };
+  } else if (comfortScore >= 50) {
+    return { text: "Moderate Comfort", category: "moderate" };
+  } else if (comfortScore >= 30) {
+    return { text: "Low Comfort", category: "low" };
+  } else {
+    return { text: "Very Low Comfort", category: "very-low" };
+  }
+}
+

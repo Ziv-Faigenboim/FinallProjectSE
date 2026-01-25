@@ -1,7 +1,7 @@
 # setup_db.py
 
 from db.connection import get_db_collection
-from db.db_collections import DBCollections  # Updated import
+from db.db_collections import DBCollections
 
 # If you only want "users" collection, remove sensor_data references
 
