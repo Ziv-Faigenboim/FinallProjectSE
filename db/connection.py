@@ -12,7 +12,7 @@ CONNECTION_STRING = "mongodb://localhost:27017/"
 def get_db_collection(collection_name: DBCollections):
     client = MongoClient(CONNECTION_STRING)
 
-    # הגדרות שונות לפי סוג הקולקשן
+    # Different settings according to connection type
     if collection_name == DBCollections.users:
         db = client["FinalProject"]
     else:

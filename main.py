@@ -275,7 +275,7 @@ def export_csv():
     except Exception as e:
         return f"Error generating CSV: {str(e)}", 500
 
-# ===================== User Registration & Login =====================
+# User Registration & Login
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -299,7 +299,7 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """
-    Logs the user in by checking against hardcoded credentials. If success, sets session.
+    Logs the user in by checking against hardcoded credentials. If successful, sets session.
     """
     if request.method == "POST":
         username = request.form.get("username")
@@ -331,7 +331,7 @@ def logout():
     flash("You have been logged out.", "info")
     return redirect(url_for("login"))
 
-# ===================== Run App =====================
+# Run App
 if __name__ == "__main__":
     app.run(debug=True)
 

@@ -288,7 +288,7 @@ map.on('load', () => {
 function addLandUseLayers() {
   try {
     // Use the correct Mapbox composite source which includes land use data
-    // This data comes from OpenStreetMap and is available globally
+    // This data comes from OpenStreetMap
     
     // Standardized land use colors based on international standards
     const landUseColors = {
