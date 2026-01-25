@@ -6,6 +6,9 @@ A web-based Geographic Information System (GIS) application that visualizes envi
 
 This project was developed as part of my final year coursework, focusing on real-time environmental monitoring and spatial data visualization. The application integrates sensor data from multiple locations, displays it on an interactive Mapbox map, and provides tools for analyzing comfort levels and shadow patterns throughout the day.
 
+<img width="2560" height="1440" alt="ShadeSpotter 1" src="https://github.com/user-attachments/assets/8b0f305d-2e57-469b-8dd4-fcee673d93dc" />
+<img width="2560" height="1440" alt="ShadeSpotter 2" src="https://github.com/user-attachments/assets/08024a5c-645b-4d47-92f2-64c623c75997" />
+
 ## Key Features
 
 - **Interactive Map Visualization**: Real-time sensor data displayed on a Mapbox GL JS map with custom markers for each sensor location
@@ -16,9 +19,6 @@ This project was developed as part of my final year coursework, focusing on real
 - **Land Use Visualization**: Toggleable land use layers showing residential, commercial, park, and other area classifications
 - **Weather Integration**: Real-time weather data from OpenWeatherMap API
 - **Data Export**: CSV export functionality for sensor readings
-- 
-<img width="2560" height="1440" alt="ShadeSpotter 1" src="https://github.com/user-attachments/assets/8b0f305d-2e57-469b-8dd4-fcee673d93dc" />
-<img width="2560" height="1440" alt="ShadeSpotter 2" src="https://github.com/user-attachments/assets/08024a5c-645b-4d47-92f2-64c623c75997" />
 
 ## Technology Stack
 
