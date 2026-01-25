@@ -197,6 +197,6 @@ def authenticate_and_get_token(email, password, app_version='1.8.5', access_type
 if __name__ == "__main__":
     # If you want to test this script directly, uncomment below:
     # data = get_latest_sensor_data()
-    #print(data)
+    # print(data)
     main()
     pass

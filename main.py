@@ -1,8 +1,5 @@
 import json
 from flask import Flask, render_template, jsonify, request, redirect, url_for, flash, session
-# Update these imports to match your file structure
-# from db.db_collections import DBCollections  # rename your old collections.py to db_collections.py
-# from db.connection import get_db_collection
 
 app = Flask(__name__)
 app.secret_key = "your_secret_key"  # Needed for session and flashing messages
@@ -10,7 +7,7 @@ app.secret_key = "your_secret_key"  # Needed for session and flashing messages
 # Temporary hardcoded user credentials (no MongoDB needed)
 TEMP_USER = {"username": "user", "password": "1234"}
 
-# ===================== Sensor Data from JSON =====================
+# Sensor Data from JSON
 # Map sensor IDs to their data files
 SENSOR_FILES = {
     "original": "readings.json",
