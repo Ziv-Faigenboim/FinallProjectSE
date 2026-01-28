@@ -1,4 +1,4 @@
-# GIS ShadeSpotter
+# GIS ShadeSpotter (Backend-Pythom-Flask,MongoDB, Frontend-Javascript,HTML,CSS)
 
 A web-based Geographic Information System (GIS) application that visualizes environmental sensor data on an interactive map. The application tracks temperature, humidity, radiation levels, and battery status from multiple sensors across different locations, with advanced shadow analysis capabilities based on time of day.
 
